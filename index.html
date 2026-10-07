@@ -48,7 +48,12 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 -ap
 header.site { position: sticky; top: 0; z-index: 50; background: var(--band); color: var(--band-text); border-bottom: 1px solid rgba(255, 255, 255, .12); }
 .site-inner { max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--band-text); text-decoration: none; font-weight: 700; white-space: nowrap; padding: 12px 0; }
-.brand-mark { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: #06202f; font-weight: 800; }
+.brand-logo { display: inline-flex; flex: none; padding: 5px 8px; border-radius: 6px; background: #fff; }
+.brand-logo img { display: block; width: 108px; height: auto; }
+@media (max-width: 380px) {
+  .brand { gap: 8px; font-size: 14px; }
+  .brand-logo img { width: 92px; }
+}
 nav.tabs { display: flex; gap: 4px; overflow-x: auto; min-width: 0; flex: 1; scrollbar-width: thin; padding: 6px 0; }
 nav.tabs a { flex: none; color: var(--band-muted); text-decoration: none; padding: 9px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 600; min-height: 40px; display: inline-flex; align-items: center; }
 nav.tabs a:hover { background: rgba(255, 255, 255, .1); color: #fff; }
@@ -209,7 +214,7 @@ section.block:first-of-type { margin-top: 8px; }
 <a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="site">
 <div class="site-inner">
-<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">E</span><span>ERNI · Roadmap AI Engineer</span></a>
+<a class="brand" href="index.html"><span class="brand-logo"><img src="assets/erni-logo.png" alt="ERNI" width="768" height="199"></span><span>Roadmap AI Engineer</span></a>
 <nav class="tabs" aria-label="Secciones de la guía">
 <a href="index.html" aria-current="page">Inicio</a>
 <a href="ruta.html">Tu ruta</a>
