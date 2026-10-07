@@ -6,4 +6,4 @@ Guía del alumno del programa AI Engineer de ERNI: diagnóstico de entrada, ruta
 
 ## Mantenimiento
 
-`index.html` se genera a partir de la guía interna del programa. No se edita a mano: se cambia la guía y se vuelve a generar la página.
+Las páginas HTML (`index.html`, `ruta.html`, `conceptos.html`, `bloques.html`, `caso-final.html` y `evaluacion.html`) se generan a partir de la guía interna del programa. No se editan a mano: se cambia la guía y se vuelven a generar.

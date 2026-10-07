@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>ERNI · Roadmap AI Engineer</title>
-<meta name="description" content="Guía del alumno del programa AI Engineer de ERNI: diagnóstico, rutas por perfil, cursos, entregas y calendario.">
+<title>Caso final · ERNI · Roadmap AI Engineer</title>
+<meta name="description" content="El asistente que construyes y el dataset con el que se evalúa.">
 <style>
 :root {
   color-scheme: light dark;
@@ -205,17 +205,17 @@ section.block:first-of-type { margin-top: 8px; }
 
 </style>
 </head>
-<body class="home">
+<body class="caso-final">
 <a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="site">
 <div class="site-inner">
 <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">E</span><span>ERNI · Roadmap AI Engineer</span></a>
 <nav class="tabs" aria-label="Secciones de la guía">
-<a href="index.html" aria-current="page">Inicio</a>
+<a href="index.html">Inicio</a>
 <a href="ruta.html">Tu ruta</a>
 <a href="conceptos.html">Conceptos</a>
 <a href="bloques.html">Bloques B01–B10</a>
-<a href="caso-final.html">Caso final</a>
+<a href="caso-final.html" aria-current="page">Caso final</a>
 <a href="evaluacion.html">Evaluación y calendario</a>
 </nav>
 </div>
@@ -223,184 +223,213 @@ section.block:first-of-type { margin-top: 8px; }
 <div class="layout">
 <aside class="side">
 <nav class="toc toc-wide" aria-label="En esta página"><p class="toc-title">En esta página</p><ul>
-<li><a href="#el-programa-en-5-minutos">El programa en 5 minutos</a><ul><li><a href="#que-viene-de-erni-y-que-se-propone-aqui">Qué viene de ERNI y qué se propone aquí</a></li></ul></li>
-<li><a href="#antes-de-empezar">Antes de empezar</a></li>
+<li><a href="#caso-final">Caso final</a><ul><li><a href="#enunciado-comun">Enunciado común</a></li><li><a href="#datos-que-debes-preparar-en-e01">Datos que debes preparar en E01</a></li><li><a href="#contrato-observable-del-servicio">Contrato observable del servicio</a></li><li><a href="#estructura-minima-de-lo-que-vas-a-entregar">Estructura mínima de lo que vas a entregar</a></li></ul></li>
+<li><a href="#dataset-y-evaluacion-final">Dataset y evaluación final</a><ul><li><a href="#que-dataset-debes-entregar">Qué dataset debes entregar</a></li><li><a href="#que-debe-pasar-al-final">Qué debe pasar al final</a></li></ul></li>
 </ul></nav>
 <details class="toc toc-narrow"><summary>En esta página</summary><nav aria-label="En esta página (móvil)"><ul>
-<li><a href="#el-programa-en-5-minutos">El programa en 5 minutos</a><ul><li><a href="#que-viene-de-erni-y-que-se-propone-aqui">Qué viene de ERNI y qué se propone aquí</a></li></ul></li>
-<li><a href="#antes-de-empezar">Antes de empezar</a></li>
+<li><a href="#caso-final">Caso final</a><ul><li><a href="#enunciado-comun">Enunciado común</a></li><li><a href="#datos-que-debes-preparar-en-e01">Datos que debes preparar en E01</a></li><li><a href="#contrato-observable-del-servicio">Contrato observable del servicio</a></li><li><a href="#estructura-minima-de-lo-que-vas-a-entregar">Estructura mínima de lo que vas a entregar</a></li></ul></li>
+<li><a href="#dataset-y-evaluacion-final">Dataset y evaluación final</a><ul><li><a href="#que-dataset-debes-entregar">Qué dataset debes entregar</a></li><li><a href="#que-debe-pasar-al-final">Qué debe pasar al final</a></li></ul></li>
 </ul></nav></details>
 </aside>
 <main id="contenido" tabindex="-1">
-<header class="hero"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1 id="ai-engineer-guia-del-alumno">AI Engineer · guía del alumno</h1><p class="lead">De un perfil técnico a construir, evaluar, desplegar y operar una aplicación de IA generativa, en 10 bloques y 20 semanas.</p></header><section class="start" aria-labelledby="empieza-aqui-tarjetas"><h2 id="empieza-aqui-tarjetas">Las partes de la guía</h2><ul class="start-grid"><li><a class="start-card" href="ruta.html"><strong>Tu ruta</strong><span>Diagnóstico de entrada, rutas según tu perfil y el recorrido completo.</span><em>Abrir →</em></a></li><li><a class="start-card" href="conceptos.html"><strong>Conceptos</strong><span>Glosario con ejemplos para entender cada término del programa.</span><em>Abrir →</em></a></li><li><a class="start-card" href="bloques.html"><strong>Bloques B01–B10</strong><span>Los diez bloques: qué aprendes, cursos y entrega de cada uno.</span><em>Abrir →</em></a></li><li><a class="start-card" href="caso-final.html"><strong>Caso final</strong><span>El asistente que construyes y el dataset con el que se evalúa.</span><em>Abrir →</em></a></li><li><a class="start-card" href="evaluacion.html"><strong>Evaluación y calendario</strong><span>Cómo se aprueba, las 20 semanas, la checklist y los accesos.</span><em>Abrir →</em></a></li></ul></section><section class="sec intro">
-<p><strong>Versión 0.2 · 7 de septiembre de 2026 · propuesta para revisión de ERNI.</strong></p>
-<p>Pasa de un perfil técnico a construir, evaluar, desplegar y operar una aplicación de IA generativa: <strong>25 cursos en orden, 10 entregas acumulativas, 16 cursos de nivelación condicional y 20 semanas a 8 h/semana</strong>. No es un catálogo: sigue D0 → B01 → … → B10.</p>
-<div class="callout tip"><p class="callout-title">Empieza aquí</p><ol>
-<li>Lee <a href="#antes-de-empezar">Antes de empezar</a> y realiza <a href="ruta.html#diagnostico-de-entrada">D0</a>.</li>
-<li>Haz solo la <a href="ruta.html#nivelacion-con-cursos-enlazados">nivelación</a> que no puedas acreditar.</li>
-<li>Sigue <a href="ruta.html#ruta-completa-de-un-vistazo">los diez bloques</a> en orden: curso → ejercicios → entrega propia → revisión.</li>
-<li>Usa <a href="evaluacion.html#calendario-de-20-semanas">el calendario</a> y <a href="evaluacion.html#checklist-y-seguimiento">la checklist</a>.</li>
-<li>El resultado es <a href="caso-final.html#caso-final">un único asistente de soporte reproducible</a>, no diez proyectos inconexos.</li>
-</ol></div>
+<header class="page-head"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1>Caso final</h1><p class="lead">El asistente que construyes y el dataset con el que se evalúa.</p></header><section class="sec"><h2 id="caso-final">Caso final</h2>
+<h3 id="enunciado-comun">Enunciado común</h3>
+<p>Construye <strong>Expediente Claro</strong>, un asistente ficticio para operadores de soporte. Responde sobre procedimientos con citas a la documentación y consulta, solo en lectura, el estado de un expediente autorizado. No modifica expedientes, envía mensajes ni toma decisiones crediticias, y no usa documentos reales de ERNI ni de clientes.</p>
+<details class="callout info"><summary>El caso de punta a punta</summary><p>Un operador escribe una pregunta, por ejemplo: «¿Qué pasa si falta un documento en el expediente A-003 y en qué estado está ahora?».</p>
+<ol>
+<li>La aplicación comprueba quién es el operador y a qué área pertenece.</li>
+<li>El asistente busca en los ocho documentos de procedimientos las secciones relevantes.</li>
+<li>Consulta en solo lectura el estado de A-003 mediante una herramienta acotada.</li>
+<li>Redacta una respuesta que cita las secciones usadas y muestra el estado exacto.</li>
+</ol>
+<p>Sin respaldo en los documentos, responde <code>not_found</code> en lugar de inventar. Si el expediente es de otra área o no existe, devuelve el mismo error genérico 403. Nunca puede modificar expedientes, enviar mensajes, tomar decisiones, ejecutar SQL libre ni elegir por su cuenta qué área consultar.</p></details>
 
-<p><strong>Navegación:</strong> <a href="ruta.html#rutas-de-entrada">Mi perfil</a> · <a href="evaluacion.html#evaluacion-y-condiciones-de-avance">Cómo se aprueba</a> · <a href="evaluacion.html#accesos-licencias-y-mantenimiento">Accesos y licencias</a></p>
-</section>
-<section class="sec"><h2 id="el-programa-en-5-minutos">El programa en 5 minutos</h2>
-<p>Qué es el programa, con qué herramientas trabajarás y cómo se organiza.</p>
-<p><strong>Qué es un AI Engineer.</strong> No entrenas modelos: construyes productos con modelos que ya existen. Alrededor del modelo diseñas lo que falta: buscar en documentos, consultar sistemas con permisos, validar la salida, medir la calidad y desplegar. Es justo el caso final, <a href="caso-final.html#caso-final">Expediente Claro</a>.</p>
-<details class="callout info"><summary>Definición oficial y ejemplo</summary><p>La definición oficial del programa dice: <em>«An AI Engineer builds products on top of Generative AI Foundation Models, rather than training models from scratch. Starts with the user need, selects an API or open model, then designs the application around it.»</em></p>
-<p>Ejemplo: los operadores de soporte pierden tiempo buscando el procedimiento correcto. Un AI Engineer parte de esa necesidad, elige un modelo (por API o abierto) y construye alrededor lo que falta.</p></details>
+<figure class="diagram"><a href="diagrams/caso-final.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/caso-final-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/caso-final-light.png" alt="Caso final · Expediente Claro" loading="lazy"></picture></a><figcaption><strong>Caso final · Expediente Claro</strong> · <a href="diagrams/caso-final.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
 
-<details class="callout info"><summary>Stack típico del rol (no tienes que dominarlo todo)</summary><ul>
-<li>Lenguajes: Python (también JS/TS y Java).</li>
-<li>Orquestación de LLM: LangChain, LangGraph, Strands (y alternativas como PydanticAI, CrewAI o Mastra).</li>
-<li>Observabilidad y pasarela de modelos: LangFuse y LiteLLM (también MLflow y LangSmith).</li>
-<li>Nube: AWS y Bedrock (o Azure y AI Foundry).</li>
-<li>Backend y despliegue: FastAPI; Docker en ECS, Fargate, Azure Container Apps o AgentCore; algo de frontend con React o Streamlit.</li>
-<li>Modelos abiertos y locales: Ollama, vLLM, llama.cpp y Hugging Face.</li>
-<li>Datos para RAG: ChromaDB, Qdrant y Postgres.</li>
-</ul></details>
+<p>Desde E01 trabajas en <strong>un único repositorio</strong>; cada entrega añade capacidades a la anterior sin perder sus pruebas. El capstone está incluido en esas entregas, no es otro trabajo al final.</p>
+<p><strong>Stack propuesto:</strong> Python + FastAPI, Chroma, SQLite, LangChain/LangGraph, una consulta expuesta por MCP local, y Docker → ECR → ECS Fargate en AWS. Los modelos se consumen solo por LiteLLM de ERNI.</p>
+<details class="callout info"><summary>Stack de referencia del laboratorio (propuesto)</summary><ul>
+<li>Python + FastAPI. En los cursos de DataCamp se usa el entorno del propio curso; en el caso propio, los modelos se consumen a través de <strong>LiteLLM de ERNI</strong> (pasarela con API compatible con OpenAI, clave individual y presupuesto de 40 €/mes por persona), con configuración externa y nunca con cuentas o claves personales.</li>
+<li>Chroma para el índice local, como se introduce en C12. Pinecone se practica en C13 para aprender la alternativa gestionada; no se exige una segunda base vectorial en el capstone.</li>
+<li>SQLite para los doce expedientes sintéticos de solo lectura; LangChain/LangGraph para la orquestación; una única consulta de negocio expuesta por MCP local con transporte stdio.</li>
+<li>LangSmith para evaluación/trazas del ejercicio y CloudWatch para operación AWS. Solo información sintética en la plataforma de formación. Langfuse puede ser una adaptación posterior aprobada, <strong>no una segunda implementación exigida ni cubierta por estos cursos</strong>.</li>
+<li>Docker → Amazon ECR → ECS Fargate, con CloudFormation y un pipeline CI/CD. Una tarea de laboratorio; sin alta disponibilidad, Kubernetes, RDS, autoscaling avanzado ni carga real de producción.</li>
+</ul>
+<p>Esta elección reduce decisiones incidentales. No establece un estándar tecnológico corporativo ni exige esos proveedores en proyectos futuros.</p></details>
 
-<p><strong>Las cuatro fases.</strong> 4 meses de programa central, más 2–4 semanas opcionales para preparar una certificación. Cada mes tiene un foco.</p>
-<details class="callout info"><summary>Fases, meses y bloques de esta guía</summary><div class="table-wrap"><table>
+<h3 id="datos-que-debes-preparar-en-e01">Datos que debes preparar en E01</h3>
+<ul>
+<li><strong>Ocho documentos ficticios</strong> (200–400 palabras y al menos dos secciones cada uno) y <strong>doce expedientes sintéticos</strong> (A-001…A-006 y B-001…B-006) generados de forma reproducible.</li>
+<li>La autorización se deriva de la identidad validada en la aplicación y se aplica también dentro de la herramienta. <strong>El LLM no elige el ámbito autorizado ni recibe acceso SQL libre.</strong></li>
+</ul>
+<details class="callout info"><summary>Los ocho documentos, sus metadatos y los doce expedientes</summary><div class="table-wrap"><table>
 <thead>
 <tr>
-<th>Fase</th>
-<th>Mes</th>
-<th>Qué se hace (programa oficial)</th>
-<th>Bloques de esta guía</th>
+<th>ID</th>
+<th>Tema y hechos mínimos que debe fijar</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Foundation</td>
-<td>Octubre</td>
-<td>roadmap.sh y ERNI RoadMap; empezar el track de DataCamp</td>
-<td>D0, nivelación, <a href="bloques.html#b01-ingenieria-python-y-api">B01</a>–<a href="bloques.html#b02-aws-identidad-y-coste">B02</a></td>
+<td>DOC-01</td>
+<td>Alta: campos necesarios y cuándo se considera recibido un expediente</td>
 </tr>
 <tr>
-<td>Core patterns</td>
-<td>Noviembre</td>
-<td>Completar DataCamp y <strong>Proyecto 1: chatbot LLM básico</strong></td>
-<td><a href="bloques.html#b03-llm-y-contexto">B03</a>–<a href="bloques.html#b04-embeddings-y-rag">B04</a>; el Proyecto 1 equivale aproximadamente a E01 + E03</td>
+<td>DOC-02</td>
+<td>Documentación requerida: lista de documentos ficticios y qué ocurre si falta uno</td>
 </tr>
 <tr>
-<td>Local projects</td>
-<td>Diciembre</td>
-<td>Documentación de LangChain y FastAPI; <strong>Proyecto 2: agente RAG</strong></td>
-<td><a href="bloques.html#b05-evaluacion-antes-de-agentes">B05</a>–<a href="bloques.html#b07-mcp-y-conectores">B07</a>; el Proyecto 2 equivale aproximadamente a E04–E06</td>
+<td>DOC-03</td>
+<td>Seguimiento: canal de consulta y datos que se pueden mostrar</td>
 </tr>
 <tr>
-<td>Cloud practice</td>
-<td>Enero y febrero</td>
-<td>AWS Cloud Quest y fundamentos de despliegue</td>
-<td><a href="bloques.html#b08-api-segura-y-docker">B08</a>–<a href="bloques.html#b10-operacion-y-defensa-final">B10</a>: despliegue y operación</td>
-</tr>
-</tbody>
-</table></div></details>
-
-<figure class="diagram"><a href="diagrams/ruta-programa.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-programa-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-programa-light.png" alt="Ruta del programa AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta del programa AI Engineer</strong> · <a href="diagrams/ruta-programa.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
-
-<p>El orden de los bloques es el que manda; el <a href="evaluacion.html#calendario-de-20-semanas">calendario de 20 semanas</a> es la referencia de dedicación a 8 h por semana.</p>
-<p><strong>Recursos y accesos.</strong> Coste total estimado por persona: <strong>150 a 400 €</strong>, según los complementos que uses.</p>
-<details class="callout info"><summary>Recursos, para qué sirven y coste</summary><div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Recurso</th>
-<th>Para qué sirve</th>
-<th>Coste o acceso</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://roadmap.sh/ai-engineer">roadmap.sh, rol AI Engineer</a> + ERNI RoadMap</td>
-<td>Glosario gratuito de términos de AI Engineering y un plan personalizado para cada rol</td>
-<td>Gratuito</td>
+<td>DOC-04</td>
+<td>Cierre: condiciones de cierre y forma de informar del resultado</td>
 </tr>
 <tr>
-<td>DataCamp, track «Associate AI Engineer for Developers»</td>
-<td>Cursos guiados con ejercicios (los C de esta guía); empieza con la prueba gratuita</td>
-<td>30 €/mes durante 2 meses</td>
+<td>DOC-05</td>
+<td>Estados: significado de recibido, en_revision y cerrado; transiciones permitidas</td>
 </tr>
 <tr>
-<td>Documentación de LangChain y FastAPI</td>
-<td>Referencia para los proyectos demo</td>
-<td>Uso continuo durante todo el programa</td>
+<td>DOC-06</td>
+<td>Plazos: tres plazos ficticios; aclarar que son ejemplos, no compromisos reales</td>
 </tr>
 <tr>
-<td>AWS Cloud Quest</td>
-<td>Práctica de nube en formato de juego</td>
-<td>2 capítulos gratis; después 20 €/mes durante 1 mes</td>
+<td>DOC-07</td>
+<td>Permisos: área A y B solo pueden consultar sus propios expedientes</td>
 </tr>
 <tr>
-<td>Pasarela LiteLLM de ERNI</td>
-<td>Acceso a modelos para tus proyectos, con clave de API individual</td>
-<td>Presupuesto de 40 €/mes por persona</td>
-</tr>
-<tr>
-<td>Certificación AWS (opcional)</td>
-<td>AI Practitioner o Generative AI Developer Professional</td>
-<td>150 € cada una</td>
-</tr>
-</tbody>
-</table></div></details>
-
-<div class="callout info"><p class="callout-title">Norma de acceso a modelos</p><p>Los modelos se consumen siempre por la pasarela LiteLLM de ERNI. No se usan Ollama Cloud, otros servicios no aprobados ni cuentas o claves personales.</p></div>
-
-<p><strong>Seguimiento.</strong> 8 sesiones con un check-in breve: qué has completado, qué te ha bloqueado y tu siguiente objetivo. Opcionalmente, una encuesta ligera y sesiones 1:1. Prepáralo con la <a href="evaluacion.html#checklist-y-seguimiento">checklist</a>.</p>
-<details class="callout tip"><summary>Tu primera semana</summary><ol>
-<li>Crea tu cuenta en roadmap.sh y recorre el rol AI Engineer: no hace falta estudiar cada nodo, solo ubicarte.</li>
-<li>Empieza la prueba gratuita de DataCamp y localiza el track «Associate AI Engineer for Developers».</li>
-<li>Espera la invitación a LiteLLM y comprueba que recibes tu clave individual; no uses cuentas personales mientras tanto.</li>
-<li>Haz el <a href="ruta.html#diagnostico-de-entrada">diagnóstico D0</a> para saber qué nivelación necesitas.</li>
-</ol></details>
-
-<h3 id="que-viene-de-erni-y-que-se-propone-aqui">Qué viene de ERNI y qué se propone aquí</h3>
-<p>El documento corporativo <strong>AI Engineer | Generative AI</strong> enlaza el track <a href="https://www.datacamp.com/tracks/associate-ai-engineer-for-developers">Associate AI Engineer for Developers</a>. Se han verificado sus diez cursos y se conservan en esta ruta. <strong>El orden adaptado, los quince cursos complementarios, las prácticas, los tiempos de trabajo y los criterios de aceptación son propuesta didáctica propia</strong>, no decisiones ya aprobadas.</p>
-<details class="callout info"><summary>Qué cubre el track y qué añade la ruta</summary><p>El track aporta 29 h nominales de cursos. Por sí solo no cubre todo el resultado operativo que pide ERNI; por eso la ruta añade Python aplicado, FastAPI, evaluación, agentes con estado, Docker y AWS. Los dos proyectos bonus del track no son requisitos adicionales de este programa ni sustituyen sus entregables.</p></details>
-
-</section>
-<section class="sec"><h2 id="antes-de-empezar">Antes de empezar</h2>
-<p>Para profesionales de desarrollo, datos o plataforma. No exige haber entrenado un modelo fundacional, ni convierte en AI Engineer en veinte semanas a quien no tenga fundamentos de programación.</p>
-<p>Los nombres concretos y las licencias <strong>siguen pendientes de confirmación del grupo</strong>. Si falta acceso, se registra «bloqueado por acceso», no «no apto». Puedes seguir con contenidos y prácticas locales independientes; no se declara superado un despliegue simulado.</p>
-<details class="callout info"><summary>Preparación obligatoria del participante</summary><ul>
-<li>Ordenador con Python, Git y un entorno de desarrollo. Docker antes de B08 y AWS CLI antes de B09. Registra las versiones en el repositorio; sigue el entorno del curso cuando sus ejemplos dependan de él.</li>
-<li>Leer material técnico en inglés. Entregables y defensa pueden redactarse en español; la disponibilidad de traducciones y subtítulos se confirma con la cuenta del alumno, no se ha supuesto.</li>
-<li>Licencia o acceso completo a los cursos seleccionados por ERNI. Las fichas públicas permiten comprobar catálogo y temario, <strong>no prueban que la cuenta de cada empleado tenga acceso</strong>.</li>
-<li>Repositorio privado o entorno formativo autorizado, acceso del mentor y un proveedor de modelos permitido para datos sintéticos.</li>
-<li>Antes de gastar en APIs o cloud: cuenta/proyecto de laboratorio, región, límite económico, responsable y fecha de retirada. No uses una cuenta personal como alternativa automática a un acceso corporativo pendiente.</li>
-</ul></details>
-
-<details class="callout info"><summary>Responsabilidades antes del kickoff</summary><div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Rol</th>
-<th>Qué debe dejar preparado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Coordinación de formación</td>
-<td>Participantes, licencias, tiempo protegido, calendario y persona que valida cada bloque</td>
-</tr>
-<tr>
-<td>Mentor AI/software</td>
-<td>Revisión de D0 y E01–E08; dudas técnicas y aceptación del caso</td>
-</tr>
-<tr>
-<td>Referente AWS/plataforma</td>
-<td>Sandbox, red, roles acotados, control de coste; revisión de E02, E09 y E10</td>
-</tr>
-<tr>
-<td>Alumno</td>
-<td>Cursos, repositorio, evidencias, registro semanal y correcciones</td>
+<td>DOC-08</td>
+<td>Preguntas frecuentes: tres preguntas nuevas y sus respuestas consistentes con los otros documentos</td>
 </tr>
 </tbody>
 </table></div>
-<p>La ruta está definida; esas decisiones habilitan impartirla.</p></details>
+<ul>
+<li>Metadatos: <code>documentId</code>, <code>version</code>, <code>title</code>, <code>updatedAt</code>; cada sección tiene <code>sectionId</code>.</li>
+<li>Escribe una segunda versión de DOC-06 cambiando <strong>un plazo</strong> y documentando la fecha efectiva. Conserva la antigua como archivo histórico, excluida del índice activo.</li>
+<li>Expedientes: dos por cada estado en cada área. Esquema <code>expedientes(id, area, estado, updated_at)</code>. Usa fechas artificiales explícitas, no la fecha del sistema, para los resultados esperados.</li>
+<li>Dos identidades sintéticas: una autorizada para A y otra para B.</li>
+</ul></details>
+
+<h3 id="contrato-observable-del-servicio">Contrato observable del servicio</h3>
+<ul>
+<li>Tres endpoints: <code>GET /healthz</code>, <code>GET /readyz</code> y <code>POST /v1/consultas</code>.</li>
+<li>La respuesta incluye <code>requestId</code>, <code>status</code> (<code>answered | not_found | forbidden | dependency_error</code>), <code>answer</code>, <code>citations</code> y <code>expediente</code>.</li>
+<li>Un ID inexistente y un ID de otra área producen <strong>el mismo error genérico 403</strong>: no se revela si existe fuera del ámbito.</li>
+</ul>
+<details class="callout info"><summary>Detalle del contrato (endpoints, campos y códigos HTTP)</summary><ul>
+<li><code>GET /healthz</code>: proceso vivo.</li>
+<li><code>GET /readyz</code>: configuración y dependencias necesarias preparadas. No generar llamadas LLM costosas por cada sondeo.</li>
+<li><code>POST /v1/consultas</code>: <code>message</code> y <code>caseId</code> opcional; autenticación separada del cuerpo.</li>
+<li><code>citations</code>: lista de <code>documentId</code>, <code>version</code> y <code>sectionId</code>; debe resolver a contenido vigente.</li>
+<li><code>expediente</code>: nulo o <code>{id, estado, updatedAt}</code>, sin campos no necesarios.</li>
+<li>Consulta solo SQL: citas documentales vacías permitidas; los datos deben coincidir exactamente con SQL.</li>
+<li>Sin evidencia documental: <code>not_found</code>, sin inventar una respuesta.</li>
+<li>HTTP 200 para respuesta o ausencia de evidencia; 400/422 para entrada inválida, 401 para credencial ausente/inválida, 403 para consulta de expediente no accesible y 503 para fallo de dependencia imprescindible.</li>
+<li>El informe de pruebas interno distingue ambas causas del 403 (ID inexistente o de otra área); la API pública no.</li>
+</ul></details>
+
+<h3 id="estructura-minima-de-lo-que-vas-a-entregar">Estructura mínima de lo que vas a entregar</h3>
+<p>Un único repositorio con README, <code>src/</code>, <code>tests/</code>, <code>data/</code>, <code>scripts/</code>, <code>prompts/</code>, <code>evals/</code>, <code>docs/</code>, <code>infra/</code>, Dockerfile, dependencias con lock y configuración del pipeline. Es un contrato de entrega, <strong>no artefactos ya creados por esta roadmap</strong>.</p>
+<details class="callout info"><summary>Árbol de ficheros esperado</summary><p><code>text
+README.md                     instalación, ejecución, pruebas y límites
+src/                          API, lógica, retrieval y herramientas
+tests/                        pruebas unitarias, contrato e integración
+data/corpus/                  documentos sintéticos y versiones
+data/fixtures/                registros e identidades de prueba
+scripts/                      generación/carga reproducible
+prompts/                      instrucciones versionadas
+evals/dev.jsonl                desarrollo
+evals/test.jsonl               reserva confirmatoria
+evals/manifest.json            versiones del corpus, datos y evaluaciones
+evals/results/                resultados, configuración y métricas
+docs/diagnostico.md            capacidades y nivelación acordada
+docs/entregas/E01.md...E10.md   evidencia por entrega y revisión
+docs/architecture.md           componentes y decisiones
+docs/runbook.md                operación, incidentes, rollback y retirada
+infra/                        CloudFormation y configuración no secreta
+Dockerfile                    imagen del servicio
+archivo de dependencias y lock
+configuración del pipeline</code></p>
+<p>El README debe indicar comandos reales que funcionen, no instrucciones genéricas del tipo «arrancar la aplicación». Nunca guardar credenciales en ejemplos, imágenes, commits o informes.</p></details>
 
 </section>
-<nav class="pager" aria-label="Navegación entre páginas"><a class="next" rel="next" href="ruta.html"><small>Siguiente</small><strong>Tu ruta →</strong></a></nav>
+<section class="sec"><h2 id="dataset-y-evaluacion-final">Dataset y evaluación final</h2>
+<p><strong>Propuesta académica:</strong> cantidades y umbrales son criterios del laboratorio, no SLO, políticas ni métricas aprobadas de un cliente.</p>
+<h3 id="que-dataset-debes-entregar">Qué dataset debes entregar</h3>
+<ul>
+<li>E03: diez ejemplos para aprender y comparar prompts. E05: conjunto versionado de <strong>24 casos de desarrollo y 12 de test reservado</strong>, con cuatro de desarrollo y dos de test por categoría. Los ejemplos iniciales pueden pasar a desarrollo, nunca a test.</li>
+<li>Seis categorías: documental, SQL, mixta, sin evidencia, acceso denegado y dependencia fallida.</li>
+<li>Los valores esperados salen de los documentos y el SQL ficticios; <strong>una respuesta de LLM no es verdad de referencia sin revisión</strong>.</li>
+</ul>
+<details class="callout info"><summary>Categorías, formato JSONL y manifiesto</summary><ol>
+<li>Documental: hechos presentes en el corpus, incluida la versión vigente de un plazo.</li>
+<li>SQL: estado exacto de un expediente del área autorizada.</li>
+<li>Mixta: procedimiento documentado más estado SQL.</li>
+<li>Sin evidencia: pregunta fuera del corpus; no debe responder inventando.</li>
+<li>Acceso denegado: expediente de otra área o inexistente, con respuesta externa indistinguible.</li>
+<li>Dependencia fallida: proveedor/modelo o herramienta imprescindible no disponible.</li>
+</ol>
+<p>Cada línea JSONL registra: <code>id</code>, <code>split</code>, <code>datasetVersion</code>, <code>input</code>, <code>identityFixture</code>, <code>expectedStatus</code>, <code>expectedFacts</code>, <code>evidenceRefs</code>, <code>allowedTools</code>, <code>forbiddenFacts</code> y <code>faultFixture</code>.</p>
+<p>El manifiesto fija versión/hash de corpus, fixtures, particiones y configuración; el informe añade commit, modelos efectivos, prompt, retrieval y fecha. El test se congela antes de optimizar con desarrollo. Quien lo redacta conoce sus casos: no se presenta como examen ciego ni validación independiente. Si un fallo de test se usa para corregir el sistema, se crea una nueva reserva confirmatoria antes de volver a afirmar generalización.</p></details>
+
+<h3 id="que-debe-pasar-al-final">Qué debe pasar al final</h3>
+<ul>
+<li>La aceptación comprueba ocho puntos: respuestas útiles (al menos 5 de los 6 casos respondibles del test), contrato (12/12), SQL exacto, citas vigentes, abstención y fallos, seguridad y aislamiento, operación y handoff.</li>
+<li>La exigencia de 5/6 es una regla del caso académico, <strong>no una estimación fiable de calidad poblacional</strong>; los doce ejemplos no son un benchmark productivo.</li>
+</ul>
+<details class="callout info"><summary>Tabla de comprobaciones y aceptación</summary><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Comprobación</th>
+<th>Aceptación del ejercicio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Respuestas útiles</td>
+<td>Al menos 5 de los 6 casos respondibles del test contienen todos los hechos esperados, sin contradicciones ni afirmaciones factuales no respaldadas por las secciones citadas o el SQL autorizado</td>
+</tr>
+<tr>
+<td>Contrato</td>
+<td>12/12 respuestas cumplen esquema y estado esperado; errores controlados sin trazas internas</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>Todos los datos de expediente emitidos coinciden exactamente con la fuente y con el ámbito autorizado</td>
+</tr>
+<tr>
+<td>Citas</td>
+<td>Todas las citas emitidas resuelven a secciones vigentes; no se cita DOC-06 archivado</td>
+</tr>
+<tr>
+<td>Abstención y fallos</td>
+<td>Todos los casos sin evidencia, denegados y de dependencia fallida respetan el contrato</td>
+</tr>
+<tr>
+<td>Seguridad y aislamiento</td>
+<td>Todas las pruebas de credenciales inválidas, cruce de áreas y aislamiento entre peticiones pasan; sin secretos en artefactos/logs</td>
+</tr>
+<tr>
+<td>Operación</td>
+<td>Reproducción, consulta completa en sandbox, alarma comprobada, rollback y recuperación demostrados</td>
+</tr>
+<tr>
+<td>Handoff</td>
+<td>Un revisor reproduce la ejecución con README/runbook e identifica límites pendientes</td>
+</tr>
+</tbody>
+</table></div></details>
+
+<details class="callout info"><summary>Cómo medir</summary><ul>
+<li>Al evaluar cada respuesta, comprueba <code>expectedFacts</code> y cualquier hecho adicional. Que una cita exista no demuestra que respalde la afirmación a la que acompaña.</li>
+<li>Mide recuperación separada de generación: secciones relevantes en top-k, hechos correctos y correspondencia de citas.</li>
+<li>Mide latencia por etapa y total, errores, tokens y coste cuando estén disponibles. Informa siempre tamaño de muestra, entorno y concurrencia; con esta muestra los percentiles son ilustrativos, no validan un SLO.</li>
+<li>Compara alternativas sobre el mismo conjunto de desarrollo, no con capturas o ejemplos escogidos.</li>
+</ul></details>
+
+</section>
+<nav class="pager" aria-label="Navegación entre páginas"><a class="prev" rel="prev" href="bloques.html"><small>Anterior</small><strong>← Bloques B01–B10</strong></a><a class="next" rel="next" href="evaluacion.html"><small>Siguiente</small><strong>Evaluación y calendario →</strong></a></nav>
 </main>
 </div>
 <footer class="foot">Versión 0.2 · Actualizado el 8 de octubre de 2026 · Material formativo de ERNI.</footer>

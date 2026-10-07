@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Tu ruta · ERNI · Roadmap AI Engineer</title>
+<meta name="description" content="Diagnóstico de entrada, rutas según tu perfil y el recorrido completo.">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f4f3ee; --surface: #ffffff; --surface-2: #faf9f5; --text: #1d2733; --muted: #505b69;
+  --heading: #0f2a47; --accent: #0a6590; --accent-soft: #e3f0f6; --border: #dcd9cf; --focus: #0a6590;
+  --code: #eeece6; --band: #0f2a47; --band-text: #ffffff; --band-muted: #c9d6e3; --stripe: #f6f5f0;
+  --shadow: 0 1px 2px rgba(15, 42, 71, .06), 0 6px 20px rgba(15, 42, 71, .06);
+  --abstract: #0f766e; --abstract-bg: #e6f4f2; --abstract-fg: #0b5a54;
+  --example: #7048b8; --example-bg: #f0eafa; --example-fg: #5a3799;
+  --info: #2563a8; --info-bg: #e8f0fa; --info-fg: #1d4e86;
+  --tip: #2f7d4f; --tip-bg: #e7f4ec; --tip-fg: #1f6139;
+  --note: #6b7685; --note-bg: #eef0f3; --note-fg: #444e5b;
+  --warning: #b36b00; --warning-bg: #fdf1dc; --warning-fg: #7a4a07;
+  --important: #c0392b; --important-bg: #fbe9e6; --important-fg: #9a2a1e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11161c; --surface: #181e25; --surface-2: #1d242c; --text: #e0e6ed; --muted: #a3aeba;
+    --heading: #f1f4f7; --accent: #70c6ea; --accent-soft: #1d2f3a; --border: #2c343d; --focus: #9bd8f2;
+    --code: #232a32; --band: #0b2238; --band-text: #ffffff; --band-muted: #b7c8d9; --stripe: #1b2229;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 20px rgba(0, 0, 0, .25);
+    --abstract: #4fd1c5; --abstract-bg: #14302e; --abstract-fg: #7fe0d6;
+    --example: #b79af0; --example-bg: #251d38; --example-fg: #cdb8f7;
+    --info: #79a8d8; --info-bg: #1b2836; --info-fg: #a5c6ea;
+    --tip: #5cbf86; --tip-bg: #19302a; --tip-fg: #86d6a8;
+    --note: #9aa5b1; --note-bg: #232a32; --note-fg: #c0c9d3;
+    --warning: #e0a23a; --warning-bg: #33280f; --warning-fg: #f0c273;
+    --important: #ee7f70; --important-bg: #3a1f1b; --important-fg: #f5a69b;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; overflow-wrap: break-word; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.skip { position: absolute; left: 8px; top: -60px; background: var(--surface); color: var(--text); padding: 8px 14px; border-radius: 6px; z-index: 100; }
+.skip:focus { top: 8px; }
+
+/* Cabecera y pestañas */
+header.site { position: sticky; top: 0; z-index: 50; background: var(--band); color: var(--band-text); border-bottom: 1px solid rgba(255, 255, 255, .12); }
+.site-inner { max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--band-text); text-decoration: none; font-weight: 700; white-space: nowrap; padding: 12px 0; }
+.brand-mark { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: #06202f; font-weight: 800; }
+nav.tabs { display: flex; gap: 4px; overflow-x: auto; min-width: 0; flex: 1; scrollbar-width: thin; padding: 6px 0; }
+nav.tabs a { flex: none; color: var(--band-muted); text-decoration: none; padding: 9px 14px; border-radius: 8px; font-size: 14.5px; font-weight: 600; min-height: 40px; display: inline-flex; align-items: center; }
+nav.tabs a:hover { background: rgba(255, 255, 255, .1); color: #fff; }
+nav.tabs a[aria-current="page"] { background: #fff; color: #0f2a47; }
+header.site :focus-visible { outline-color: #fff; }
+
+/* Maquetación */
+.layout { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 40px; padding: 28px 16px 64px; }
+aside.side { align-self: start; position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow-y: auto; }
+.toc ul { list-style: none; margin: 0; padding: 0; }
+.toc-title { margin: 0 0 8px; font-weight: 700; color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .08em; }
+.toc > ul, .toc nav > ul { border-left: 2px solid var(--border); font-size: 14px; }
+.toc li > a { display: block; padding: 5px 12px; color: var(--text); text-decoration: none; font-weight: 600; line-height: 1.35; }
+.toc li > a:hover { color: var(--accent); background: var(--accent-soft); }
+.toc ul ul { margin: 0 0 6px; }
+.toc ul ul li > a { padding: 3px 12px 3px 24px; font-weight: 400; color: var(--muted); font-size: 13px; }
+.toc-narrow { display: none; }
+main { min-width: 0; outline: none; }
+
+/* Cabecera de página y hero */
+.page-head { margin: 0 0 8px; padding: 8px 0 20px; }
+.eyebrow { margin: 0 0 6px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.page-head h1 { margin: 0; color: var(--heading); font-size: clamp(30px, 4.4vw, 44px); line-height: 1.12; letter-spacing: -.01em; }
+.page-head .lead { margin: 12px 0 0; font-size: 19px; color: var(--muted); max-width: 60ch; }
+.hero { background: var(--band); color: var(--band-text); border-radius: 20px; padding: clamp(28px, 5vw, 56px); margin-bottom: 28px; box-shadow: var(--shadow); }
+.hero .eyebrow { color: var(--band-muted); }
+.hero h1 { margin: 0; font-size: clamp(32px, 5.2vw, 54px); line-height: 1.08; letter-spacing: -.015em; color: #fff; }
+.hero .lead { margin: 16px 0 0; font-size: clamp(17px, 2vw, 21px); color: var(--band-muted); max-width: 52ch; line-height: 1.5; }
+.start { margin: 0 0 12px; }
+.start > h2 { font-size: 22px; margin: 0 0 14px; color: var(--heading); }
+.start-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.start-card { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 18px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); box-shadow: var(--shadow); transition: border-color .15s, transform .15s; }
+.start-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.start-card strong { color: var(--heading); font-size: 17px; }
+.start-card span { color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+.start-card em { margin-top: auto; padding-top: 6px; font-style: normal; color: var(--accent); font-weight: 700; font-size: 14px; }
+@media (prefers-reduced-motion: reduce) { .start-card { transition: none; } .start-card:hover { transform: none; } }
+
+/* Secciones y tipografía */
+section.sec { margin-top: 64px; padding-top: 40px; border-top: 2px solid var(--border); }
+main > section.sec:first-of-type, main > .page-head + section.sec { margin-top: 24px; }
+.page-head + section.sec, .hero ~ section.sec:first-of-type { border-top: 0; }
+main h2 { color: var(--heading); margin: 0 0 18px; font-size: clamp(25px, 3vw, 32px); line-height: 1.2; letter-spacing: -.01em; }
+main h3 { color: var(--heading); margin: 36px 0 10px; font-size: 20px; line-height: 1.3; }
+main p, main li { max-width: 72ch; }
+main p { margin: 0 0 1.05em; }
+main ul, main ol { margin: 0 0 1.2em; padding-left: 1.4em; }
+main li { margin: .35em 0; }
+main a { color: var(--accent); text-underline-offset: 2px; }
+main a:hover { text-decoration-thickness: 2px; }
+main strong { color: var(--heading); }
+main code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: .92em; }
+main pre { background: var(--code); padding: 14px; border-radius: 8px; overflow-x: auto; max-width: 100%; }
+main pre code { padding: 0; background: none; }
+main hr { border: 0; border-top: 1px solid var(--border); margin: 28px 0; }
+
+/* Tablas */
+.table-wrap { overflow-x: auto; margin: 20px 0 24px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); max-width: 100%; }
+.table-wrap table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+.table-wrap th, .table-wrap td { padding: 10px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+.table-wrap th { background: var(--accent-soft); color: var(--heading); font-weight: 700; }
+.table-wrap tbody tr:nth-child(even) td { background: var(--stripe); }
+.table-wrap tbody tr:last-child td { border-bottom: 0; }
+.table-wrap td p, .table-wrap td li { max-width: none; }
+
+/* Figuras */
+figure.diagram { margin: 24px 0; }
+figure.diagram img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+figure.diagram figcaption { font-size: 13.5px; margin-top: 8px; color: var(--muted); }
+
+/* Callouts */
+.callout { --k: var(--info); --k-bg: var(--info-bg); --k-fg: var(--info-fg); border: 1px solid var(--border); border-left: 5px solid var(--k); background: var(--k-bg); border-radius: 12px; margin: 22px 0; padding: 4px 20px 6px; }
+.callout.abstract { --k: var(--abstract); --k-bg: var(--abstract-bg); --k-fg: var(--abstract-fg); }
+.callout.example { --k: var(--example); --k-bg: var(--example-bg); --k-fg: var(--example-fg); }
+.callout.info { --k: var(--info); --k-bg: var(--info-bg); --k-fg: var(--info-fg); }
+.callout.tip { --k: var(--tip); --k-bg: var(--tip-bg); --k-fg: var(--tip-fg); }
+.callout.note { --k: var(--note); --k-bg: var(--note-bg); --k-fg: var(--note-fg); }
+.callout.warning { --k: var(--warning); --k-bg: var(--warning-bg); --k-fg: var(--warning-fg); }
+.callout.important { --k: var(--important); --k-bg: var(--important-bg); --k-fg: var(--important-fg); }
+.callout-title, details.callout > summary { color: var(--k-fg); font-weight: 700; font-size: 16px; }
+.callout-title { margin: 12px 0 8px; }
+details.callout { padding: 0; }
+details.callout > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 10px; min-height: 48px; user-select: none; }
+details.callout > summary::-webkit-details-marker { display: none; }
+details.callout > summary::after { content: ""; flex: none; margin-left: auto; width: 9px; height: 9px; border-right: 2.5px solid var(--k); border-bottom: 2.5px solid var(--k); transform: rotate(45deg) translateY(-2px); transition: transform .2s; }
+details.callout[open] > summary::after { transform: rotate(-135deg) translateY(-2px); }
+details.callout > summary:hover { background: color-mix(in srgb, var(--k) 12%, transparent); }
+details.callout > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
+details.callout[open] > summary { border-bottom: 1px dashed color-mix(in srgb, var(--k) 45%, transparent); border-radius: 10px 10px 0 0; }
+details.callout > :not(summary) { margin-left: 20px; margin-right: 20px; }
+details.callout > summary + * { margin-top: 14px; }
+details.callout > :last-child { margin-bottom: 16px; }
+@media (prefers-reduced-motion: reduce) { details.callout > summary::after { transition: none; } }
+.callout ul, .callout ol { padding-left: 1.3em; }
+
+/* Bloques B01–B10 */
+section.block { background: var(--surface); border: 1px solid var(--border); border-top: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); padding: clamp(20px, 3.5vw, 36px); margin-top: 32px; }
+section.block:first-of-type { margin-top: 8px; }
+.block > h2 { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.badge { flex: none; display: inline-grid; place-items: center; min-width: 56px; height: 56px; padding: 0 8px; border-radius: 16px; background: var(--accent); color: #fff; font-size: 19px; font-weight: 800; letter-spacing: .02em; }
+@media (prefers-color-scheme: dark) { .badge { color: #06202f; } }
+.chips { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { max-width: none; margin: 0; display: inline-flex; flex-direction: column; padding: 7px 14px; border-radius: 10px; background: var(--accent-soft); border: 1px solid var(--border); line-height: 1.25; }
+.chip-label { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.chip-value { font-weight: 700; color: var(--heading); }
+.lede { border-left: 5px solid var(--accent); background: var(--surface-2); border-radius: 0 12px 12px 0; padding: 16px 22px; margin: 0 0 22px; font-size: 17.5px; line-height: 1.6; }
+.lede p:last-child { margin-bottom: 0; }
+.lede-label, .learn-label { margin: 0 0 6px; font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; color: var(--accent); }
+.learn { margin: 0 0 24px; }
+.learn ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
+.learn li { position: relative; margin: 0; padding: 10px 14px 10px 46px; background: var(--tip-bg); border: 1px solid var(--border); border-radius: 10px; max-width: none; }
+.learn li::before { content: "✓"; position: absolute; left: 12px; top: 10px; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--tip); color: #fff; font-weight: 800; font-size: 14px; line-height: 1; }
+@media (prefers-color-scheme: dark) { .learn li::before { color: #06231a; } }
+.block > p:last-child a { display: inline-block; margin-top: 8px; font-size: 14.5px; font-weight: 600; }
+
+/* Conceptos */
+.cards { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); margin-top: 8px; }
+@media (min-width: 1100px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.cards > .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px 10px; box-shadow: var(--shadow); min-width: 0; }
+.card h3 { margin: 0 0 10px; font-size: 19px; }
+.cards > .group-label { grid-column: 1 / -1; margin: 28px 0 0; padding-bottom: 6px; border-bottom: 2px solid var(--accent); color: var(--accent); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: 13.5px; max-width: none; }
+.cards > .group-label:first-child { margin-top: 0; }
+.cards > figure.diagram { grid-column: 1 / -1; }
+.card .callout { margin: 16px 0 14px; }
+
+/* Pie de página y paginación */
+.pager { display: flex; gap: 12px; justify-content: space-between; margin-top: 64px; padding-top: 24px; border-top: 2px solid var(--border); }
+.pager a { display: flex; flex-direction: column; gap: 2px; padding: 14px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; min-width: 0; max-width: 48%; box-shadow: var(--shadow); }
+.pager a:hover { border-color: var(--accent); }
+.pager small { color: var(--muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
+.pager strong { color: var(--accent); font-size: 17px; }
+.pager .next { margin-left: auto; text-align: right; }
+.foot { max-width: 1280px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 13.5px; }
+
+/* Móvil */
+@media (max-width: 860px) {
+  .site-inner { flex-wrap: wrap; gap: 0 12px; }
+  .brand { padding: 10px 0 0; flex-basis: 100%; }
+  nav.tabs { flex-basis: 100%; padding-bottom: 8px; }
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-top: 16px; }
+  aside.side { position: static; max-height: none; overflow: visible; }
+  .toc-wide { display: none; }
+  .toc-narrow { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+  .toc-narrow > summary { cursor: pointer; padding: 12px 16px; font-weight: 700; min-height: 48px; display: flex; align-items: center; }
+  .toc-narrow nav { padding: 0 8px 12px; max-height: 50vh; overflow-y: auto; }
+  html { scroll-padding-top: 110px; }
+  section.sec { margin-top: 48px; padding-top: 32px; }
+  .block > h2 { gap: 12px; }
+  .badge { min-width: 48px; height: 48px; font-size: 17px; }
+  .pager { flex-direction: column; }
+  .pager a { max-width: none; }
+  .pager .next { margin-left: 0; text-align: left; }
+}
+
+</style>
+</head>
+<body class="ruta">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site">
+<div class="site-inner">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">E</span><span>ERNI · Roadmap AI Engineer</span></a>
+<nav class="tabs" aria-label="Secciones de la guía">
+<a href="index.html">Inicio</a>
+<a href="ruta.html" aria-current="page">Tu ruta</a>
+<a href="conceptos.html">Conceptos</a>
+<a href="bloques.html">Bloques B01–B10</a>
+<a href="caso-final.html">Caso final</a>
+<a href="evaluacion.html">Evaluación y calendario</a>
+</nav>
+</div>
+</header>
+<div class="layout">
+<aside class="side">
+<nav class="toc toc-wide" aria-label="En esta página"><p class="toc-title">En esta página</p><ul>
+<li><a href="#diagnostico-de-entrada">Diagnóstico de entrada</a><ul><li><a href="#nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</a></li></ul></li>
+<li><a href="#rutas-de-entrada">Rutas de entrada</a><ul><li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li><li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li><li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li><li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li><li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li><li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li></ul></li>
+<li><a href="#ruta-completa-de-un-vistazo">Ruta completa de un vistazo</a></li>
+</ul></nav>
+<details class="toc toc-narrow"><summary>En esta página</summary><nav aria-label="En esta página (móvil)"><ul>
+<li><a href="#diagnostico-de-entrada">Diagnóstico de entrada</a><ul><li><a href="#nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</a></li></ul></li>
+<li><a href="#rutas-de-entrada">Rutas de entrada</a><ul><li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li><li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li><li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li><li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li><li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li><li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li></ul></li>
+<li><a href="#ruta-completa-de-un-vistazo">Ruta completa de un vistazo</a></li>
+</ul></nav></details>
+</aside>
+<main id="contenido" tabindex="-1">
+<header class="page-head"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1>Tu ruta</h1><p class="lead">Diagnóstico de entrada, rutas según tu perfil y el recorrido completo.</p></header><section class="sec"><h2 id="diagnostico-de-entrada">Diagnóstico de entrada</h2>
+<p><strong>D0 · 2 h orientativas</strong> de preparación y revisión de evidencias. No hay exenciones por puesto, años ni certificados solamente.</p>
+<ul>
+<li>Presentas un repositorio o ejemplo propio sanitizado y explicas cómo funciona. El mentor comprueba seis capacidades: Python, API, Git y terminal, SQL/datos, ML/LLM y plataforma.</li>
+<li>Salida: <code>docs/diagnostico.md</code> con capacidad, evidencia, resultado «acreditada / refuerzo», cursos necesarios, mentor y fecha. Acreditar conocimientos equivalentes evita repetir el curso de nivelación; no exige matricularse para obtener un certificado.</li>
+<li>Hay dos ramas introductorias de Python (N01–N05, de datos; N06–N08, de desarrollo) porque las fichas tienen prerrequisitos distintos. <strong>No repites ambas desde cero si D0 demuestra los contenidos coincidentes</strong>; el mentor registra la equivalencia, incluidas las capacidades que pide cada ficha.</li>
+</ul>
+<details class="callout info"><summary>Capacidades, evidencia mínima y cursos si faltan</summary><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Capacidad</th>
+<th>Evidencia suficiente para no repetir fundamentos</th>
+<th>Si falta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>Ejecutar un módulo; explicar funciones, clases, excepciones, iteradores y dependencias; corregir un fallo pequeño de un ejemplo propio</td>
+<td>N01–N07 y N11 según la carencia</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Consumir una API JSON, distinguir petición/respuesta, autenticación y errores; probar una entrada inválida</td>
+<td>N08, después de N06–N07</td>
+</tr>
+<tr>
+<td>Git y terminal</td>
+<td>Leer un diff e historial; reproducir la ejecución desde un directorio limpio y gestionar configuración sin publicar secretos</td>
+<td>N09 y N10</td>
+</tr>
+<tr>
+<td>SQL/datos</td>
+<td>Consultar filas por identificador y ámbito, filtrar y agregar; explicar una carga idempotente y una versión de datos</td>
+<td>N12–N14</td>
+</tr>
+<tr>
+<td>ML/LLM</td>
+<td>Diferenciar entrenamiento e inferencia, modelo y aplicación; explicar particiones de evaluación, error y límites de una respuesta generada</td>
+<td>N16 antes de C06</td>
+</tr>
+<tr>
+<td>Plataforma</td>
+<td>Distinguir imagen, contenedor y máquina virtual; explicar límites de acceso y coste</td>
+<td>N14–N15; B02 sigue formando parte de la ruta</td>
+</tr>
+</tbody>
+</table></div></details>
+
+<h3 id="nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</h3>
+<p>Solo haces los cursos que D0 asigne. Fichas consultadas el <strong>07/09/2026</strong>; cada fila indica los capítulos exactos (con sus ejercicios) y el orden lo marca «Antes», no el catálogo.</p>
+<ul>
+<li><strong>Cuándo:</strong> N01–N13 pendientes, antes de B01; N16 antes de B03; N14–N15 antes de B08. Puedes adelantarlos todos durante la nivelación. La tabla respeta dependencias: N11 necesita N05, que depende de N04 → N03 → N02 → N01.</li>
+<li><strong>Carga:</strong> la suma nominal de los dieciséis cursos es <strong>46 h 45 min</strong>, pero <strong>no es obligatoria para todos</strong>; se añade solo lo asignado, más <strong>4 h propias de práctica/revisión</strong> (ampliar si no basta, no rebajar el criterio).</li>
+</ul>
+<details class="callout info"><summary>Tabla de cursos de nivelación (N01–N16)</summary><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Curso de DataCamp</th>
+<th>Antes</th>
+<th>Capítulos</th>
+<th>Duración publicada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N01</td>
+<td><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Introduction to Python</a></td>
+<td>Ninguno</td>
+<td>1–4, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N02</td>
+<td><a href="https://www.datacamp.com/courses/intermediate-python">Intermediate Python</a></td>
+<td>N01</td>
+<td>1–5, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N03</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-functions-in-python">Introduction to Functions in Python</a></td>
+<td>N02</td>
+<td>1–3, completos</td>
+<td>3 h</td>
+</tr>
+<tr>
+<td>N04</td>
+<td><a href="https://www.datacamp.com/courses/python-toolbox">Python Toolbox</a></td>
+<td>N03</td>
+<td>1–3, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N05</td>
+<td><a href="https://www.datacamp.com/courses/writing-functions-in-python">Writing Functions in Python</a></td>
+<td>N04</td>
+<td>1–4, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N06</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-python-for-developers">Introduction to Python for Developers</a></td>
+<td>Ninguno</td>
+<td>1–3, completos</td>
+<td>3 h</td>
+</tr>
+<tr>
+<td>N07</td>
+<td><a href="https://www.datacamp.com/courses/intermediate-python-for-developers">Intermediate Python for Developers</a></td>
+<td>N06</td>
+<td>1–3, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N08</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-apis-in-python">Introduction to APIs in Python</a></td>
+<td>N07</td>
+<td>1–2, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N09</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-git">Introduction to Git</a></td>
+<td>Ninguno</td>
+<td>1–2, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N10</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-shell">Introduction to Shell</a></td>
+<td>Ninguno</td>
+<td>1–5, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N11</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-object-oriented-programming-in-python">Introduction to Object-Oriented Programming in Python</a></td>
+<td>N05</td>
+<td>1–3, completos</td>
+<td>3 h</td>
+</tr>
+<tr>
+<td>N12</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-sql">Introduction to SQL</a></td>
+<td>Ninguno</td>
+<td>1, completo</td>
+<td>45 min; rango 30–60 min</td>
+</tr>
+<tr>
+<td>N13</td>
+<td><a href="https://www.datacamp.com/courses/intermediate-sql">Intermediate SQL</a></td>
+<td>N12</td>
+<td>1–4, completos</td>
+<td>5 h; rango 4–6 h</td>
+</tr>
+<tr>
+<td>N14</td>
+<td><a href="https://www.datacamp.com/courses/understanding-data-engineering">Understanding Data Engineering</a></td>
+<td>Ninguno</td>
+<td>1–3, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N15</td>
+<td><a href="https://www.datacamp.com/courses/containerization-and-virtualization-concepts">Containerization and Virtualization Concepts</a></td>
+<td>N14</td>
+<td>1–2, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N16</td>
+<td><a href="https://www.datacamp.com/courses/understanding-machine-learning">Understanding Machine Learning</a></td>
+<td>Ninguno</td>
+<td>1–3, completos</td>
+<td>2 h</td>
+</tr>
+</tbody>
+</table></div>
+<p>Se usan los metadatos actuales de N12 (45 min, rango 30–60 min) y N13 (5 h, rango 4–6 h), no las antiguas descripciones promocionales que aún mencionan otras duraciones.</p></details>
+
+<details class="callout info"><summary>Entrega y aceptación de la nivelación</summary><p><strong>Entrega:</strong> <code>docs/nivelacion.md</code> con enlaces o constancias de los cursos completados y un ejemplo reproducible por capacidad que faltaba.</p>
+<ul>
+<li>Python: transformar registros y manejar un registro inválido.</li>
+<li>APIs: petición correcta y fallo controlado.</li>
+<li>SQL: filtros y agregación sobre doce registros ficticios.</li>
+<li>Git/terminal: reconstruir el ejemplo desde su README.</li>
+<li>ML: justificar la separación de datos de desarrollo y test.</li>
+<li>Contenedores: explicar qué empaqueta una imagen y qué queda fuera.</li>
+</ul>
+<p><strong>Aceptación:</strong> el mentor vuelve a comprobar únicamente las capacidades pendientes de D0.</p></details>
+
+</section>
+<section class="sec"><h2 id="rutas-de-entrada">Rutas de entrada</h2>
+<p><strong>Todos llegáis al mismo sitio por el mismo camino. Solo cambia por dónde empiezas.</strong></p>
+<ol>
+<li><strong>Diagnóstico (D0, 2 h con tu mentor).</strong> Enseñas algo tuyo y el mentor comprueba qué ya dominas.</li>
+<li><strong>Nivelación, solo si D0 detecta un hueco.</strong> Haces únicamente los cursos de ese hueco (<a href="#nivelacion-con-cursos-enlazados">ver la lista de cursos</a>). Si no hay hueco, te la saltas.</li>
+<li><strong>Ruta común B01 → B10, igual para todos.</strong> Mismas diez entregas y mismo nivel de exigencia al final.</li>
+</ol>
+<p><strong>Cómo leer cada diagrama:</strong> la flecha verde «ya lo acreditas» va directa a la ruta; la línea discontinua es el desvío por la nivelación. Los bloques del color «Tu foco» son donde más vas a tener que crecer viniendo de tu perfil.</p>
+<details class="callout info"><summary>Resumen por perfil</summary><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Tu perfil</th>
+<th>Nivelación típica (solo si D0 la pide)</th>
+<th>Dónde más vas a crecer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ML Engineer</td>
+<td>APIs, Git y terminal</td>
+<td>Pasar del modelo a un sistema que responde con citas, usa herramientas y se opera</td>
+</tr>
+<tr>
+<td>Data Scientist</td>
+<td>Python de software, APIs, Git y contenedores</td>
+<td>Código mantenible, tests, despliegue y recuperación</td>
+</tr>
+<tr>
+<td>Data Engineer</td>
+<td>Fundamentos de ML y APIs</td>
+<td>Llevar la calidad del dato a la calidad de la respuesta</td>
+</tr>
+<tr>
+<td>DevOps</td>
+<td>Python, SQL y fundamentos de ML</td>
+<td>Prompts, RAG y evaluar si las respuestas son buenas</td>
+</tr>
+<tr>
+<td>Backend Developer</td>
+<td>Python (si no es tu lenguaje) y ML</td>
+<td>Sistemas probabilísticos: evaluación, RAG y agentes</td>
+</tr>
+<tr>
+<td>Fullstack Developer</td>
+<td>Python, SQL y ML</td>
+<td>El servicio backend: estado y observabilidad</td>
+</tr>
+</tbody>
+</table></div></details>
+
+<h3 id="ml-engineer-ai-engineer">ML Engineer → AI Engineer</h3>
+<figure class="diagram"><a href="diagrams/ruta-ml-engineer.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-ml-engineer-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-ml-engineer-light.png" alt="Ruta ML Engineer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta ML Engineer → AI Engineer</strong> · <a href="diagrams/ruta-ml-engineer.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> Python, ML y datos. En D0 lo demuestras con un ejemplo propio; no se da por sabido.</li>
+<li><strong>Nivelación, si te falta:</strong> APIs → N08 <em>Introduction to APIs in Python</em>. Git → N09 <em>Introduction to Git</em>. Terminal → N10 <em>Introduction to Shell</em>.</li>
+<li><strong>Tu foco:</strong> pasar del modelo al sistema. Respuestas con citas (B03–B04), herramientas y agentes (B05–B07) y operar lo que construyes (B08–B10).</li>
+</ul>
+<h3 id="data-scientist-ai-engineer">Data Scientist → AI Engineer</h3>
+<figure class="diagram"><a href="diagrams/ruta-data-scientist.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-data-scientist-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-data-scientist-light.png" alt="Ruta Data Scientist → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Data Scientist → AI Engineer</strong> · <a href="diagrams/ruta-data-scientist.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> análisis, ML y notebooks.</li>
+<li><strong>Nivelación, si te falta:</strong><ul>
+<li>Si solo trabajas en notebooks → N03 <em>Introduction to Functions in Python</em>, N04 <em>Python Toolbox</em>, N05 <em>Writing Functions in Python</em> y N11 <em>Introduction to Object-Oriented Programming in Python</em>.</li>
+<li>APIs, Git y terminal → N08, N09 y N10.</li>
+<li>Contenedores → N14 <em>Understanding Data Engineering</em> y N15 <em>Containerization and Virtualization Concepts</em>.</li>
+</ul>
+</li>
+<li><strong>Tu foco:</strong> software que otros pueden mantener: contratos, tests, despliegue y recuperación (B01–B02 y B08–B10).</li>
+</ul>
+<h3 id="data-engineer-ai-engineer">Data Engineer → AI Engineer</h3>
+<figure class="diagram"><a href="diagrams/ruta-data-engineer.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-data-engineer-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-data-engineer-light.png" alt="Ruta Data Engineer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Data Engineer → AI Engineer</strong> · <a href="diagrams/ruta-data-engineer.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> pipelines, SQL y calidad del dato.</li>
+<li><strong>Nivelación, si te falta:</strong> evaluación de modelos → N16 <em>Understanding Machine Learning</em>. APIs u objetos en Python → N08 <em>Introduction to APIs in Python</em> y N11 <em>Introduction to Object-Oriented Programming in Python</em>.</li>
+<li><strong>Tu foco:</strong> llevar la calidad del dato a la calidad de la respuesta. Primero RAG (B03–B04); después estado, herramientas y evaluación de LLM (B05–B07).</li>
+</ul>
+<h3 id="devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</h3>
+<figure class="diagram"><a href="diagrams/ruta-devops.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-devops-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-devops-light.png" alt="Ruta DevOps → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta DevOps → AI Engineer</strong> · <a href="diagrams/ruta-devops.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> plataforma, contenedores, CI/CD y nube.</li>
+<li><strong>Nivelación, si te falta:</strong> Python → la rama N01–N08 y N11, solo lo que falte. SQL → N12 <em>Introduction to SQL</em> y N13 <em>Intermediate SQL</em>. ML → N16 <em>Understanding Machine Learning</em>.</li>
+<li><strong>Puedes acreditar con evidencia</strong> la parte de plataforma de B02, B08 y B09: te ahorras el estudio, no la entrega ni sus pruebas.</li>
+<li><strong>Tu foco:</strong> prompts, RAG y evaluación (B03–B07). Que un contenedor arranque no demuestra que las respuestas sean correctas.</li>
+</ul>
+<h3 id="backend-developer-ai-engineer">Backend Developer → AI Engineer</h3>
+<figure class="diagram"><a href="diagrams/ruta-backend.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-backend-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-backend-light.png" alt="Ruta Backend Developer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Backend Developer → AI Engineer</strong> · <a href="diagrams/ruta-backend.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> APIs, servicios y tests.</li>
+<li><strong>Nivelación, si te falta:</strong> si no trabajas en Python → N06 <em>Introduction to Python for Developers</em>, N07 <em>Intermediate Python for Developers</em> y N08 <em>Introduction to APIs in Python</em> (y N01–N05 y N11 si hace falta más base). ML → N16 <em>Understanding Machine Learning</em>.</li>
+<li><strong>Tu foco:</strong> sistemas que no siempre responden igual: datos de evaluación, RAG y agentes (B03–B07). Un HTTP 200 no significa que la respuesta sea buena.</li>
+</ul>
+<h3 id="fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</h3>
+<figure class="diagram"><a href="diagrams/ruta-fullstack.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-fullstack-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-fullstack-light.png" alt="Ruta Fullstack Developer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Fullstack Developer → AI Engineer</strong> · <a href="diagrams/ruta-fullstack.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> frontend y backend.</li>
+<li><strong>Nivelación, si te falta:</strong> Python, igual que Backend Developer. SQL → N12 <em>Introduction to SQL</em> y N13 <em>Intermediate SQL</em>. ML → N16 <em>Understanding Machine Learning</em>.</li>
+<li><strong>Tu foco:</strong> el servicio backend, su estado y su observabilidad (B01–B02, B05–B07 y B08–B10). La interfaz del caso final es opcional y no sustituye la API, la evaluación ni la operación.</li>
+</ul>
+<p><strong>Convalidar un bloque común:</strong> si ya dominas un curso, puedes saltarte su estudio, pero no su entrega. Presentas la evidencia de la entrega E correspondiente, el mentor la revisa y queda registrado qué se convalida. No se convalida B09 por conocer otra nube ni B05 por haber usado un panel de logs. El calendario solo se acorta después de esa revisión.</p>
+</section>
+<section class="sec"><h2 id="ruta-completa-de-un-vistazo">Ruta completa de un vistazo</h2>
+<p>Los IDs <strong>C</strong> son cursos; <strong>E</strong>, entregas propias; <strong>B</strong>, bloques. Dentro de cada bloque se sigue el orden mostrado. «Curso completo» = todos los capítulos y ejercicios de la ficha, no solo los vídeos.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th>Cursos en orden</th>
+<th>Entrega</th>
+<th>Dedicación base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="bloques.html#b01-ingenieria-python-y-api">B01 · Ingeniería Python y API</a></td>
+<td>C01 → C02</td>
+<td>E01</td>
+<td>8 h cursos + 6 h práctica + 1 h revisión = <strong>15 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b02-aws-identidad-y-coste">B02 · AWS, identidad y coste</a></td>
+<td>C03 → C04 → C05</td>
+<td>E02</td>
+<td>8 h cursos + 4 h práctica + 1 h revisión = <strong>13 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b03-llm-y-contexto">B03 · LLM y contexto</a></td>
+<td>C06 → C07 → C08 → C09 → C10 → C11</td>
+<td>E03</td>
+<td>15 h cursos + 6 h práctica + 1 h revisión = <strong>22 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b04-embeddings-y-rag">B04 · Embeddings y RAG</a></td>
+<td>C12 → C13 → C14</td>
+<td>E04</td>
+<td>9 h cursos + 10 h práctica + 1 h revisión = <strong>20 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b05-evaluacion-antes-de-agentes">B05 · Evaluación antes de agentes</a></td>
+<td>C15 → C16</td>
+<td>E05</td>
+<td>5 h cursos + 8 h práctica + 1 h revisión = <strong>14 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b06-tools-y-langgraph">B06 · Tools y LangGraph</a></td>
+<td>C17 → C18</td>
+<td>E06</td>
+<td>6 h cursos + 8 h práctica + 1 h revisión = <strong>15 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b07-mcp-y-conectores">B07 · MCP y conectores</a></td>
+<td>C19</td>
+<td>E07</td>
+<td>3 h cursos + 6 h práctica + 1 h revisión = <strong>10 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b08-api-segura-y-docker">B08 · API segura y Docker</a></td>
+<td>C20 → C21</td>
+<td>E08</td>
+<td>8 h cursos + 6 h práctica + 1 h revisión = <strong>15 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b09-entrega-en-aws">B09 · Entrega en AWS</a></td>
+<td>C22 → C23 → C24</td>
+<td>E09</td>
+<td>10 h cursos + 8 h práctica + 1 h revisión + 1 h lectura AWS = <strong>20 h</strong></td>
+</tr>
+<tr>
+<td><a href="bloques.html#b10-operacion-y-defensa-final">B10 · Operación y defensa final</a></td>
+<td>C25</td>
+<td>E10</td>
+<td>3 h cursos + 6 h práctica + 1 h revisión = <strong>10 h</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Regla de secuencia:</strong> no empieces una práctica que dependa de una entrega no aceptada (sí puedes adelantar lectura independiente). B05 (evaluación) precede a B06 (agentes) porque los cursos de tools/LangGraph la exigen y hay que medir el cambio que introduce el agente.</p>
+</section>
+<nav class="pager" aria-label="Navegación entre páginas"><a class="prev" rel="prev" href="index.html"><small>Anterior</small><strong>← Inicio</strong></a><a class="next" rel="next" href="conceptos.html"><small>Siguiente</small><strong>Conceptos →</strong></a></nav>
+</main>
+</div>
+<footer class="foot">Versión 0.2 · Actualizado el 8 de octubre de 2026 · Material formativo de ERNI.</footer>
+</body>
+</html>
