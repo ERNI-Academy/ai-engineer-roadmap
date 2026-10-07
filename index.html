@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERNI · Roadmap AI Engineer</title>
+<meta name="description" content="Guía del alumno del programa AI Engineer de ERNI: diagnóstico, rutas por perfil, cursos, entregas y calendario.">
+<style>
+:root {
+  --bg: #f7f6f2; --surface: #fffefb; --text: #1f2933; --muted: #5b6573;
+  --heading: #0f2a47; --accent: #0b6e99; --accent-soft: #e3f0f6; --border: #dedbd2;
+  --code: #eeece6; --tip: #e7f4ec; --tip-border: #2f7d4f; --info: #e6eef8; --info-border: #2f5d8c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12171d; --surface: #1a2027; --text: #dde3ea; --muted: #9aa5b1;
+    --heading: #f1f4f7; --accent: #6cc3e8; --accent-soft: #1d2f3a; --border: #2c343d;
+    --code: #232a32; --tip: #19302a; --tip-border: #5cbf86; --info: #1b2836; --info-border: #79a8d8;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+header.top { background: var(--heading); color: #fff; padding: 28px 16px; }
+@media (prefers-color-scheme: dark) { header.top { background: #0b2238; } }
+header.top .wrap { max-width: 1200px; margin: 0 auto; }
+header.top p.eyebrow { margin: 0 0 6px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; opacity: .8; }
+header.top h1 { margin: 0; font-size: clamp(26px, 4vw, 38px); line-height: 1.15; }
+header.top p.sub { margin: 8px 0 0; opacity: .85; }
+.layout { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 32px; padding: 24px 16px 64px; }
+nav.toc { position: sticky; top: 16px; align-self: start; max-height: calc(100vh - 32px); overflow-y: auto; font-size: 14px; }
+nav.toc p { margin: 0 0 8px; font-weight: 700; color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .08em; }
+nav.toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--border); }
+nav.toc li a { display: block; padding: 4px 12px; color: var(--muted); text-decoration: none; }
+nav.toc li a:hover { color: var(--accent); }
+main { min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 8px 32px 32px; }
+main h2 { color: var(--heading); margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--border); font-size: 26px; }
+main h2:first-child { margin-top: 16px; border-top: 0; }
+main h3 { color: var(--heading); margin-top: 32px; font-size: 20px; }
+main a { color: var(--accent); }
+main code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: .92em; }
+main pre { background: var(--code); padding: 14px; border-radius: 8px; overflow-x: auto; }
+main pre code { padding: 0; background: none; }
+main table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; margin: 16px 0; font-size: 14.5px; }
+main th, main td { border: 1px solid var(--border); padding: 7px 10px; text-align: left; vertical-align: top; }
+main th { background: var(--accent-soft); color: var(--heading); }
+.callout { border-left: 4px solid var(--info-border); background: var(--info); border-radius: 8px; padding: 4px 16px; margin: 16px 0; }
+.callout.tip { border-color: var(--tip-border); background: var(--tip); }
+.callout-title, details.callout summary { font-weight: 700; margin: 10px 0 4px; cursor: default; }
+details.callout summary { cursor: pointer; padding: 6px 0; }
+footer { max-width: 1200px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 13px; }
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  nav.toc { position: static; max-height: none; }
+  main { padding: 4px 16px 24px; }
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<p class="eyebrow">ERNI · Programa AI Engineer</p>
+<h1>Roadmap AI Engineer</h1>
+<p class="sub">Guía del alumno: diagnóstico, rutas por perfil, cursos, entregas y calendario.</p>
+</div></header>
+<div class="layout">
+<nav class="toc" aria-label="Índice"><p>Índice</p><ul>
+<li><a href="#que-viene-de-erni-y-que-se-propone-aqui">Qué viene de ERNI y qué se propone aquí</a></li>
+<li><a href="#nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</a></li>
+<li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li>
+<li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li>
+<li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li>
+<li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li>
+<li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li>
+<li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li>
+<li><a href="#enunciado-comun">Enunciado común</a></li>
+<li><a href="#datos-que-debes-preparar-en-e01">Datos que debes preparar en E01</a></li>
+<li><a href="#contrato-observable-del-servicio">Contrato observable del servicio</a></li>
+<li><a href="#estructura-minima-de-lo-que-vas-a-entregar">Estructura mínima de lo que vas a entregar</a></li>
+<li><a href="#que-dataset-debes-entregar">Qué dataset debes entregar</a></li>
+<li><a href="#que-debe-pasar-al-final">Qué debe pasar al final</a></li>
+<li><a href="#dedicacion-y-organizacion">Dedicación y organización</a></li>
+<li><a href="#acceso-licencias-y-mantenimiento">Acceso, licencias y mantenimiento</a></li>
+</ul></nav>
+<main>
+<h2 id="ai-engineer-guia-del-alumno">AI Engineer · guía del alumno</h2>
+<p><strong>Versión 0.2 · 7 de septiembre de 2026 · propuesta para revisión de ERNI.</strong></p>
+<p>Un recorrido completo para pasar de un perfil técnico a construir, evaluar, desplegar y operar una aplicación de IA generativa. Incluye <strong>25 cursos en orden, 10 entregas acumulativas, 16 cursos de nivelación condicional y un calendario de 20 semanas a 8 h/semana</strong>. No es un catálogo para elegir al azar: sigue D0 → B01 → … → B10.</p>
+<div class="callout tip"><p class="callout-title">Empieza aquí</p><ol>
+<li>Lee <a href="#antes-de-empezar">Antes de empezar</a> y realiza <a href="#diagnostico-de-entrada">D0</a>.</li>
+<li>Completa solo la <a href="#nivelacion-con-cursos-enlazados">nivelación</a> que no puedas acreditar.</li>
+<li>Sigue <a href="#ruta-completa-de-un-vistazo">los diez bloques</a> en orden: curso → ejercicios del curso → entrega propia → revisión.</li>
+<li>Usa <a href="#calendario-de-20-semanas">el calendario</a> y <a href="#checklist-y-seguimiento">la checklist</a>.</li>
+<li>El resultado final es <a href="#caso-final">un único asistente de soporte reproducible</a>, no diez proyectos inconexos.</li>
+</ol></div>
+
+<p><strong>Navegación:</strong> <a href="#rutas-de-entrada">Mi perfil</a> · <a href="#evaluacion-y-condiciones-de-avance">Cómo se aprueba</a> · <a href="#accesos-licencias-y-mantenimiento">Accesos y licencias</a></p>
+<h3 id="que-viene-de-erni-y-que-se-propone-aqui">Qué viene de ERNI y qué se propone aquí</h3>
+<p>El documento corporativo <strong>AI Engineer | Generative AI</strong> enlaza el track <a href="https://www.datacamp.com/tracks/associate-ai-engineer-for-developers">Associate AI Engineer for Developers</a>. Se han verificado sus diez cursos y se conservan en esta ruta. <strong>El orden adaptado, los quince cursos complementarios, las prácticas, los tiempos de trabajo y los criterios de aceptación son propuesta didáctica propia</strong>, no decisiones ya aprobadas.</p>
+<p>El track aporta 29 h nominales de cursos. Por sí solo no cubre todo el resultado operativo que pide ERNI; por eso la ruta añade Python aplicado, FastAPI, evaluación, agentes con estado, Docker y AWS. Los dos proyectos bonus del track no son requisitos adicionales de este programa ni sustituyen sus entregables.</p>
+<h2 id="antes-de-empezar">Antes de empezar</h2>
+<p>Dirigido a profesionales de desarrollo, datos o plataforma. No exige haber sido investigador ni entrenar un modelo fundacional desde cero. Tampoco convierte a una persona sin fundamentos de programación en AI Engineer en veinte semanas.</p>
+<p><strong>Preparación obligatoria del participante:</strong></p>
+<ul>
+<li>Ordenador con Python, Git y un entorno de desarrollo disponible. Docker debe estar disponible antes de B08 y AWS CLI antes de B09. Registrar versiones en el repositorio; seguir el entorno del curso cuando sus ejemplos dependan de él.</li>
+<li>Capacidad para leer el material técnico en inglés. Los entregables y la defensa pueden redactarse en español. La disponibilidad de traducciones, subtítulos y adaptaciones se confirma con la cuenta del alumno; no se ha supuesto.</li>
+<li>Licencia o acceso completo a los cursos seleccionado por ERNI. Las fichas públicas permiten comprobar catálogo y temario, <strong>no prueban que la cuenta de cada empleado tenga acceso</strong>.</li>
+<li>Repositorio privado o entorno formativo autorizado, acceso del mentor y un proveedor de modelos permitido para datos sintéticos.</li>
+<li>Antes de gastar en APIs o cloud: cuenta/proyecto de laboratorio, región, límite económico, responsable y fecha de retirada. No usar una cuenta personal como alternativa automática a un acceso corporativo pendiente.</li>
+</ul>
+<p><strong>Asignación de responsabilidades antes del kickoff:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Qué debe dejar preparado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coordinación de formación</td>
+<td>Participantes, licencias, tiempo protegido, calendario y persona que valida cada bloque</td>
+</tr>
+<tr>
+<td>Mentor AI/software</td>
+<td>Revisión de D0 y E01–E08; dudas técnicas y aceptación del caso</td>
+</tr>
+<tr>
+<td>Referente AWS/plataforma</td>
+<td>Sandbox, red, roles acotados, control de coste; revisión de E02, E09 y E10</td>
+</tr>
+<tr>
+<td>Alumno</td>
+<td>Cursos, repositorio, evidencias, registro semanal y correcciones</td>
+</tr>
+</tbody>
+</table>
+<p>Los nombres concretos y las licencias <strong>siguen pendientes de confirmación del grupo</strong>. La ruta está definida; esas decisiones habilitan impartirla. Si falta acceso, se registra «bloqueado por acceso», no «no apto». Se puede continuar con contenidos y prácticas locales independientes; no se declara superado un despliegue simulado.</p>
+<h2 id="diagnostico-de-entrada">Diagnóstico de entrada</h2>
+<p><strong>D0 · 2 h orientativas de preparación y revisión de evidencias.</strong> No se asignan exenciones por puesto, años ni certificados solamente.</p>
+<p>Presenta un repositorio o ejemplo propio sanitizado y explica cómo funciona. El mentor comprueba seis capacidades con estas evidencias mínimas:</p>
+<table>
+<thead>
+<tr>
+<th>Capacidad</th>
+<th>Evidencia suficiente para no repetir fundamentos</th>
+<th>Si falta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>Ejecutar un módulo; explicar funciones, clases, excepciones, iteradores y dependencias; corregir un fallo pequeño de un ejemplo propio</td>
+<td>N01–N07 y N11 según la carencia</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Consumir una API JSON, distinguir petición/respuesta, autenticación y errores; probar una entrada inválida</td>
+<td>N08, después de N06–N07</td>
+</tr>
+<tr>
+<td>Git y terminal</td>
+<td>Leer un diff e historial; reproducir la ejecución desde un directorio limpio y gestionar configuración sin publicar secretos</td>
+<td>N09 y N10</td>
+</tr>
+<tr>
+<td>SQL/datos</td>
+<td>Consultar filas por identificador y ámbito, filtrar y agregar; explicar una carga idempotente y una versión de datos</td>
+<td>N12–N14</td>
+</tr>
+<tr>
+<td>ML/LLM</td>
+<td>Diferenciar entrenamiento e inferencia, modelo y aplicación; explicar particiones de evaluación, error y límites de una respuesta generada</td>
+<td>N16 antes de C06</td>
+</tr>
+<tr>
+<td>Plataforma</td>
+<td>Distinguir imagen, contenedor y máquina virtual; explicar límites de acceso y coste</td>
+<td>N14–N15; B02 sigue formando parte de la ruta</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Salida D0:</strong> <code>docs/diagnostico.md</code> con capacidad, evidencia, resultado «acreditada / refuerzo», IDs de cursos necesarios, mentor y fecha. Una acreditación de conocimientos equivalentes evita repetir el curso de nivelación correspondiente; no exige matricularse para obtener un certificado.</p>
+<p>Hay dos ramas introductorias de Python porque las fichas de DataCamp tienen prerrequisitos distintos. N01–N05 sigue su rama de datos; N06–N08, la de desarrollo. <strong>No se obliga a repetir ambas desde cero si D0 demuestra los contenidos coincidentes.</strong> El mentor registra explícitamente la equivalencia, incluidas las capacidades que pide cada ficha.</p>
+<h3 id="nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</h3>
+<p>Consulta de todas las fichas: <strong>07/09/2026</strong>. En cada fila se indican los capítulos exactos que se completan; todos incluyen sus ejercicios. El orden lo determina «Antes», no el orden alfabético del catálogo.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Curso de DataCamp</th>
+<th>Antes</th>
+<th>Capítulos</th>
+<th>Duración publicada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N01</td>
+<td><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Introduction to Python</a></td>
+<td>Ninguno</td>
+<td>1–4, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N02</td>
+<td><a href="https://www.datacamp.com/courses/intermediate-python">Intermediate Python</a></td>
+<td>N01</td>
+<td>1–5, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N03</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-functions-in-python">Introduction to Functions in Python</a></td>
+<td>N02</td>
+<td>1–3, completos</td>
+<td>3 h</td>
+</tr>
+<tr>
+<td>N04</td>
+<td><a href="https://www.datacamp.com/courses/python-toolbox">Python Toolbox</a></td>
+<td>N03</td>
+<td>1–3, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N05</td>
+<td><a href="https://www.datacamp.com/courses/writing-functions-in-python">Writing Functions in Python</a></td>
+<td>N04</td>
+<td>1–4, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N06</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-python-for-developers">Introduction to Python for Developers</a></td>
+<td>Ninguno</td>
+<td>1–3, completos</td>
+<td>3 h</td>
+</tr>
+<tr>
+<td>N07</td>
+<td><a href="https://www.datacamp.com/courses/intermediate-python-for-developers">Intermediate Python for Developers</a></td>
+<td>N06</td>
+<td>1–3, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N08</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-apis-in-python">Introduction to APIs in Python</a></td>
+<td>N07</td>
+<td>1–2, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N09</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-git">Introduction to Git</a></td>
+<td>Ninguno</td>
+<td>1–2, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N10</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-shell">Introduction to Shell</a></td>
+<td>Ninguno</td>
+<td>1–5, completos</td>
+<td>4 h</td>
+</tr>
+<tr>
+<td>N11</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-object-oriented-programming-in-python">Introduction to Object-Oriented Programming in Python</a></td>
+<td>N05</td>
+<td>1–3, completos</td>
+<td>3 h</td>
+</tr>
+<tr>
+<td>N12</td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-sql">Introduction to SQL</a></td>
+<td>Ninguno</td>
+<td>1, completo</td>
+<td>45 min; rango 30–60 min</td>
+</tr>
+<tr>
+<td>N13</td>
+<td><a href="https://www.datacamp.com/courses/intermediate-sql">Intermediate SQL</a></td>
+<td>N12</td>
+<td>1–4, completos</td>
+<td>5 h; rango 4–6 h</td>
+</tr>
+<tr>
+<td>N14</td>
+<td><a href="https://www.datacamp.com/courses/understanding-data-engineering">Understanding Data Engineering</a></td>
+<td>Ninguno</td>
+<td>1–3, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N15</td>
+<td><a href="https://www.datacamp.com/courses/containerization-and-virtualization-concepts">Containerization and Virtualization Concepts</a></td>
+<td>N14</td>
+<td>1–2, completos</td>
+<td>2 h</td>
+</tr>
+<tr>
+<td>N16</td>
+<td><a href="https://www.datacamp.com/courses/understanding-machine-learning">Understanding Machine Learning</a></td>
+<td>Ninguno</td>
+<td>1–3, completos</td>
+<td>2 h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cuándo hacerlos:</strong> N01–N13 pendientes, antes de B01; N16 antes de B03; N14–N15 antes de B08. Se pueden adelantar todos durante la nivelación. La tabla respeta dependencias: por ejemplo, N11 necesita N05, que depende de N04 → N03 → N02 → N01.</p>
+<p><strong>Entrega de nivelación:</strong> <code>docs/nivelacion.md</code> con enlaces o constancias de los cursos completados y un ejemplo reproducible por capacidad que faltaba. Python: transformar registros y manejar un registro inválido; APIs: petición correcta y fallo controlado; SQL: filtros y agregación sobre doce registros ficticios; Git/terminal: reconstruir el ejemplo desde su README; ML: justificar separación de datos de desarrollo y test; contenedores: explicar qué empaqueta una imagen y qué queda fuera.</p>
+<p><strong>Aceptación:</strong> el mentor vuelve a comprobar únicamente las capacidades pendientes de D0. Reservar <strong>4 h propias de práctica/revisión si se necesita nivelación</strong>, además de los cursos; ampliar si no basta, no rebajar el criterio.</p>
+<p>La suma nominal de los dieciséis cursos es <strong>46 h 45 min</strong>, pero <strong>no es una carga obligatoria para todos</strong>. Se añade solo lo asignado; N12 muestra 45 min y un rango de 30–60 min, y N13 5 h y un rango de 4–6 h. Se usan esos metadatos, no las antiguas descripciones promocionales que aún mencionan otras duraciones.</p>
+<h2 id="rutas-de-entrada">Rutas de entrada</h2>
+<p>Todos terminan con las mismas capacidades demostradas y las mismas diez entregas. La diferencia es la nivelación y el reconocimiento de conocimientos previos, no un estándar de salida más bajo.</p>
+<h3 id="ml-engineer-ai-engineer">ML Engineer → AI Engineer</h3>
+<p>D0 → refuerzo N08/N09/N10 si faltan APIs o ingeniería de servicio → <strong>B01</strong> → B02 → B03 → B04 → B05 → B06 → B07 → B08 → B09 → B10. Prioridad: pasar del modelo al sistema, grounding, herramientas y operación. Python, ML o SQL se acreditan con evidencia; no se dan por sabidos.</p>
+<h3 id="data-scientist-ai-engineer">Data Scientist → AI Engineer</h3>
+<p>D0 → N03–N05/N11 si el trabajo se limita a notebooks; N08–N10 para API, Git y terminal; N14–N15 si faltan bases de contenedores → <strong>B01</strong> y secuencia completa. Prioridad: software mantenible, contratos, testing, despliegue y recuperación.</p>
+<h3 id="data-engineer-ai-engineer">Data Engineer → AI Engineer</h3>
+<p>D0 → N16 si faltan fundamentos de evaluación de modelos; N08/N11 si faltan APIs u objetos Python → <strong>B01</strong> y secuencia completa. Prioridad: unir calidad del dato, recuperación y calidad de respuesta; después estado, tools y evaluación LLM.</p>
+<h3 id="devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</h3>
+<p>D0 → rama Python necesaria N01–N08/N11, N12–N13 si falta SQL y N16 → <strong>B01</strong> y secuencia completa. B02/B08/B09 permiten acreditar conocimientos de plataforma, pero se mantienen las pruebas del asistente. Prioridad: prompts, RAG y evaluación semántica; desplegar un contenedor no demuestra que las respuestas sean correctas.</p>
+<h3 id="backend-developer-ai-engineer">Backend Developer → AI Engineer</h3>
+<p>D0 → si no trabaja en Python, rama N06–N08 más equivalencias o refuerzo N01–N05/N11; N16 para ML → <strong>B01</strong> y secuencia completa. Prioridad: comportamiento probabilístico, datos de evaluación, recuperación y agentes. No confundir un HTTP 200 con calidad.</p>
+<h3 id="fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</h3>
+<p>D0 → nivelación Python equivalente a backend, N12–N13 si falta SQL y N16 → <strong>B01</strong> y secuencia completa. Prioridad: servicio backend, estado y observabilidad; no dedicar el programa a hacer una interfaz. El frontend del capstone es opcional y no sustituye API, evaluación ni operación.</p>
+<p><strong>Convalidación de bloques comunes:</strong> se puede omitir el estudio de un curso ya dominado, pero no su entrega. Presentar la evidencia mínima de E correspondiente, superar la revisión y registrar qué se convalida. No se convalida automáticamente B09 por conocer otra nube, ni B05 por haber usado un panel de logs. El calendario se acorta solo después de esa revisión.</p>
+<h2 id="ruta-completa-de-un-vistazo">Ruta completa de un vistazo</h2>
+<p>Los IDs <strong>C</strong> son cursos; <strong>E</strong> son entregas propias; <strong>B</strong> son bloques. Dentro de cada bloque se sigue el orden mostrado. «Curso completo» significa todos los capítulos y ejercicios indicados en la ficha, no solo ver los vídeos.</p>
+<table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th>Cursos en orden</th>
+<th>Entrega</th>
+<th>Dedicación base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#b01-ingenieria-python-y-api">B01 · Ingeniería Python y API</a></td>
+<td>C01 → C02</td>
+<td>E01</td>
+<td>8 h cursos + 6 h práctica + 1 h revisión = <strong>15 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b02-aws-identidad-y-coste">B02 · AWS, identidad y coste</a></td>
+<td>C03 → C04 → C05</td>
+<td>E02</td>
+<td>8 h cursos + 4 h práctica + 1 h revisión = <strong>13 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b03-llm-y-contexto">B03 · LLM y contexto</a></td>
+<td>C06 → C07 → C08 → C09 → C10 → C11</td>
+<td>E03</td>
+<td>15 h cursos + 6 h práctica + 1 h revisión = <strong>22 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b04-embeddings-y-rag">B04 · Embeddings y RAG</a></td>
+<td>C12 → C13 → C14</td>
+<td>E04</td>
+<td>9 h cursos + 10 h práctica + 1 h revisión = <strong>20 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b05-evaluacion-antes-de-agentes">B05 · Evaluación antes de agentes</a></td>
+<td>C15 → C16</td>
+<td>E05</td>
+<td>5 h cursos + 8 h práctica + 1 h revisión = <strong>14 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b06-tools-y-langgraph">B06 · Tools y LangGraph</a></td>
+<td>C17 → C18</td>
+<td>E06</td>
+<td>6 h cursos + 8 h práctica + 1 h revisión = <strong>15 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b07-mcp-y-conectores">B07 · MCP y conectores</a></td>
+<td>C19</td>
+<td>E07</td>
+<td>3 h cursos + 6 h práctica + 1 h revisión = <strong>10 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b08-api-segura-y-docker">B08 · API segura y Docker</a></td>
+<td>C20 → C21</td>
+<td>E08</td>
+<td>8 h cursos + 6 h práctica + 1 h revisión = <strong>15 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b09-entrega-en-aws">B09 · Entrega en AWS</a></td>
+<td>C22 → C23 → C24</td>
+<td>E09</td>
+<td>10 h cursos + 8 h práctica + 1 h revisión + 1 h lectura AWS = <strong>20 h</strong></td>
+</tr>
+<tr>
+<td><a href="#b10-operacion-y-defensa-final">B10 · Operación y defensa final</a></td>
+<td>C25</td>
+<td>E10</td>
+<td>3 h cursos + 6 h práctica + 1 h revisión = <strong>10 h</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Regla de secuencia:</strong> no empezar una práctica que dependa de una entrega no aceptada. Se puede adelantar lectura independiente. La evaluación B05 precede a los agentes B06 porque los cursos seleccionados de tools/LangGraph la exigen y porque necesitamos medir el cambio que introducirá el agente.</p>
+<h2 id="caso-final">Caso final</h2>
+<h3 id="enunciado-comun">Enunciado común</h3>
+<p>Construye <strong>Expediente Claro</strong>, un asistente ficticio para operadores de soporte. Responde sobre procedimientos usando documentación con citas y consulta, solo en lectura, el estado de un expediente autorizado. No modifica expedientes, envía mensajes, toma decisiones crediticias ni utiliza documentos reales de ERNI o clientes.</p>
+<p>Desde E01 trabajas en <strong>un único repositorio</strong>. Las entregas siguientes añaden capacidades a la anterior, preservando sus pruebas. El capstone está incluido en esas entregas; no es otro trabajo al final.</p>
+<p><strong>Stack de referencia de este laboratorio, propuesto:</strong></p>
+<ul>
+<li>Python + FastAPI; OpenAI como proveedor de aprendizaje, mediante una cuenta permitida y configuración externa.</li>
+<li>Chroma para el índice local del caso, tal como se introduce en C12. Pinecone se practica en C13 para aprender la alternativa gestionada; no se exige una segunda base vectorial en el capstone.</li>
+<li>SQLite para los doce expedientes sintéticos de solo lectura; LangChain/LangGraph para la orquestación; una única consulta de negocio expuesta por MCP local con transporte stdio.</li>
+<li>LangSmith para evaluación/trazas del ejercicio y CloudWatch para operación AWS. Se permite únicamente información sintética en la plataforma de formación. Langfuse puede ser una adaptación posterior aprobada, <strong>no una segunda implementación exigida ni cubierta por estos cursos</strong>.</li>
+<li>Docker → Amazon ECR → ECS Fargate, con CloudFormation y un pipeline CI/CD. Una tarea de laboratorio; sin alta disponibilidad, Kubernetes, RDS, autoscaling avanzado ni carga real de producción.</li>
+</ul>
+<p>Esta elección reduce decisiones incidentales del alumno. No establece un estándar tecnológico corporativo ni exige esos proveedores en todos los proyectos futuros.</p>
+<h3 id="datos-que-debes-preparar-en-e01">Datos que debes preparar en E01</h3>
+<p>Redacta <strong>ocho documentos ficticios</strong>, 200–400 palabras y al menos dos secciones cada uno:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Tema y hechos mínimos que debe fijar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DOC-01</td>
+<td>Alta: campos necesarios y cuándo se considera recibido un expediente</td>
+</tr>
+<tr>
+<td>DOC-02</td>
+<td>Documentación requerida: lista de documentos ficticios y qué ocurre si falta uno</td>
+</tr>
+<tr>
+<td>DOC-03</td>
+<td>Seguimiento: canal de consulta y datos que se pueden mostrar</td>
+</tr>
+<tr>
+<td>DOC-04</td>
+<td>Cierre: condiciones de cierre y forma de informar del resultado</td>
+</tr>
+<tr>
+<td>DOC-05</td>
+<td>Estados: significado de recibido, en_revision y cerrado; transiciones permitidas</td>
+</tr>
+<tr>
+<td>DOC-06</td>
+<td>Plazos: tres plazos ficticios; aclarar que son ejemplos, no compromisos reales</td>
+</tr>
+<tr>
+<td>DOC-07</td>
+<td>Permisos: área A y B solo pueden consultar sus propios expedientes</td>
+</tr>
+<tr>
+<td>DOC-08</td>
+<td>Preguntas frecuentes: tres preguntas nuevas y sus respuestas consistentes con los otros documentos</td>
+</tr>
+</tbody>
+</table>
+<p>Metadatos: <code>documentId</code>, <code>version</code>, <code>title</code>, <code>updatedAt</code>; cada sección tiene <code>sectionId</code>. Escribe una segunda versión de DOC-06 cambiando <strong>un plazo</strong> y documentando la fecha efectiva. Conserva la antigua como archivo histórico, excluida del índice activo.</p>
+<p>Genera de forma reproducible doce expedientes: <strong>A-001…A-006 y B-001…B-006</strong>, dos por cada estado en cada área. Esquema: <code>expedientes(id, area, estado, updated_at)</code>. Usa fechas artificiales explícitas, no la fecha del sistema para resultados esperados. Dos identidades sintéticas: una autorizada para A y otra para B.</p>
+<p>La autorización se deriva de la identidad validada en la aplicación y se aplica también dentro de la herramienta. <strong>El LLM no elige el ámbito autorizado ni recibe acceso SQL libre.</strong></p>
+<h3 id="contrato-observable-del-servicio">Contrato observable del servicio</h3>
+<ul>
+<li><code>GET /healthz</code>: proceso vivo.</li>
+<li><code>GET /readyz</code>: configuración y dependencias necesarias preparadas. No generar llamadas LLM costosas por cada sondeo.</li>
+<li><code>POST /v1/consultas</code>: <code>message</code> y <code>caseId</code> opcional; autenticación separada del cuerpo.</li>
+</ul>
+<p>La respuesta incluye <code>requestId</code>, <code>status</code>, <code>answer</code>, <code>citations</code> y <code>expediente</code>.</p>
+<ul>
+<li><code>status</code>: <code>answered | not_found | forbidden | dependency_error</code>.</li>
+<li><code>citations</code>: lista de <code>documentId</code>, <code>version</code> y <code>sectionId</code>; debe resolver a contenido vigente.</li>
+<li><code>expediente</code>: nulo o <code>{id, estado, updatedAt}</code>, sin campos no necesarios.</li>
+<li>Consulta solo SQL: citas documentales vacías permitidas; los datos deben coincidir exactamente con SQL.</li>
+<li>Sin evidencia documental: <code>not_found</code>, sin inventar una respuesta.</li>
+<li>HTTP 200 para respuesta o ausencia de evidencia; 400/422 para entrada inválida, 401 para credencial ausente/inválida, 403 para consulta de expediente no accesible y 503 para fallo de dependencia imprescindible.</li>
+<li>Un ID inexistente y un ID de otra área producen <strong>el mismo error genérico 403</strong> en esta práctica: no se revela si existe fuera del ámbito. El informe de pruebas interno distingue ambas causas, la API pública no.</li>
+</ul>
+<h3 id="estructura-minima-de-lo-que-vas-a-entregar">Estructura mínima de lo que vas a entregar</h3>
+<pre><code class="language-text">README.md                     instalación, ejecución, pruebas y límites
+src/                          API, lógica, retrieval y herramientas
+tests/                        pruebas unitarias, contrato e integración
+data/corpus/                  documentos sintéticos y versiones
+data/fixtures/                registros e identidades de prueba
+scripts/                      generación/carga reproducible
+prompts/                      instrucciones versionadas
+evals/dev.jsonl                desarrollo
+evals/test.jsonl               reserva confirmatoria
+evals/manifest.json            versiones del corpus, datos y evaluaciones
+evals/results/                resultados, configuración y métricas
+docs/diagnostico.md            capacidades y nivelación acordada
+docs/entregas/E01.md...E10.md   evidencia por entrega y revisión
+docs/architecture.md           componentes y decisiones
+docs/runbook.md                operación, incidentes, rollback y retirada
+infra/                        CloudFormation y configuración no secreta
+Dockerfile                    imagen del servicio
+archivo de dependencias y lock
+configuración del pipeline
+</code></pre>
+<p>Los ficheros son un contrato de entrega, <strong>no artefactos ya creados por esta roadmap</strong>. El README debe indicar comandos reales que funcionen, no instrucciones genéricas del tipo «arrancar la aplicación». Nunca guardar credenciales en ejemplos, imágenes, commits o informes.</p>
+<h2 id="b01-ingenieria-python-y-api">B01 · Ingeniería Python y API</h2>
+<ul>
+<li><strong>C01. <a href="https://www.datacamp.com/courses/software-engineering-principles-in-python">Software Engineering Principles in Python</a> — 4 h.</strong> Capítulos 1–4 completos: Módulos, clases, documentación y pruebas. Antes: N03.</li>
+<li><strong>C02. <a href="https://www.datacamp.com/courses/introduction-to-fastapi">Introduction to FastAPI</a> — 4 h.</strong> Capítulos 1–3 completos: HTTP, validación, ejecución asíncrona y pruebas de una API JSON. Antes: N08 y N11.</li>
+</ul>
+<p><strong>Antes:</strong> D0 y nivelación pendiente de Python, APIs, Git y SQL. <strong>Resultado:</strong> servicio mantenible y corpus preparado.</p>
+<p><strong>E01 · 6 h de práctica.</strong> Crea el repositorio y los datos especificados en el caso. Implementa la API con respuestas simuladas, validación de entradas y separación de transporte/lógica. Documenta configuración y dependencias. No conectes todavía modelos ni AWS.</p>
+<p><strong>Entregar:</strong> README ejecutable, scripts/fixtures, API, pruebas y <code>docs/entregas/E01.md</code>. Incluye al menos: salud, preparación, entrada válida, mensaje vacío, tipo incorrecto y carga repetida de datos.</p>
+<p><strong>Avance:</strong> desde un entorno limpio otra persona puede arrancar el servicio y ejecutar los tests; el contrato coincide con la especificación; dos cargas no duplican expedientes; no hay secretos. Mentor AI/software revisa la entrega en 1 h.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b02-aws-identidad-y-coste">B02 · AWS, identidad y coste</h2>
+<ul>
+<li><strong>C03. <a href="https://www.datacamp.com/courses/aws-concepts">AWS Concepts</a> — 2 h.</strong> Capítulos 1–3 completos: Servicios, infraestructura global y economía cloud. Antes: Sin prerrequisito de curso.</li>
+<li><strong>C04. <a href="https://www.datacamp.com/courses/aws-cloud-technology-and-services">AWS Cloud Technology and Services Concepts</a> — 3 h.</strong> Capítulos 1–3 completos: Cómputo, red, almacenamiento y servicios de datos e IA. Antes: C03.</li>
+<li><strong>C05. <a href="https://www.datacamp.com/courses/aws-security-and-cost-management">AWS Security and Cost Management Concepts</a> — 3 h.</strong> Capítulos 1–3 completos: Identidad, red, responsabilidad compartida y control de gasto. Antes: C03; cursar después de C04.</li>
+</ul>
+<p><strong>Antes:</strong> E01 aceptada. <strong>Resultado:</strong> saber qué se desplegará y bajo qué límites.</p>
+<p><strong>E02 · 4 h de práctica.</strong> Dibuja el laboratorio del caso y fija sandbox, región, repositorio, servicios, permisos, datos, proveedor de modelos y plan de retirada. Distingue rol de ejecución de tarea y permisos de la aplicación. Prepara una estimación de coste y registra la cifra máxima autorizada por coordinación, no una cantidad inventada por el alumno.</p>
+<p><strong>Entregar:</strong> <code>docs/architecture.md</code>, <code>docs/laboratorio.md</code> y E02 con comprobación de identidad/ámbito, acceso a recursos permitidos, responsable del gasto y verificación de avisos.</p>
+<p><strong>Avance:</strong> referente AWS confirma cuenta/red/roles y control de coste. Una alarma de presupuesto <strong>no corta el gasto</strong>: documentar cómo detener las tareas y retirar recursos. Sin autorización no se consumen APIs ni cloud; puede continuar el trabajo local con proveedor simulado. No se considera E02 completamente aceptada hasta comprobar los accesos.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b03-llm-y-contexto">B03 · LLM y contexto</h2>
+<ul>
+<li><strong>C06. <a href="https://www.datacamp.com/courses/large-language-models-llms-concepts">Large Language Models (LLMs) Concepts</a> — 2 h.</strong> Capítulos 1–4 completos: Fundamentos, entrenamiento a nivel conceptual, límites y riesgos. Antes: N16.</li>
+<li><strong>C07. <a href="https://www.datacamp.com/courses/llmops-concepts">LLMOps Concepts</a> — 1 h.</strong> Capítulos 1–3 completos: Ciclo completo: ideación, desarrollo, evaluación y operación. Antes: C06.</li>
+<li><strong>C08. <a href="https://www.datacamp.com/courses/working-with-the-openai-api">Working with the OpenAI API</a> — 3 h.</strong> Capítulos 1–3 completos: Integración de modelos, instrucciones y conversaciones. Antes: N02.</li>
+<li><strong>C09. <a href="https://www.datacamp.com/courses/prompt-engineering-with-the-openai-api">Prompt Engineering with the OpenAI API</a> — 4 h.</strong> Capítulos 1–4 completos: Diseño de instrucciones, ejemplos y pruebas de prompts. Antes: C08.</li>
+<li><strong>C10. <a href="https://www.datacamp.com/courses/working-with-the-openai-responses-api">Working with the OpenAI Responses API</a> — 3 h.</strong> Capítulos 1–3 completos: Responses API, herramientas, salidas estructuradas y streaming. Antes: C08; seguir C09 en esta ruta.</li>
+<li><strong>C11. <a href="https://www.datacamp.com/courses/working-with-hugging-face">Working with Hugging Face</a> — 2 h.</strong> Capítulos 1–2 completos: Modelos y datasets del Hub; uso de pipelines. Antes: N03.</li>
+</ul>
+<p><strong>Antes:</strong> E01; N16 acreditado. E02 habilita las llamadas reales; sin ella, trabajar con simuladores.</p>
+<p><strong>E03 · 6 h de práctica.</strong> Integra Responses API con un fragmento documental explícito, sin búsqueda automática. Conserva dos versiones de prompt y compáralas sobre <strong>diez ejemplos de desarrollo</strong>: seis respondibles, dos sin evidencia, uno con contexto contradictorio y uno con fallo de proveedor. Añade pruebas de salida inválida y timeout mediante simulador.</p>
+<p><strong>Entregar:</strong> integración, configuración externa de proveedor/modelo, prompts, ejemplos, resultados comparativos y E03. Registrar tokens/coste cuando el proveedor los reporte; si falta un dato, marcarlo como no disponible.</p>
+<p><strong>Avance:</strong> esquema válido, ausencia de contexto tratada sin invención, timeout controlado y ninguna clave en trazas. Realizar una comprobación real mínima con datos sintéticos y configuración efectiva registrada. Justifica qué cambió entre prompts y por qué el tono convincente no demuestra verdad. Revisión AI/software de 1 h.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b04-embeddings-y-rag">B04 · Embeddings y RAG</h2>
+<ul>
+<li><strong>C12. <a href="https://www.datacamp.com/courses/introduction-to-embeddings-with-the-openai-api">Introduction to Embeddings with the OpenAI API</a> — 3 h.</strong> Capítulos 1–3 completos: Embeddings, similitud, búsqueda y almacenamiento vectorial. Antes: C08 y N04.</li>
+<li><strong>C13. <a href="https://www.datacamp.com/courses/building-ai-applications-with-pinecone">Building AI Applications with Pinecone</a> — 3 h.</strong> Capítulos 1–3 completos: Índices, operaciones vectoriales y ajuste de recuperación. Antes: C12.</li>
+<li><strong>C14. <a href="https://www.datacamp.com/courses/developing-llm-applications-with-langchain">Developing LLM Applications with LangChain</a> — 3 h.</strong> Capítulos 1–3 completos: Cadenas, agentes básicos e integración de RAG. Antes: C09 y C12; seguir C13.</li>
+</ul>
+<p><strong>Antes:</strong> E03 y N04 acreditados. <strong>Resultado:</strong> responder usando evidencia recuperada y versionada.</p>
+<p><strong>E04 · 10 h de práctica.</strong> Ingiere los ocho documentos, divide por secciones, genera embeddings y crea el índice Chroma. Registra tamaño de fragmento, solapamiento si lo usas, metadatos y top-k. La versión antigua de DOC-06 debe quedar fuera de las búsquedas activas. Practica Pinecone en el curso, pero no mantengas dos índices activos del capstone.</p>
+<p><strong>Entregar:</strong> pipeline idempotente, inventario de fragmentos, configuración, diez preguntas con secciones esperadas y E04. Incluye una pregunta por documento, una sobre el plazo actualizado y otra que requiera combinar documentos. Añade un caso ajeno al corpus como prueba de abstención.</p>
+<p><strong>Avance:</strong> al menos <strong>8 de las 10 preguntas</strong> recuperan la sección esperada entre los primeros cinco resultados; todas las citas emitidas existen y están vigentes; el caso ajeno produce <code>not_found</code>; reingestar no duplica contenido. Explica por separado fallos del buscador y de la respuesta. Estos son umbrales del ejercicio, no garantías de servicio.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b05-evaluacion-antes-de-agentes">B05 · Evaluación antes de agentes</h2>
+<ul>
+<li><strong>C15. <a href="https://www.datacamp.com/courses/llm-application-fundamentals-with-langchain">LLM Application Fundamentals with LangChain</a> — 3 h (ficha: 2–4 h).</strong> Capítulos 1–2 completos: Salida estructurada, memoria conversacional y streaming. Antes: N06 y N07; seguir C14.</li>
+<li><strong>C16. <a href="https://www.datacamp.com/courses/llm-application-evaluation-with-langsmith">LLM Application Evaluation with LangSmith</a> — 2 h (ficha: 1–3 h).</strong> Módulo 1 completo: Evaluación sistemática y diagnóstico de aplicaciones. Antes: C15.</li>
+</ul>
+<p><strong>Antes:</strong> E04. <strong>Resultado:</strong> un baseline medible antes de introducir más autonomía.</p>
+<p><strong>E05 · 8 h de práctica.</strong> Prepara el dataset y manifiesto de <a href="#dataset-y-evaluacion-final">Dataset y evaluación final</a>. Instrumenta etapas con un identificador de petición, duración, error y consumo disponible. Usa LangSmith con datos sintéticos; conservar también resultados exportables para que la evidencia no dependa de una captura de pantalla.</p>
+<p><strong>Entregar:</strong> <code>evals/dev.jsonl</code>, <code>evals/test.jsonl</code>, manifiesto, evaluador, resultados del baseline y E05. Compara dos configuraciones de retrieval/prompt <strong>solo sobre desarrollo</strong>, usando los mismos casos y registrando costes.</p>
+<p><strong>Avance:</strong> se puede reproducir la comparación; se identifican recuperación, modelo y herramienta —si existe—; se conoce qué casos siguen sin implementar. SQL/mixtos permanecen pendientes hasta E06, no se cuentan como éxitos. Test queda congelado y no se usa para elegir la mejor configuración. Revisión de 1 h.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b06-tools-y-langgraph">B06 · Tools y LangGraph</h2>
+<ul>
+<li><strong>C17. <a href="https://www.datacamp.com/courses/llm-tool-use-with-langchain">LLM Tool Use with LangChain</a> — 3 h (ficha: 2–4 h).</strong> Módulo 1 completo: Contratos de herramientas e integración con datos externos. Antes: C15 y C16.</li>
+<li><strong>C18. <a href="https://www.datacamp.com/courses/agentic-systems-with-langgraph">Agentic Systems with LangGraph</a> — 3 h (ficha: 2–4 h).</strong> Módulo 1 completo: Estado, control y ejecución de sistemas agénticos. Antes: C15, C16 y C17.</li>
+</ul>
+<p><strong>Antes:</strong> E05 y, dentro de este bloque, C17 antes de C18. <strong>Resultado:</strong> añadir solo la autonomía que se pueda justificar.</p>
+<p><strong>E06 · 8 h de práctica.</strong> Implementa una herramienta <code>get_case_status</code> que consulta por ID y ámbito autenticado, sin SQL libre ni escrituras. Integra un grafo capaz de resolver consulta documental, consulta SQL o una combinación. Compara el resultado con un flujo determinista simple; explica qué aporta el agente y qué coste añade.</p>
+<p><strong>Entregar:</strong> contrato de herramienta, grafo, pruebas y E06 con comparación sobre desarrollo.</p>
+<p><strong>Avance:</strong> los valores SQL coinciden exactamente; no se consulta otra área; el contexto autorizado no procede del modelo; el estado de una petición no pasa a otra. Límite académico: <strong>máximo tres invocaciones de herramienta por petición</strong>, timeout por dependencia y salida controlada al agotar el límite. Probar ID inexistente, área ajena, repetición de llamada y caída de herramienta. No se pide un sistema multiagente complejo.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b07-mcp-y-conectores">B07 · MCP y conectores</h2>
+<ul>
+<li><strong>C19. <a href="https://www.datacamp.com/courses/introduction-to-model-context-protocol-mcp">Introduction to Model Context Protocol (MCP)</a> — 3 h.</strong> Capítulos 1–3 completos: Cliente/servidor MCP, herramientas, recursos y preparación operativa. Antes: N05 y N08; seguir B06.</li>
+</ul>
+<p><strong>Antes:</strong> E06; N05 y N08 acreditados. <strong>Resultado:</strong> desacoplar un conector sin perder control.</p>
+<p><strong>E07 · 6 h de práctica.</strong> Expón la misma consulta de negocio por un servidor MCP local y consúmela desde el asistente. Usa stdio para acotar el laboratorio; no abras un servidor público. La identidad/ámbito sigue viniendo del contexto de ejecución validado, no de un argumento que redacte el LLM.</p>
+<p><strong>Entregar:</strong> contrato y esquema de herramienta, arranque cliente/servidor, pruebas de paridad con E06 y E07. Documentar dónde se conserva el contexto de autorización y cómo se aísla entre las dos identidades de prueba.</p>
+<p><strong>Avance:</strong> misma respuesta y permisos antes/después de MCP; argumentos inválidos se rechazan; servidor no disponible produce un error controlado; una sola ruta activa de consulta, sin duplicar reglas SQL. Registrar compatibilidad/versiones efectivas. Revisión AI/software de 1 h.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b08-api-segura-y-docker">B08 · API segura y Docker</h2>
+<ul>
+<li><strong>C20. <a href="https://www.datacamp.com/courses/deploying-ai-into-production-with-fastapi">Deploying AI into Production with FastAPI</a> — 4 h.</strong> Capítulos 1–4 completos: Integración de modelos, seguridad, versionado y observabilidad de API. Antes: C02 y C06.</li>
+<li><strong>C21. <a href="https://www.datacamp.com/courses/introduction-to-docker">Introduction to Docker</a> — 4 h.</strong> Capítulos 1–3 completos: Contenedores, imágenes propias y endurecimiento básico. Antes: N10 y N15.</li>
+</ul>
+<p><strong>Antes:</strong> E07 y nivelación de terminal/contenedores. <strong>Resultado:</strong> empaquetar el asistente manteniendo sus controles.</p>
+<p><strong>E08 · 6 h de práctica.</strong> Completa autenticación/autorización en la API, acota tamaño de entrada y respuestas, evita filtrar detalles internos y empaqueta el servicio y su conector MCP. La identidad de prueba se obtiene de credenciales externas al repositorio; no es un campo libre del mensaje.</p>
+<p><strong>Entregar:</strong> Dockerfile, instrucciones de ejecución, configuración de ejemplo sin valores secretos, pruebas negativas y E08.</p>
+<p><strong>Avance:</strong> imagen reproducible, ejecución sin usuario administrador del contenedor, salud/preparación correctas y tests previos en verde. Comprobar credencial inválida, expediente de otra área, instrucción irrelevante dentro de un documento, timeout y ausencia de evidencia. Revisión de repositorio, imagen y logs sin exposición de secretos. Un fallo de aislamiento o una credencial expuesta <strong>bloquea B09</strong>, aunque el resto funcione.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b09-entrega-en-aws">B09 · Entrega en AWS</h2>
+<ul>
+<li><strong>C22. <a href="https://www.datacamp.com/courses/introduction-to-aws-boto-in-python">Introduction to AWS Boto in Python</a> — 4 h.</strong> Capítulos 1–4 completos: Uso programático de AWS, S3 y tratamiento seguro de archivos. Antes: N04 y C03.</li>
+<li><strong>C23. <a href="https://www.datacamp.com/courses/deploying-applications-on-aws">Deploying Applications on AWS</a> — 3 h.</strong> Capítulos 1–3 completos: Desplegar, proteger y observar aplicaciones AWS. Antes: N01, N02 y C22.</li>
+<li><strong>C24. <a href="https://www.datacamp.com/courses/automating-deployments-on-aws">Automating Deployments on AWS</a> — 3 h.</strong> Capítulos 1–3 completos: Pipelines CI/CD, estrategias de entrega y CloudFormation. Antes: C03 y C04; seguir C23.</li>
+</ul>
+<p><strong>Antes:</strong> E08 aceptada y sandbox de E02 operativo. <strong>Resultado:</strong> ejecutar en AWS el mismo artefacto que se probó.</p>
+<p><strong>Lecturas L-AWS · 1 h estimada propia, no duración de un curso.</strong> Leer, en este orden:</p>
+<ol>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html">Preparación de Amazon ECS</a>: cuenta, red, permisos y herramientas. No crear otra cuenta; usar el sandbox asignado.</li>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html">Imagen Docker y Amazon ECR</a>: requisitos, crear imagen, publicarla en ECR y retirada.</li>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-fargate.html">Primer servicio Linux en Fargate</a>: prerrequisitos y pasos 1–5.</li>
+<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-with-cloudformation.html">ECS con CloudFormation</a>: plantilla, stack y revisión de cambios.</li>
+</ol>
+<p><strong>Adaptación obligatoria del tutorial:</strong> usar la imagen de E08 y su puerto, no el ejemplo de Apache; digest/versiones fijas, no <code>latest</code>; roles acotados y red aprobada del sandbox. El ejemplo público incluye acceso amplio y HTTP: <strong>no copiar esas aperturas</strong>. El acceso al laboratorio debe usar el ingreso HTTPS o túnel seguro previsto por plataforma y quedar restringido. No otorgarse permisos administrativos para hacer funcionar el tutorial.</p>
+<p><strong>E09 · 8 h de práctica.</strong> Publica la imagen en ECR, crea una definición de tarea/servicio Fargate de una réplica, configura logs y secretos por referencia y reproduce la infraestructura con CloudFormation. El índice y SQL son snapshots ficticios de lectura; no se requiere persistencia de escrituras. Construye un pipeline que ejecute tests/evaluaciones de desarrollo, construya imagen y requiera aprobación para entregar al sandbox.</p>
+<p><strong>Entregar:</strong> <code>infra/</code>, configuración del pipeline, commit/digest/configuración desplegados, evidencias de salud y consulta completa, rollback y E09.</p>
+<p><strong>Avance:</strong> pruebas fallidas bloquean la entrega; una consulta real completa funciona en el entorno; se puede volver a un artefacto anterior; existen pasos de retirada exactos sobre recursos propios. C23 enseña también Lambda/API Gateway, pero <strong>no exige desplegar una segunda copia del capstone en Lambda</strong>. Revisión conjunta AI/plataforma de 1 h.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="b10-operacion-y-defensa-final">B10 · Operación y defensa final</h2>
+<ul>
+<li><strong>C25. <a href="https://www.datacamp.com/courses/monitoring-and-troubleshooting-aws">Monitoring and Troubleshooting AWS</a> — 3 h.</strong> Capítulos 1–3 completos: Métricas, logs, alarmas y trazas distribuidas. Antes: C03; seguir B09.</li>
+</ul>
+<p><strong>Antes:</strong> E09. <strong>Resultado:</strong> demostrar límites, diagnóstico y recuperación, y permitir el relevo.</p>
+<p><strong>E10 · 6 h de práctica.</strong> Configura métricas, logs y una alarma útil en CloudWatch; relaciona el requestId con la traza de aplicación. Ejecuta el test reservado sobre el candidato fijado y una incidencia controlada de dependencia indisponible. Recupera el servicio siguiendo el runbook.</p>
+<p><strong>Entregar:</strong> informe final, manifiesto evaluado, diagrama del estado real, dashboard/alarma comprobados, runbook, demostración y E10. Separar resultados locales y del sandbox; marcar toda prueba que no se haya ejecutado.</p>
+<p><strong>Avance:</strong> superar <a href="#dataset-y-evaluacion-final">la aceptación final</a>, identificar dónde se consume el tiempo y el coste, demostrar rollback/recuperación y retirada de los recursos del ejercicio. Otra persona debe poder arrancar/verificar usando solo la documentación. Una solución que funciona solo en la máquina del autor no cierra el caso.</p>
+<p><strong>Sesión final de 1 h incluida en la ruta:</strong> 15 min de demostración; 15 min de decisiones/alternativas; 15 min de diagnóstico de un fallo controlado; 15 min de revisión de evidencias y próximos pasos.</p>
+<p><a href="#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
+<h2 id="dataset-y-evaluacion-final">Dataset y evaluación final</h2>
+<p><strong>Propuesta académica:</strong> las cantidades y umbrales de esta sección son criterios del laboratorio, no SLO, políticas ni métricas aprobadas de un cliente.</p>
+<h3 id="que-dataset-debes-entregar">Qué dataset debes entregar</h3>
+<p>En E03 se crean diez ejemplos para aprender y comparar prompts. En E05 prepara un conjunto versionado más completo: <strong>24 casos de desarrollo y 12 de test reservado</strong>. Se pueden incorporar ejemplos iniciales a desarrollo, nunca reutilizarlos en test.</p>
+<p>Seis categorías, con cuatro casos de desarrollo y dos de test por categoría:</p>
+<ol>
+<li>Documental: hechos presentes en el corpus, incluida la versión vigente de un plazo.</li>
+<li>SQL: estado exacto de un expediente del área autorizada.</li>
+<li>Mixta: procedimiento documentado más estado SQL.</li>
+<li>Sin evidencia: pregunta fuera del corpus; no debe responder inventando.</li>
+<li>Acceso denegado: expediente de otra área o inexistente, con respuesta externa indistinguible.</li>
+<li>Dependencia fallida: proveedor/modelo o herramienta imprescindible no disponible.</li>
+</ol>
+<p>Cada línea JSONL registra: <code>id</code>, <code>split</code>, <code>datasetVersion</code>, <code>input</code>, <code>identityFixture</code>, <code>expectedStatus</code>, <code>expectedFacts</code>, <code>evidenceRefs</code>, <code>allowedTools</code>, <code>forbiddenFacts</code> y <code>faultFixture</code>. Los valores esperados se extraen de los documentos/SQL ficticios; <strong>no se acepta una respuesta LLM como verdad de referencia sin revisión</strong>.</p>
+<p>El manifiesto fija versión/hash de corpus, fixtures, particiones y configuración; el informe añade commit, modelos efectivos, prompt, retrieval y fecha. El test se congela antes de optimizar con desarrollo. La persona que lo redacta conoce sus casos: por tanto, no se presenta como examen ciego ni validación independiente. Si un fallo de test se usa para corregir el sistema, se crea una nueva reserva confirmatoria antes de volver a afirmar generalización.</p>
+<h3 id="que-debe-pasar-al-final">Qué debe pasar al final</h3>
+<table>
+<thead>
+<tr>
+<th>Comprobación</th>
+<th>Aceptación del ejercicio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Respuestas útiles</td>
+<td>Al menos 5 de los 6 casos respondibles del test contienen todos los hechos esperados, sin contradicciones ni afirmaciones factuales no respaldadas por las secciones citadas o el SQL autorizado</td>
+</tr>
+<tr>
+<td>Contrato</td>
+<td>12/12 respuestas cumplen esquema y estado esperado; errores controlados sin trazas internas</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>Todos los datos de expediente emitidos coinciden exactamente con la fuente y con el ámbito autorizado</td>
+</tr>
+<tr>
+<td>Citas</td>
+<td>Todas las citas emitidas resuelven a secciones vigentes; no se cita DOC-06 archivado</td>
+</tr>
+<tr>
+<td>Abstención y fallos</td>
+<td>Todos los casos sin evidencia, denegados y de dependencia fallida respetan el contrato</td>
+</tr>
+<tr>
+<td>Seguridad y aislamiento</td>
+<td>Todas las pruebas de credenciales inválidas, cruce de áreas y aislamiento entre peticiones pasan; sin secretos en artefactos/logs</td>
+</tr>
+<tr>
+<td>Operación</td>
+<td>Reproducción, consulta completa en sandbox, alarma comprobada, rollback y recuperación demostrados</td>
+</tr>
+<tr>
+<td>Handoff</td>
+<td>Un revisor reproduce la ejecución con README/runbook e identifica límites pendientes</td>
+</tr>
+</tbody>
+</table>
+<p>La exigencia de 5/6 es una regla del pequeño caso académico, <strong>no una estimación fiable de calidad poblacional</strong>. No presentar esos doce ejemplos como un benchmark productivo.</p>
+<p>Al evaluar cada respuesta, comprobar tanto <code>expectedFacts</code> como cualquier hecho adicional. Que una cita exista no demuestra que respalde la afirmación a la que acompaña.</p>
+<p>Medir recuperación separada de generación: secciones relevantes en top-k, hechos correctos y correspondencia de citas. Medir latencia por etapa y total, errores, tokens y coste cuando estén disponibles. Informar siempre tamaño de muestra, entorno y concurrencia; con esta muestra los percentiles son ilustrativos, no validan un SLO. Comparar alternativas sobre el mismo conjunto de desarrollo, no con capturas o ejemplos escogidos.</p>
+<h2 id="evaluacion-y-condiciones-de-avance">Evaluación y condiciones de avance</h2>
+<p><strong>Al acabar cada bloque:</strong> subir la evidencia de la entrega al repositorio de formación, completar su informe y reservar la revisión indicada. El mentor responde «aceptada / corregir / bloqueada por acceso», con fallos concretos y próxima comprobación. No avanzar a capacidades dependientes de una entrega pendiente.</p>
+<p>Cada <code>docs/entregas/E##.md</code> debe contener:</p>
+<ul>
+<li>Cursos completados o convalidados y fundamento de la convalidación.</li>
+<li>Versión exacta evaluada y cómo reproducirla.</li>
+<li>Entregable, pruebas ejecutadas, resultados y evidencia enlazada.</li>
+<li>Decisiones, alternativa descartada y limitaciones.</li>
+<li>Estado, revisor, fecha y correcciones pendientes.</li>
+</ul>
+<p><strong>Rúbrica transversal</strong>, aplicada a ingeniería/API, datos/RAG, integración LLM, tools/MCP, evaluación, seguridad, cloud/operación y comunicación:</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No hay evidencia suficiente o la funcionalidad no funciona</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Lo ejecuta con instrucciones detalladas y necesita ayuda para diagnosticar</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lo ejecuta, explica y diagnostica autónomamente dentro del alcance del ejercicio</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Compara alternativas y adapta la solución justificando impacto y límites</td>
+</tr>
+</tbody>
+</table>
+<p>Para cerrar el programa: <strong>nivel 2 o superior en todas las competencias y todas las condiciones finales superadas</strong>. No se compensa una fuga de permisos o un fallo de seguridad con una media alta.</p>
+<p>Los cursos sirven para aprender; las entregas demuestran aplicación. Un certificado de curso, de track o aprobar este laboratorio no asigna automáticamente Junior, Professional, Senior ni Expert, ni acredita ownership de producción sin acompañamiento.</p>
+<h2 id="calendario-de-20-semanas">Calendario de 20 semanas</h2>
+<p><strong>Plan de referencia: 8 horas protegidas por semana</strong>, en el orden siguiente. Si un curso aparece en dos semanas, se continúa desde donde se dejó. El alumno utiliza los IDs C para abrir sus enlaces en los bloques; no tiene que elegir otro curso.</p>
+<table>
+<thead>
+<tr>
+<th>Semana</th>
+<th>Qué hacer, en este orden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>D0 · diagnóstico (2 h); C01 (4 h); C02 (2 h)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>C02 (2 h); E01 · práctica (6 h)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>E01 · revisión (1 h); C03 (2 h); C04 (3 h); C05 (2 h)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>C05 (1 h); E02 · práctica (4 h); E02 · revisión (1 h); C06 (2 h)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>C07 (1 h); C08 (3 h); C09 (4 h)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>C10 (3 h); C11 (2 h); E03 · práctica (3 h)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>E03 · práctica (3 h); E03 · revisión (1 h); C12 (3 h); C13 (1 h)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>C13 (2 h); C14 (3 h); E04 · práctica (3 h)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>E04 · práctica (7 h); E04 · revisión (1 h)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>C15 (3 h); C16 (2 h); E05 · práctica (3 h)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>E05 · práctica (5 h); E05 · revisión (1 h); C17 (2 h)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>C17 (1 h); C18 (3 h); E06 · práctica (4 h)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>E06 · práctica (4 h); E06 · revisión (1 h); C19 (3 h)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>E07 · práctica (6 h); E07 · revisión (1 h); C20 (1 h)</td>
+</tr>
+<tr>
+<td>15</td>
+<td>C20 (3 h); C21 (4 h); E08 · práctica (1 h)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>E08 · práctica (5 h); E08 · revisión (1 h); C22 (2 h)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>C22 (2 h); C23 (3 h); C24 (3 h)</td>
+</tr>
+<tr>
+<td>18</td>
+<td>L-AWS · lecturas (1 h); E09 · práctica (7 h)</td>
+</tr>
+<tr>
+<td>19</td>
+<td>E09 · práctica (1 h); E09 · revisión (1 h); C25 (3 h); E10 · práctica (3 h)</td>
+</tr>
+<tr>
+<td>20</td>
+<td>E10 · práctica (3 h); E10 · revisión (1 h); reserva para ajustes (4 h)</td>
+</tr>
+</tbody>
+</table>
+<p>El calendario reserva 160 h: <strong>156 h de base + 4 h de margen</strong>. Las diez revisiones son sesiones sobre evidencia, no diez clases magistrales adicionales. El caso final ya está incluido en las prácticas y no se vuelve a sumar.</p>
+<h3 id="dedicacion-y-organizacion">Dedicación y organización</h3>
+<table>
+<thead>
+<tr>
+<th>Partida</th>
+<th>Horas de alumno</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D0: diagnóstico</td>
+<td>2 h estimadas</td>
+</tr>
+<tr>
+<td>25 cursos</td>
+<td>75 h nominales publicadas en fichas</td>
+</tr>
+<tr>
+<td>Lecturas oficiales AWS</td>
+<td>1 h estimada propia</td>
+</tr>
+<tr>
+<td>E01–E10: prácticas, integración y documentación</td>
+<td>68 h estimadas propias</td>
+</tr>
+<tr>
+<td>Diez revisiones de entregas</td>
+<td>10 h estimadas propias</td>
+</tr>
+<tr>
+<td><strong>Base</strong></td>
+<td><strong>156 h</strong></td>
+</tr>
+<tr>
+<td>Nivelación</td>
+<td>Solo los cursos asignados; hasta 46 h 45 min nominales si hicieran falta todos, más 4 h de práctica/revisión estimadas</td>
+</tr>
+<tr>
+<td>Repeticiones, bloqueos o recuperación de carencias</td>
+<td>Se registran y replantean; no se ocultan dentro de un porcentaje de avance</td>
+</tr>
+</tbody>
+</table>
+<p>C15, C17 y C18 publican 3 h como referencia y rango de 2–4 h; C16 publica 2 h y rango de 1–3 h. Por ello los cursos comunes pueden oscilar <strong>71–79 h según esas fichas</strong>, antes de diferencias individuales. Las 75 h no son un cronómetro ni una garantía de finalización.</p>
+<p>A 8 h/semana: unas 20 semanas sin nivelación; a 6 h/semana: unas 26 semanas. Si hicieran falta todos los refuerzos y sus 4 h de práctica, la base sería <strong>206 h 45 min</strong>, unas 26 semanas a 8 h o 35 a 6 h. No se promete cerrar dentro de 3–6 meses con cualquier dedicación o punto de entrada.</p>
+<p><strong>Tiempo docente separado:</strong> revisar las diez entregas puede requerir hasta 10 h por participante si es individual, además de coordinación y preparación. La estimación corporativa previa de preparar unas diez sesiones durante unas cinco semanas se refería al trabajo de preparación del programa; no se usa como dedicación del alumno ni se declara ya realizado.</p>
+<h2 id="checklist-y-seguimiento">Checklist y seguimiento</h2>
+<p>Las siguientes casillas son <strong>del futuro participante</strong>, no indican que los cursos o el laboratorio ya se hayan ejecutado.</p>
+<ul>
+<li>[ ] Acceso a formación, repositorio, mentor y tiempo protegido confirmados.</li>
+<li>[ ] D0 revisado y nivelación necesaria identificada.</li>
+<li>[ ] Nivelación asignada superada o conocimientos equivalentes acreditados.</li>
+<li>[ ] B01: C01–C02 y E01 aceptada.</li>
+<li>[ ] B02: C03–C05 y E02 aceptada.</li>
+<li>[ ] B03: C06–C11 y E03 aceptada.</li>
+<li>[ ] B04: C12–C14 y E04 aceptada.</li>
+<li>[ ] B05: C15–C16 y E05 aceptada.</li>
+<li>[ ] B06: C17–C18 y E06 aceptada.</li>
+<li>[ ] B07: C19 y E07 aceptada.</li>
+<li>[ ] B08: C20–C21 y E08 aceptada.</li>
+<li>[ ] B09: C22–C24, lecturas L-AWS y E09 aceptada.</li>
+<li>[ ] B10: C25, evaluación final y E10 aceptada.</li>
+<li>[ ] Handoff revisado y recursos del laboratorio retirados.</li>
+<li>[ ] Resultado registrado por competencias, sin promoción automática.</li>
+</ul>
+<p><strong>Seguimiento semanal mínimo:</strong> fecha, bloque, último curso/capítulo, horas reales, próxima entrega, evidencia, bloqueo y siguiente acción. Un curso cuenta como completo/convalidado; una entrega, solo como aceptada tras revisión. No inventar porcentajes a partir de vídeos vistos.</p>
+<details class="callout abstract"><summary>Plantilla para la revisión semanal</summary><p>Semana:
+Bloque y curso/capítulo:
+Horas reales / previstas:
+Evidencia entregada:
+Estado de la entrega: pendiente / en revisión / corregir / aceptada / bloqueada por acceso
+Bloqueo y responsable:
+Siguiente acción y fecha:
+Revisor:</p></details>
+
+<h2 id="accesos-licencias-y-mantenimiento">Accesos, licencias y mantenimiento</h2>
+<h3 id="acceso-licencias-y-mantenimiento">Acceso, licencias y mantenimiento</h3>
+<ul>
+<li>DataCamp: catálogo público verificado; acceso completo, plan empresarial y condiciones de cada participante pendientes de confirmar. «Start free» no significa que todo el programa sea gratuito.</li>
+<li>AWS: documentación pública; cuenta, consumo y recursos del laboratorio requieren autorización y presupuesto. No se asume Free Tier.</li>
+<li>OpenAI, Pinecone y LangSmith: usar los entornos de ejercicio del curso cuando estén disponibles y la cuenta autorizada para el caso propio. Su disponibilidad concreta no se ha probado. No crear cuentas ni gastos por iniciativa del alumno sin el acuerdo de formación.</li>
+<li>No se ha verificado contenido accesible solo tras matrícula ni calidad pedagógica mediante realización íntegra de los cursos. La selección se basa en las fichas primarias y se debe pilotar.</li>
+<li>Antes de cada cohorte, comprobar cambios de URL, capítulos, versiones y dependencias. Si un material se retira, coordinación fija un sustituto equivalente antes del paso afectado; no trasladar al alumno la tarea de reconstruir la ruta.</li>
+<li>Mantener separadas licencia de formación, asistente de código, consumo API y cloud. Una licencia de herramienta no cubre automáticamente las otras partidas.</li>
+</ul>
+</main>
+</div>
+<footer>Versión 0.2 · Actualizado el 7 de octubre de 2026 · Material formativo de ERNI.</footer>
+</body>
+</html>
