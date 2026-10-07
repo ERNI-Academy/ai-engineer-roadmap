@@ -33,6 +33,9 @@ nav.toc p { margin: 0 0 8px; font-weight: 700; color: var(--muted); text-transfo
 nav.toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--border); }
 nav.toc li a { display: block; padding: 4px 12px; color: var(--muted); text-decoration: none; }
 nav.toc li a:hover { color: var(--accent); }
+nav.toc li > a { font-weight: 600; color: var(--text); }
+nav.toc ul ul { border-left: 0; margin: 0 0 6px; }
+nav.toc ul ul li a { padding: 2px 12px 2px 24px; font-weight: 400; color: var(--muted); font-size: 13px; }
 main { min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 8px 32px 32px; }
 main h2 { color: var(--heading); margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--border); font-size: 26px; }
 main h2:first-child { margin-top: 16px; border-top: 0; }
@@ -64,22 +67,27 @@ footer { max-width: 1200px; margin: 0 auto; padding: 0 16px 40px; color: var(--m
 </div></header>
 <div class="layout">
 <nav class="toc" aria-label="Índice"><p>Índice</p><ul>
-<li><a href="#que-viene-de-erni-y-que-se-propone-aqui">Qué viene de ERNI y qué se propone aquí</a></li>
-<li><a href="#nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</a></li>
-<li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li>
-<li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li>
-<li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li>
-<li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li>
-<li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li>
-<li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li>
-<li><a href="#enunciado-comun">Enunciado común</a></li>
-<li><a href="#datos-que-debes-preparar-en-e01">Datos que debes preparar en E01</a></li>
-<li><a href="#contrato-observable-del-servicio">Contrato observable del servicio</a></li>
-<li><a href="#estructura-minima-de-lo-que-vas-a-entregar">Estructura mínima de lo que vas a entregar</a></li>
-<li><a href="#que-dataset-debes-entregar">Qué dataset debes entregar</a></li>
-<li><a href="#que-debe-pasar-al-final">Qué debe pasar al final</a></li>
-<li><a href="#dedicacion-y-organizacion">Dedicación y organización</a></li>
-<li><a href="#acceso-licencias-y-mantenimiento">Acceso, licencias y mantenimiento</a></li>
+<li><a href="#ai-engineer-guia-del-alumno">AI Engineer · guía del alumno</a><ul><li><a href="#que-viene-de-erni-y-que-se-propone-aqui">Qué viene de ERNI y qué se propone aquí</a></li></ul></li>
+<li><a href="#antes-de-empezar">Antes de empezar</a></li>
+<li><a href="#diagnostico-de-entrada">Diagnóstico de entrada</a><ul><li><a href="#nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</a></li></ul></li>
+<li><a href="#rutas-de-entrada">Rutas de entrada</a><ul><li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li><li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li><li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li><li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li><li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li><li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li></ul></li>
+<li><a href="#ruta-completa-de-un-vistazo">Ruta completa de un vistazo</a></li>
+<li><a href="#caso-final">Caso final</a><ul><li><a href="#enunciado-comun">Enunciado común</a></li><li><a href="#datos-que-debes-preparar-en-e01">Datos que debes preparar en E01</a></li><li><a href="#contrato-observable-del-servicio">Contrato observable del servicio</a></li><li><a href="#estructura-minima-de-lo-que-vas-a-entregar">Estructura mínima de lo que vas a entregar</a></li></ul></li>
+<li><a href="#b01-ingenieria-python-y-api">B01 · Ingeniería Python y API</a></li>
+<li><a href="#b02-aws-identidad-y-coste">B02 · AWS, identidad y coste</a></li>
+<li><a href="#b03-llm-y-contexto">B03 · LLM y contexto</a></li>
+<li><a href="#b04-embeddings-y-rag">B04 · Embeddings y RAG</a></li>
+<li><a href="#b05-evaluacion-antes-de-agentes">B05 · Evaluación antes de agentes</a></li>
+<li><a href="#b06-tools-y-langgraph">B06 · Tools y LangGraph</a></li>
+<li><a href="#b07-mcp-y-conectores">B07 · MCP y conectores</a></li>
+<li><a href="#b08-api-segura-y-docker">B08 · API segura y Docker</a></li>
+<li><a href="#b09-entrega-en-aws">B09 · Entrega en AWS</a></li>
+<li><a href="#b10-operacion-y-defensa-final">B10 · Operación y defensa final</a></li>
+<li><a href="#dataset-y-evaluacion-final">Dataset y evaluación final</a><ul><li><a href="#que-dataset-debes-entregar">Qué dataset debes entregar</a></li><li><a href="#que-debe-pasar-al-final">Qué debe pasar al final</a></li></ul></li>
+<li><a href="#evaluacion-y-condiciones-de-avance">Evaluación y condiciones de avance</a></li>
+<li><a href="#calendario-de-20-semanas">Calendario de 20 semanas</a><ul><li><a href="#dedicacion-y-organizacion">Dedicación y organización</a></li></ul></li>
+<li><a href="#checklist-y-seguimiento">Checklist y seguimiento</a></li>
+<li><a href="#accesos-licencias-y-mantenimiento">Accesos, licencias y mantenimiento</a></li>
 </ul></nav>
 <main>
 <h2 id="ai-engineer-guia-del-alumno">AI Engineer · guía del alumno</h2>
@@ -883,7 +891,6 @@ Siguiente acción y fecha:
 Revisor:</p></details>
 
 <h2 id="accesos-licencias-y-mantenimiento">Accesos, licencias y mantenimiento</h2>
-<h3 id="acceso-licencias-y-mantenimiento">Acceso, licencias y mantenimiento</h3>
 <ul>
 <li>DataCamp: catálogo público verificado; acceso completo, plan empresarial y condiciones de cada participante pendientes de confirmar. «Start free» no significa que todo el programa sea gratuito.</li>
 <li>AWS: documentación pública; cuenta, consumo y recursos del laboratorio requieren autorización y presupuesto. No se asume Free Tier.</li>
