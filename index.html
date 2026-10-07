@@ -596,20 +596,109 @@ footer { max-width: 1200px; margin: 0 auto; padding: 0 16px 40px; color: var(--m
 <p><strong>Aceptación:</strong> el mentor vuelve a comprobar únicamente las capacidades pendientes de D0. Reservar <strong>4 h propias de práctica/revisión si se necesita nivelación</strong>, además de los cursos; ampliar si no basta, no rebajar el criterio.</p>
 <p>La suma nominal de los dieciséis cursos es <strong>46 h 45 min</strong>, pero <strong>no es una carga obligatoria para todos</strong>. Se añade solo lo asignado; N12 muestra 45 min y un rango de 30–60 min, y N13 5 h y un rango de 4–6 h. Se usan esos metadatos, no las antiguas descripciones promocionales que aún mencionan otras duraciones.</p>
 <h2 id="rutas-de-entrada">Rutas de entrada</h2>
-<p>Todos terminan con las mismas capacidades demostradas y las mismas diez entregas. La diferencia es la nivelación y el reconocimiento de conocimientos previos, no un estándar de salida más bajo.</p>
+<p><strong>Todos llegáis al mismo sitio por el mismo camino. Solo cambia por dónde empiezas.</strong></p>
+<ol>
+<li><strong>Diagnóstico (D0, 2 h con tu mentor).</strong> Enseñas algo tuyo y el mentor comprueba qué ya dominas.</li>
+<li><strong>Nivelación, solo si D0 detecta un hueco.</strong> Haces únicamente los cursos de ese hueco (<a href="#nivelacion-con-cursos-enlazados">ver la lista de cursos</a>). Si no hay hueco, te la saltas.</li>
+<li><strong>Ruta común B01 → B10, igual para todos.</strong> Mismas diez entregas y mismo nivel de exigencia al final.</li>
+</ol>
+<p><strong>Cómo leer cada diagrama:</strong> la flecha verde «ya lo acreditas» va directa a la ruta; la línea discontinua es el desvío por la nivelación. Los bloques del color «Tu foco» son donde más vas a tener que crecer viniendo de tu perfil.</p>
+<table>
+<thead>
+<tr>
+<th>Tu perfil</th>
+<th>Nivelación típica (solo si D0 la pide)</th>
+<th>Dónde más vas a crecer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ML Engineer</td>
+<td>APIs, Git y terminal</td>
+<td>Pasar del modelo a un sistema que responde con citas, usa herramientas y se opera</td>
+</tr>
+<tr>
+<td>Data Scientist</td>
+<td>Python de software, APIs, Git y contenedores</td>
+<td>Código mantenible, tests, despliegue y recuperación</td>
+</tr>
+<tr>
+<td>Data Engineer</td>
+<td>Fundamentos de ML y APIs</td>
+<td>Llevar la calidad del dato a la calidad de la respuesta</td>
+</tr>
+<tr>
+<td>DevOps</td>
+<td>Python, SQL y fundamentos de ML</td>
+<td>Prompts, RAG y evaluar si las respuestas son buenas</td>
+</tr>
+<tr>
+<td>Backend Developer</td>
+<td>Python (si no es tu lenguaje) y ML</td>
+<td>Sistemas probabilísticos: evaluación, RAG y agentes</td>
+</tr>
+<tr>
+<td>Fullstack Developer</td>
+<td>Python, SQL y ML</td>
+<td>El servicio backend: estado y observabilidad</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ml-engineer-ai-engineer">ML Engineer → AI Engineer</h3>
-<p>D0 → refuerzo N08/N09/N10 si faltan APIs o ingeniería de servicio → <strong>B01</strong> → B02 → B03 → B04 → B05 → B06 → B07 → B08 → B09 → B10. Prioridad: pasar del modelo al sistema, grounding, herramientas y operación. Python, ML o SQL se acreditan con evidencia; no se dan por sabidos.</p>
+<figure class="diagram"><a href="diagrams/ruta-ml-engineer.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-ml-engineer-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-ml-engineer-light.png" alt="Ruta ML Engineer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta ML Engineer → AI Engineer</strong> · <a href="diagrams/ruta-ml-engineer.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> Python, ML y datos. En D0 lo demuestras con un ejemplo propio; no se da por sabido.</li>
+<li><strong>Nivelación, si te falta:</strong> APIs → N08 <em>Introduction to APIs in Python</em>. Git → N09 <em>Introduction to Git</em>. Terminal → N10 <em>Introduction to Shell</em>.</li>
+<li><strong>Tu foco:</strong> pasar del modelo al sistema. Respuestas con citas (B03–B04), herramientas y agentes (B05–B07) y operar lo que construyes (B08–B10).</li>
+</ul>
 <h3 id="data-scientist-ai-engineer">Data Scientist → AI Engineer</h3>
-<p>D0 → N03–N05/N11 si el trabajo se limita a notebooks; N08–N10 para API, Git y terminal; N14–N15 si faltan bases de contenedores → <strong>B01</strong> y secuencia completa. Prioridad: software mantenible, contratos, testing, despliegue y recuperación.</p>
+<figure class="diagram"><a href="diagrams/ruta-data-scientist.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-data-scientist-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-data-scientist-light.png" alt="Ruta Data Scientist → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Data Scientist → AI Engineer</strong> · <a href="diagrams/ruta-data-scientist.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> análisis, ML y notebooks.</li>
+<li><strong>Nivelación, si te falta:</strong><ul>
+<li>Si solo trabajas en notebooks → N03 <em>Introduction to Functions in Python</em>, N04 <em>Python Toolbox</em>, N05 <em>Writing Functions in Python</em> y N11 <em>Introduction to Object-Oriented Programming in Python</em>.</li>
+<li>APIs, Git y terminal → N08, N09 y N10.</li>
+<li>Contenedores → N14 <em>Understanding Data Engineering</em> y N15 <em>Containerization and Virtualization Concepts</em>.</li>
+</ul>
+</li>
+<li><strong>Tu foco:</strong> software que otros pueden mantener: contratos, tests, despliegue y recuperación (B01–B02 y B08–B10).</li>
+</ul>
 <h3 id="data-engineer-ai-engineer">Data Engineer → AI Engineer</h3>
-<p>D0 → N16 si faltan fundamentos de evaluación de modelos; N08/N11 si faltan APIs u objetos Python → <strong>B01</strong> y secuencia completa. Prioridad: unir calidad del dato, recuperación y calidad de respuesta; después estado, tools y evaluación LLM.</p>
+<figure class="diagram"><a href="diagrams/ruta-data-engineer.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-data-engineer-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-data-engineer-light.png" alt="Ruta Data Engineer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Data Engineer → AI Engineer</strong> · <a href="diagrams/ruta-data-engineer.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> pipelines, SQL y calidad del dato.</li>
+<li><strong>Nivelación, si te falta:</strong> evaluación de modelos → N16 <em>Understanding Machine Learning</em>. APIs u objetos en Python → N08 <em>Introduction to APIs in Python</em> y N11 <em>Introduction to Object-Oriented Programming in Python</em>.</li>
+<li><strong>Tu foco:</strong> llevar la calidad del dato a la calidad de la respuesta. Primero RAG (B03–B04); después estado, herramientas y evaluación de LLM (B05–B07).</li>
+</ul>
 <h3 id="devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</h3>
-<p>D0 → rama Python necesaria N01–N08/N11, N12–N13 si falta SQL y N16 → <strong>B01</strong> y secuencia completa. B02/B08/B09 permiten acreditar conocimientos de plataforma, pero se mantienen las pruebas del asistente. Prioridad: prompts, RAG y evaluación semántica; desplegar un contenedor no demuestra que las respuestas sean correctas.</p>
+<figure class="diagram"><a href="diagrams/ruta-devops.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-devops-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-devops-light.png" alt="Ruta DevOps → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta DevOps → AI Engineer</strong> · <a href="diagrams/ruta-devops.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> plataforma, contenedores, CI/CD y nube.</li>
+<li><strong>Nivelación, si te falta:</strong> Python → la rama N01–N08 y N11, solo lo que falte. SQL → N12 <em>Introduction to SQL</em> y N13 <em>Intermediate SQL</em>. ML → N16 <em>Understanding Machine Learning</em>.</li>
+<li><strong>Puedes acreditar con evidencia</strong> la parte de plataforma de B02, B08 y B09: te ahorras el estudio, no la entrega ni sus pruebas.</li>
+<li><strong>Tu foco:</strong> prompts, RAG y evaluación (B03–B07). Que un contenedor arranque no demuestra que las respuestas sean correctas.</li>
+</ul>
 <h3 id="backend-developer-ai-engineer">Backend Developer → AI Engineer</h3>
-<p>D0 → si no trabaja en Python, rama N06–N08 más equivalencias o refuerzo N01–N05/N11; N16 para ML → <strong>B01</strong> y secuencia completa. Prioridad: comportamiento probabilístico, datos de evaluación, recuperación y agentes. No confundir un HTTP 200 con calidad.</p>
+<figure class="diagram"><a href="diagrams/ruta-backend.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-backend-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-backend-light.png" alt="Ruta Backend Developer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Backend Developer → AI Engineer</strong> · <a href="diagrams/ruta-backend.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> APIs, servicios y tests.</li>
+<li><strong>Nivelación, si te falta:</strong> si no trabajas en Python → N06 <em>Introduction to Python for Developers</em>, N07 <em>Intermediate Python for Developers</em> y N08 <em>Introduction to APIs in Python</em> (y N01–N05 y N11 si hace falta más base). ML → N16 <em>Understanding Machine Learning</em>.</li>
+<li><strong>Tu foco:</strong> sistemas que no siempre responden igual: datos de evaluación, RAG y agentes (B03–B07). Un HTTP 200 no significa que la respuesta sea buena.</li>
+</ul>
 <h3 id="fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</h3>
-<p>D0 → nivelación Python equivalente a backend, N12–N13 si falta SQL y N16 → <strong>B01</strong> y secuencia completa. Prioridad: servicio backend, estado y observabilidad; no dedicar el programa a hacer una interfaz. El frontend del capstone es opcional y no sustituye API, evaluación ni operación.</p>
-<p><strong>Convalidación de bloques comunes:</strong> se puede omitir el estudio de un curso ya dominado, pero no su entrega. Presentar la evidencia mínima de E correspondiente, superar la revisión y registrar qué se convalida. No se convalida automáticamente B09 por conocer otra nube, ni B05 por haber usado un panel de logs. El calendario se acorta solo después de esa revisión.</p>
+<figure class="diagram"><a href="diagrams/ruta-fullstack.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-fullstack-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-fullstack-light.png" alt="Ruta Fullstack Developer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Fullstack Developer → AI Engineer</strong> · <a href="diagrams/ruta-fullstack.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
+
+<ul>
+<li><strong>Lo que ya traes:</strong> frontend y backend.</li>
+<li><strong>Nivelación, si te falta:</strong> Python, igual que Backend Developer. SQL → N12 <em>Introduction to SQL</em> y N13 <em>Intermediate SQL</em>. ML → N16 <em>Understanding Machine Learning</em>.</li>
+<li><strong>Tu foco:</strong> el servicio backend, su estado y su observabilidad (B01–B02, B05–B07 y B08–B10). La interfaz del caso final es opcional y no sustituye la API, la evaluación ni la operación.</li>
+</ul>
+<p><strong>Convalidar un bloque común:</strong> si ya dominas un curso, puedes saltarte su estudio, pero no su entrega. Presentas la evidencia de la entrega E correspondiente, el mentor la revisa y queda registrado qué se convalida. No se convalida B09 por conocer otra nube ni B05 por haber usado un panel de logs. El calendario solo se acorta después de esa revisión.</p>
 <h2 id="ruta-completa-de-un-vistazo">Ruta completa de un vistazo</h2>
 <p>Los IDs <strong>C</strong> son cursos; <strong>E</strong> son entregas propias; <strong>B</strong> son bloques. Dentro de cada bloque se sigue el orden mostrado. «Curso completo» significa todos los capítulos y ejercicios indicados en la ficha, no solo ver los vídeos.</p>
 <table>
@@ -1280,6 +1369,6 @@ Revisor:</p></details>
 </ul>
 </main>
 </div>
-<footer>Versión 0.2 · Actualizado el 7 de octubre de 2026 · Material formativo de ERNI.</footer>
+<footer>Versión 0.2 · Actualizado el 8 de octubre de 2026 · Material formativo de ERNI.</footer>
 </body>
 </html>
