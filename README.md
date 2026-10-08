@@ -2,7 +2,7 @@
 
 Guía del alumno del programa AI Engineer de ERNI: diagnóstico de entrada, rutas por perfil, cursos enlazados, entregas y calendario.
 
-**Web:** https://infantesromeroadrian.github.io/ai-engineer-roadmap/
+**Web:** https://erni-academy.github.io/ai-engineer-roadmap/
 
 ## Mantenimiento
 
