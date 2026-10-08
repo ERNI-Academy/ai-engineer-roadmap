@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "index",
+    "title": "ERNI · Roadmap AI Engineer",
+    "description": "Guía del alumno del programa AI Engineer de ERNI: diagnóstico, rutas por perfil, cursos, entregas y calendario.",
+    "body_class": "home",
+    "nav_label": "Inicio"
+  },
+  {
+    "slug": "ruta",
+    "title": "Tu ruta · ERNI · Roadmap AI Engineer",
+    "description": "Diagnóstico de entrada, rutas según tu perfil y el recorrido completo.",
+    "body_class": "ruta",
+    "nav_label": "Tu ruta"
+  },
+  {
+    "slug": "conceptos",
+    "title": "Conceptos · ERNI · Roadmap AI Engineer",
+    "description": "Glosario con ejemplos para entender cada término del programa.",
+    "body_class": "conceptos",
+    "nav_label": "Conceptos"
+  },
+  {
+    "slug": "bloques",
+    "title": "Bloques B01–B10 · ERNI · Roadmap AI Engineer",
+    "description": "Los diez bloques: qué aprendes, cursos y entrega de cada uno.",
+    "body_class": "bloques",
+    "nav_label": "Bloques B01–B10"
+  },
+  {
+    "slug": "caso-final",
+    "title": "Caso final · ERNI · Roadmap AI Engineer",
+    "description": "El asistente que construyes y el dataset con el que se evalúa.",
+    "body_class": "caso-final",
+    "nav_label": "Caso final"
+  },
+  {
+    "slug": "evaluacion",
+    "title": "Evaluación y calendario · ERNI · Roadmap AI Engineer",
+    "description": "Cómo se aprueba, las 20 semanas, la checklist y los accesos.",
+    "body_class": "evaluacion",
+    "nav_label": "Evaluación y calendario"
+  }
+]
