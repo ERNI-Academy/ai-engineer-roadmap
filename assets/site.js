@@ -24,7 +24,7 @@
   const checkboxes = [...document.querySelectorAll("[data-progress]")];
   const checklistStatus = document.getElementById("checklist-status");
   const resetButton = document.getElementById("reset-progress");
-  const storageKey = "erni.ai-engineer-roadmap.v0.3.checklist";
+  const storageKey = "erni.ai-engineer-roadmap.v0.4.checklist";
   let storage = null;
   let persistence = "local";
   let storageReason = "";
@@ -46,7 +46,7 @@
     const saved = persistence === "local"
       ? "Guardado local en este navegador; no se sincroniza entre dispositivos."
       : `${storageReason} Las casillas funcionan solo en esta visita; no se garantiza su conservación al recargar.`;
-    checklistStatus.textContent = `${marked} de ${checkboxes.length} casillas marcadas. ${saved} No constituye aprobación del mentor.`;
+    checklistStatus.textContent = `${marked} de ${checkboxes.length} casillas marcadas. ${saved} Es solo un recordatorio personal.`;
   }
 
   function saveProgress() {
@@ -81,7 +81,7 @@
     for (const checkbox of checkboxes) checkbox.addEventListener("change", saveProgress);
     resetButton.hidden = false;
     resetButton.addEventListener("click", () => {
-      if (!window.confirm("¿Reiniciar las 15 casillas de este navegador? Esto no modifica ninguna evaluación del mentor.")) return;
+      if (!window.confirm("¿Reiniciar las casillas de este navegador?")) return;
       for (const checkbox of checkboxes) checkbox.checked = false;
       // El reinicio explícito permite reparar también un JSON local incompatible.
       try {
@@ -94,21 +94,6 @@
         storageReason = "No se ha podido reiniciar el guardado local; puede reaparecer el estado anterior al recargar.";
       }
       showProgress();
-    });
-  }
-
-  const copyButton = document.getElementById("copy-template");
-  const weeklyTemplate = document.getElementById("weekly-template");
-  const copyStatus = document.getElementById("copy-status");
-  if (copyButton && weeklyTemplate && copyStatus) {
-    copyButton.hidden = false;
-    copyButton.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(weeklyTemplate.textContent);
-        copyStatus.textContent = "Plantilla copiada. Complétala en el entorno de formación autorizado.";
-      } catch {
-        copyStatus.textContent = "No se ha podido copiar. Selecciona el texto de la plantilla o usa «Descargar plantilla .md».";
-      }
     });
   }
 })();

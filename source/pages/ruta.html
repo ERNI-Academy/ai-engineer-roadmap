@@ -1,392 +1,195 @@
 <div class="layout">
 <aside class="side">
 <nav class="toc toc-wide" aria-label="En esta página"><p class="toc-title">En esta página</p><ul>
-<li><a href="#diagnostico-de-entrada">Diagnóstico de entrada</a><ul><li><a href="#nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</a></li></ul></li>
-<li><a href="#rutas-de-entrada">Rutas de entrada</a><ul><li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li><li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li><li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li><li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li><li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li><li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li></ul></li>
-<li><a href="#ruta-completa-de-un-vistazo">Ruta completa de un vistazo</a></li>
+<li><a href="#tu-perfil-y-el-plan">El plan es el mismo para todos</a></li>
+<li><a href="#rutas-por-perfil">Rutas por perfil</a><ul><li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li><li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li><li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li><li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li><li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li><li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li></ul></li>
+<li><a href="#refuerzos-opcionales">Refuerzos opcionales</a></li>
 </ul></nav>
 <details class="toc toc-narrow"><summary>En esta página</summary><nav aria-label="En esta página (móvil)"><ul>
-<li><a href="#diagnostico-de-entrada">Diagnóstico de entrada</a><ul><li><a href="#nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</a></li></ul></li>
-<li><a href="#rutas-de-entrada">Rutas de entrada</a><ul><li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li><li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li><li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li><li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li><li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li><li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li></ul></li>
-<li><a href="#ruta-completa-de-un-vistazo">Ruta completa de un vistazo</a></li>
+<li><a href="#tu-perfil-y-el-plan">El plan es el mismo para todos</a></li>
+<li><a href="#rutas-por-perfil">Rutas por perfil</a><ul><li><a href="#ml-engineer-ai-engineer">ML Engineer → AI Engineer</a></li><li><a href="#data-scientist-ai-engineer">Data Scientist → AI Engineer</a></li><li><a href="#data-engineer-ai-engineer">Data Engineer → AI Engineer</a></li><li><a href="#devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</a></li><li><a href="#backend-developer-ai-engineer">Backend Developer → AI Engineer</a></li><li><a href="#fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</a></li></ul></li>
+<li><a href="#refuerzos-opcionales">Refuerzos opcionales</a></li>
 </ul></nav></details>
 </aside>
 <main id="contenido" tabindex="-1">
-<header class="page-head"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1>Tu ruta</h1><p class="lead">Diagnóstico de entrada, rutas según tu perfil y el recorrido completo.</p></header><section class="sec"><h2 id="diagnostico-de-entrada">Diagnóstico de entrada</h2>
-<p><strong>D0 · 2 h orientativas</strong> de preparación y revisión de evidencias. No hay exenciones por puesto, años ni certificados solamente.</p>
-<ul>
-<li>Presentas un repositorio o ejemplo propio sanitizado y explicas cómo funciona. El mentor comprueba seis capacidades: Python, API, Git y terminal, SQL/datos, ML/LLM y plataforma.</li>
-<li>Salida: <code>docs/diagnostico.md</code> con capacidad, evidencia, resultado «acreditada / refuerzo», cursos necesarios, mentor y fecha. Acreditar conocimientos equivalentes evita repetir el curso de nivelación; no exige matricularse para obtener un certificado.</li>
-<li>Hay dos ramas introductorias de Python (N01–N05, de datos; N06–N08, de desarrollo) porque las fichas tienen prerrequisitos distintos. <strong>No repites ambas desde cero si D0 demuestra los contenidos coincidentes</strong>; el mentor registra la equivalencia, incluidas las capacidades que pide cada ficha.</li>
-</ul>
-<details class="callout info"><summary>Capacidades, evidencia mínima y cursos si faltan</summary><div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Capacidad</th>
-<th>Evidencia suficiente para no repetir fundamentos</th>
-<th>Si falta</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Python</td>
-<td>Ejecutar un módulo; explicar funciones, clases, excepciones, iteradores y dependencias; corregir un fallo pequeño de un ejemplo propio</td>
-<td>N01–N07 y N11 según la carencia</td>
-</tr>
-<tr>
-<td>API</td>
-<td>Consumir una API JSON, distinguir petición/respuesta, autenticación y errores; probar una entrada inválida</td>
-<td>N08, después de N06–N07</td>
-</tr>
-<tr>
-<td>Git y terminal</td>
-<td>Leer un diff e historial; reproducir la ejecución desde un directorio limpio y gestionar configuración sin publicar secretos</td>
-<td>N09 y N10</td>
-</tr>
-<tr>
-<td>SQL/datos</td>
-<td>Consultar filas por identificador y ámbito, filtrar y agregar; explicar una carga idempotente y una versión de datos</td>
-<td>N12–N14</td>
-</tr>
-<tr>
-<td>ML/LLM</td>
-<td>Diferenciar entrenamiento e inferencia, modelo y aplicación; explicar particiones de evaluación, error y límites de una respuesta generada</td>
-<td>N16 antes de C06</td>
-</tr>
-<tr>
-<td>Plataforma</td>
-<td>Distinguir imagen, contenedor y máquina virtual; explicar límites de acceso y coste</td>
-<td>N14–N15; B02 sigue formando parte de la ruta</td>
-</tr>
-</tbody>
-</table></div></details>
-
-<h3 id="nivelacion-con-cursos-enlazados">Nivelación con cursos enlazados</h3>
-<p>Solo haces los cursos que D0 asigne. Fichas consultadas el <strong>07/09/2026</strong>; cada fila indica los capítulos exactos (con sus ejercicios) y el orden lo marca «Antes», no el catálogo.</p>
-<ul>
-<li><strong>Cuándo:</strong> N01–N13 pendientes, antes de B01; N16 antes de B03; N14–N15 antes de B08. Puedes adelantarlos todos durante la nivelación. La tabla respeta dependencias: N11 necesita N05, que depende de N04 → N03 → N02 → N01.</li>
-<li><strong>Carga:</strong> la suma nominal de los dieciséis cursos es <strong>46 h 45 min</strong>, pero <strong>no es obligatoria para todos</strong>; se añade solo lo asignado, más <strong>4 h propias de práctica/revisión</strong> (ampliar si no basta, no rebajar el criterio).</li>
-</ul>
-<details class="callout info"><summary>Tabla de cursos de nivelación (N01–N16)</summary><div class="table-wrap"><table>
-<thead>
-<tr>
-<th>ID</th>
-<th>Curso de DataCamp</th>
-<th>Antes</th>
-<th>Capítulos</th>
-<th>Duración publicada</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>N01</td>
-<td><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Introduction to Python</a></td>
-<td>Ninguno</td>
-<td>1–4, completos</td>
-<td>4 h</td>
-</tr>
-<tr>
-<td>N02</td>
-<td><a href="https://www.datacamp.com/courses/intermediate-python">Intermediate Python</a></td>
-<td>N01</td>
-<td>1–5, completos</td>
-<td>4 h</td>
-</tr>
-<tr>
-<td>N03</td>
-<td><a href="https://www.datacamp.com/courses/introduction-to-functions-in-python">Introduction to Functions in Python</a></td>
-<td>N02</td>
-<td>1–3, completos</td>
-<td>3 h</td>
-</tr>
-<tr>
-<td>N04</td>
-<td><a href="https://www.datacamp.com/courses/python-toolbox">Python Toolbox</a></td>
-<td>N03</td>
-<td>1–3, completos</td>
-<td>4 h</td>
-</tr>
-<tr>
-<td>N05</td>
-<td><a href="https://www.datacamp.com/courses/writing-functions-in-python">Writing Functions in Python</a></td>
-<td>N04</td>
-<td>1–4, completos</td>
-<td>4 h</td>
-</tr>
-<tr>
-<td>N06</td>
-<td><a href="https://www.datacamp.com/courses/introduction-to-python-for-developers">Introduction to Python for Developers</a></td>
-<td>Ninguno</td>
-<td>1–3, completos</td>
-<td>3 h</td>
-</tr>
-<tr>
-<td>N07</td>
-<td><a href="https://www.datacamp.com/courses/intermediate-python-for-developers">Intermediate Python for Developers</a></td>
-<td>N06</td>
-<td>1–3, completos</td>
-<td>2 h</td>
-</tr>
-<tr>
-<td>N08</td>
-<td><a href="https://www.datacamp.com/courses/introduction-to-apis-in-python">Introduction to APIs in Python</a></td>
-<td>N07</td>
-<td>1–2, completos</td>
-<td>2 h</td>
-</tr>
-<tr>
-<td>N09</td>
-<td><a href="https://www.datacamp.com/courses/introduction-to-git">Introduction to Git</a></td>
-<td>Ninguno</td>
-<td>1–2, completos</td>
-<td>2 h</td>
-</tr>
-<tr>
-<td>N10</td>
-<td><a href="https://www.datacamp.com/courses/introduction-to-shell">Introduction to Shell</a></td>
-<td>Ninguno</td>
-<td>1–5, completos</td>
-<td>4 h</td>
-</tr>
-<tr>
-<td>N11</td>
-<td><a href="https://www.datacamp.com/courses/introduction-to-object-oriented-programming-in-python">Introduction to Object-Oriented Programming in Python</a></td>
-<td>N05</td>
-<td>1–3, completos</td>
-<td>3 h</td>
-</tr>
-<tr>
-<td>N12</td>
-<td><a href="https://www.datacamp.com/courses/introduction-to-sql">Introduction to SQL</a></td>
-<td>Ninguno</td>
-<td>1, completo</td>
-<td>45 min; rango 30–60 min</td>
-</tr>
-<tr>
-<td>N13</td>
-<td><a href="https://www.datacamp.com/courses/intermediate-sql">Intermediate SQL</a></td>
-<td>N12</td>
-<td>1–4, completos</td>
-<td>5 h; rango 4–6 h</td>
-</tr>
-<tr>
-<td>N14</td>
-<td><a href="https://www.datacamp.com/courses/understanding-data-engineering">Understanding Data Engineering</a></td>
-<td>Ninguno</td>
-<td>1–3, completos</td>
-<td>2 h</td>
-</tr>
-<tr>
-<td>N15</td>
-<td><a href="https://www.datacamp.com/courses/containerization-and-virtualization-concepts">Containerization and Virtualization Concepts</a></td>
-<td>N14</td>
-<td>1–2, completos</td>
-<td>2 h</td>
-</tr>
-<tr>
-<td>N16</td>
-<td><a href="https://www.datacamp.com/courses/understanding-machine-learning">Understanding Machine Learning</a></td>
-<td>Ninguno</td>
-<td>1–3, completos</td>
-<td>2 h</td>
-</tr>
-</tbody>
-</table></div>
-<p>Se usan los metadatos actuales de N12 (45 min, rango 30–60 min) y N13 (5 h, rango 4–6 h), no las antiguas descripciones promocionales que aún mencionan otras duraciones.</p></details>
-
-<details class="callout info"><summary>Entrega y aceptación de la nivelación</summary><p><strong>Entrega:</strong> <code>docs/nivelacion.md</code> con enlaces o constancias de los cursos completados y un ejemplo reproducible por capacidad que faltaba.</p>
-<ul>
-<li>Python: transformar registros y manejar un registro inválido.</li>
-<li>APIs: petición correcta y fallo controlado.</li>
-<li>SQL: filtros y agregación sobre doce registros ficticios.</li>
-<li>Git/terminal: reconstruir el ejemplo desde su README.</li>
-<li>ML: justificar la separación de datos de desarrollo y test.</li>
-<li>Contenedores: explicar qué empaqueta una imagen y qué queda fuera.</li>
-</ul>
-<p><strong>Aceptación:</strong> el mentor vuelve a comprobar únicamente las capacidades pendientes de D0.</p></details>
-
-</section>
-<section class="sec"><h2 id="rutas-de-entrada">Rutas de entrada</h2>
-<p><strong>Todos llegáis al mismo sitio por el mismo camino. Solo cambia por dónde empiezas.</strong></p>
-<ol>
-<li><strong>Diagnóstico (D0, 2 h con tu mentor).</strong> Enseñas algo tuyo y el mentor comprueba qué ya dominas.</li>
-<li><strong>Nivelación, solo si D0 detecta un hueco.</strong> Haces únicamente los cursos de ese hueco (<a href="#nivelacion-con-cursos-enlazados">ver la lista de cursos</a>). Si no hay hueco, te la saltas.</li>
-<li><strong>Ruta común B01 → B10, igual para todos.</strong> Mismas diez entregas y mismo nivel de exigencia al final.</li>
-</ol>
-<p><strong>Cómo leer cada diagrama:</strong> la flecha verde «ya lo acreditas» va directa a la ruta; la línea discontinua es el desvío por la nivelación. Los bloques del color «Tu foco» son donde más vas a tener que crecer viniendo de tu perfil.</p>
-<details class="callout info"><summary>Resumen por perfil</summary><div class="table-wrap"><table>
+<header class="page-head"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1>Tu perfil</h1><p class="lead">El plan es el mismo para todos; según de dónde vengas, unas partes te costarán más que otras.</p></header><section class="sec"><h2 id="tu-perfil-y-el-plan">El plan es el mismo para todos</h2>
+<p>Los pasos del plan oficial no cambian con tu perfil. Lo que cambia es dónde te conviene fijarte más y qué te resultará más fácil. Esta tabla es una orientación, no una prescripción.</p>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Tu perfil</th>
-<th>Nivelación típica (solo si D0 la pide)</th>
-<th>Dónde más vas a crecer</th>
+<th>Refuerzo, si te falta base</th>
+<th>Dónde fijarte más</th>
+<th>Qué te resultará más fácil</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ML Engineer</td>
 <td>APIs, Git y terminal</td>
-<td>Pasar del modelo a un sistema que responde con citas, usa herramientas y se opera</td>
+<td>Proyecto 1 y Proyecto 2</td>
+<td>DataCamp</td>
 </tr>
 <tr>
 <td>Data Scientist</td>
-<td>Python de software, APIs, Git y contenedores</td>
-<td>Código mantenible, tests, despliegue y recuperación</td>
+<td>Python de software (funciones y clases), APIs y Git</td>
+<td>Proyecto 1 y AWS Cloud Quest</td>
+<td>DataCamp</td>
 </tr>
 <tr>
 <td>Data Engineer</td>
-<td>Fundamentos de ML y APIs</td>
-<td>Llevar la calidad del dato a la calidad de la respuesta</td>
+<td>Fundamentos de ML, APIs y clases en Python</td>
+<td>DataCamp y Proyecto 2</td>
+<td>AWS Cloud Quest</td>
 </tr>
 <tr>
 <td>DevOps</td>
 <td>Python, SQL y fundamentos de ML</td>
-<td>Prompts, RAG y evaluar si las respuestas son buenas</td>
+<td>DataCamp y Proyecto 2</td>
+<td>AWS Cloud Quest</td>
 </tr>
 <tr>
 <td>Backend Developer</td>
-<td>Python (si no es tu lenguaje) y ML</td>
-<td>Sistemas probabilísticos: evaluación, RAG y agentes</td>
+<td>Python (si no es tu lenguaje) y fundamentos de ML</td>
+<td>DataCamp y Proyecto 2</td>
+<td>Proyecto 1</td>
 </tr>
 <tr>
 <td>Fullstack Developer</td>
-<td>Python, SQL y ML</td>
-<td>El servicio backend: estado y observabilidad</td>
+<td>Python, SQL y fundamentos de ML</td>
+<td>DataCamp y Proyecto 2</td>
+<td>Proyecto 1</td>
 </tr>
 </tbody>
-</table></div></details>
-
+</table></div>
+</section>
+<section class="sec"><h2 id="rutas-por-perfil">Rutas por perfil</h2>
+<p>En cada diagrama puedes ver de un vistazo dónde te conviene fijarte más y qué te resultará más fácil.</p>
 <h3 id="ml-engineer-ai-engineer">ML Engineer → AI Engineer</h3>
 <figure class="diagram"><a href="diagrams/ruta-ml-engineer.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-ml-engineer-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-ml-engineer-light.png" alt="Ruta ML Engineer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta ML Engineer → AI Engineer</strong> · <a href="diagrams/ruta-ml-engineer.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
 
 <ul>
-<li><strong>Lo que ya traes:</strong> Python, ML y datos. En D0 lo demuestras con un ejemplo propio; no se da por sabido.</li>
-<li><strong>Nivelación, si te falta:</strong> APIs → N08 <em>Introduction to APIs in Python</em>. Git → N09 <em>Introduction to Git</em>. Terminal → N10 <em>Introduction to Shell</em>.</li>
-<li><strong>Tu foco:</strong> pasar del modelo al sistema. Respuestas con citas (B03–B04), herramientas y agentes (B05–B07) y operar lo que construyes (B08–B10).</li>
+<li><strong>Lo que ya traes:</strong> Python, ML y datos.</li>
+<li><strong>Si te falta base (opcional):</strong> APIs, Git y terminal: <em>Introduction to APIs in Python</em>, <em>Introduction to Git</em> e <em>Introduction to Shell</em>. Ver los <a href="#refuerzos-opcionales">refuerzos opcionales</a>.</li>
+<li><strong>Tu foco en el plan:</strong> <strong>Proyecto 1 y Proyecto 2.</strong> Aquí pasas del modelo al sistema: respuestas con citas, herramientas y agentes. El track de DataCamp te resultará más llevadero.</li>
 </ul>
 <h3 id="data-scientist-ai-engineer">Data Scientist → AI Engineer</h3>
 <figure class="diagram"><a href="diagrams/ruta-data-scientist.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-data-scientist-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-data-scientist-light.png" alt="Ruta Data Scientist → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Data Scientist → AI Engineer</strong> · <a href="diagrams/ruta-data-scientist.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
 
 <ul>
-<li><strong>Lo que ya traes:</strong> análisis, ML y notebooks.</li>
-<li><strong>Nivelación, si te falta:</strong><ul>
-<li>Si solo trabajas en notebooks → N03 <em>Introduction to Functions in Python</em>, N04 <em>Python Toolbox</em>, N05 <em>Writing Functions in Python</em> y N11 <em>Introduction to Object-Oriented Programming in Python</em>.</li>
-<li>APIs, Git y terminal → N08, N09 y N10.</li>
-<li>Contenedores → N14 <em>Understanding Data Engineering</em> y N15 <em>Containerization and Virtualization Concepts</em>.</li>
-</ul>
-</li>
-<li><strong>Tu foco:</strong> software que otros pueden mantener: contratos, tests, despliegue y recuperación (B01–B02 y B08–B10).</li>
+<li><strong>Lo que ya traes:</strong> Análisis, ML y notebooks.</li>
+<li><strong>Si te falta base (opcional):</strong> Si solo trabajas en notebooks: funciones y clases en Python (<em>Introduction to Functions in Python</em>, <em>Python Toolbox</em>, <em>Writing Functions in Python</em> e <em>Introduction to Object-Oriented Programming in Python</em>). Además, APIs y Git (<em>Introduction to APIs in Python</em> e <em>Introduction to Git</em>). Ver los <a href="#refuerzos-opcionales">refuerzos opcionales</a>.</li>
+<li><strong>Tu foco en el plan:</strong> <strong>Proyecto 1 y AWS Cloud Quest.</strong> Software que otros puedan mantener (contratos, pruebas) y despliegue en la nube. El track de DataCamp te resultará más llevadero.</li>
 </ul>
 <h3 id="data-engineer-ai-engineer">Data Engineer → AI Engineer</h3>
 <figure class="diagram"><a href="diagrams/ruta-data-engineer.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-data-engineer-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-data-engineer-light.png" alt="Ruta Data Engineer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Data Engineer → AI Engineer</strong> · <a href="diagrams/ruta-data-engineer.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
 
 <ul>
-<li><strong>Lo que ya traes:</strong> pipelines, SQL y calidad del dato.</li>
-<li><strong>Nivelación, si te falta:</strong> evaluación de modelos → N16 <em>Understanding Machine Learning</em>. APIs u objetos en Python → N08 <em>Introduction to APIs in Python</em> y N11 <em>Introduction to Object-Oriented Programming in Python</em>.</li>
-<li><strong>Tu foco:</strong> llevar la calidad del dato a la calidad de la respuesta. Primero RAG (B03–B04); después estado, herramientas y evaluación de LLM (B05–B07).</li>
+<li><strong>Lo que ya traes:</strong> Pipelines, SQL y calidad del dato.</li>
+<li><strong>Si te falta base (opcional):</strong> Fundamentos de ML (<em>Understanding Machine Learning</em>), APIs (<em>Introduction to APIs in Python</em>) y clases en Python (<em>Introduction to Object-Oriented Programming in Python</em>). Ver los <a href="#refuerzos-opcionales">refuerzos opcionales</a>.</li>
+<li><strong>Tu foco en el plan:</strong> <strong>El track de DataCamp y el Proyecto 2.</strong> Llevar la calidad del dato a la calidad de la respuesta: primero RAG, después herramientas y evaluación. AWS Cloud Quest te resultará más llevadero.</li>
 </ul>
 <h3 id="devops-ai-engineer-con-foco-operativo">DevOps → AI Engineer con foco operativo</h3>
 <figure class="diagram"><a href="diagrams/ruta-devops.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-devops-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-devops-light.png" alt="Ruta DevOps → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta DevOps → AI Engineer</strong> · <a href="diagrams/ruta-devops.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
 
 <ul>
-<li><strong>Lo que ya traes:</strong> plataforma, contenedores, CI/CD y nube.</li>
-<li><strong>Nivelación, si te falta:</strong> Python → la rama N01–N08 y N11, solo lo que falte. SQL → N12 <em>Introduction to SQL</em> y N13 <em>Intermediate SQL</em>. ML → N16 <em>Understanding Machine Learning</em>.</li>
-<li><strong>Puedes acreditar con evidencia</strong> la parte de plataforma de B02, B08 y B09: te ahorras el estudio, no la entrega ni sus pruebas.</li>
-<li><strong>Tu foco:</strong> prompts, RAG y evaluación (B03–B07). Que un contenedor arranque no demuestra que las respuestas sean correctas.</li>
+<li><strong>Lo que ya traes:</strong> Plataforma, contenedores, CI/CD y nube.</li>
+<li><strong>Si te falta base (opcional):</strong> Python (solo lo que te falte), SQL (<em>Introduction to SQL</em> e <em>Intermediate SQL</em>) y fundamentos de ML (<em>Understanding Machine Learning</em>). Ver los <a href="#refuerzos-opcionales">refuerzos opcionales</a>.</li>
+<li><strong>Tu foco en el plan:</strong> <strong>El track de DataCamp y el Proyecto 2.</strong> Prompts, RAG y evaluar si las respuestas son buenas: que un contenedor arranque no demuestra que las respuestas sean correctas. AWS Cloud Quest te resultará más llevadero.</li>
 </ul>
 <h3 id="backend-developer-ai-engineer">Backend Developer → AI Engineer</h3>
 <figure class="diagram"><a href="diagrams/ruta-backend.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-backend-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-backend-light.png" alt="Ruta Backend Developer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Backend Developer → AI Engineer</strong> · <a href="diagrams/ruta-backend.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
 
 <ul>
-<li><strong>Lo que ya traes:</strong> APIs, servicios y tests.</li>
-<li><strong>Nivelación, si te falta:</strong> si no trabajas en Python → N06 <em>Introduction to Python for Developers</em>, N07 <em>Intermediate Python for Developers</em> y N08 <em>Introduction to APIs in Python</em> (y N01–N05 y N11 si hace falta más base). ML → N16 <em>Understanding Machine Learning</em>.</li>
-<li><strong>Tu foco:</strong> sistemas que no siempre responden igual: datos de evaluación, RAG y agentes (B03–B07). Un HTTP 200 no significa que la respuesta sea buena.</li>
+<li><strong>Lo que ya traes:</strong> APIs, servicios y pruebas.</li>
+<li><strong>Si te falta base (opcional):</strong> Python, si no es tu lenguaje (<em>Introduction to Python for Developers</em> e <em>Intermediate Python for Developers</em>), y fundamentos de ML (<em>Understanding Machine Learning</em>). Ver los <a href="#refuerzos-opcionales">refuerzos opcionales</a>.</li>
+<li><strong>Tu foco en el plan:</strong> <strong>El track de DataCamp y el Proyecto 2.</strong> Sistemas que no siempre responden igual: evaluación, RAG y agentes. Un HTTP 200 no significa que la respuesta sea buena. El Proyecto 1 te resultará más llevadero.</li>
 </ul>
 <h3 id="fullstack-developer-ai-engineer">Fullstack Developer → AI Engineer</h3>
 <figure class="diagram"><a href="diagrams/ruta-fullstack.html" target="_blank" rel="noopener"><picture><source srcset="diagrams/ruta-fullstack-dark.png" media="(prefers-color-scheme: dark)"><img src="diagrams/ruta-fullstack-light.png" alt="Ruta Fullstack Developer → AI Engineer" loading="lazy"></picture></a><figcaption><strong>Ruta Fullstack Developer → AI Engineer</strong> · <a href="diagrams/ruta-fullstack.html" target="_blank" rel="noopener">Abrir el diagrama interactivo ↗</a></figcaption></figure>
 
 <ul>
-<li><strong>Lo que ya traes:</strong> frontend y backend.</li>
-<li><strong>Nivelación, si te falta:</strong> Python, igual que Backend Developer. SQL → N12 <em>Introduction to SQL</em> y N13 <em>Intermediate SQL</em>. ML → N16 <em>Understanding Machine Learning</em>.</li>
-<li><strong>Tu foco:</strong> el servicio backend, su estado y su observabilidad (B01–B02, B05–B07 y B08–B10). La interfaz del caso final es opcional y no sustituye la API, la evaluación ni la operación.</li>
+<li><strong>Lo que ya traes:</strong> Frontend y backend.</li>
+<li><strong>Si te falta base (opcional):</strong> Python, igual que Backend Developer, SQL (<em>Introduction to SQL</em> e <em>Intermediate SQL</em>) y fundamentos de ML (<em>Understanding Machine Learning</em>). Ver los <a href="#refuerzos-opcionales">refuerzos opcionales</a>.</li>
+<li><strong>Tu foco en el plan:</strong> <strong>El track de DataCamp y el Proyecto 2.</strong> El servicio backend, su estado y su observabilidad: la interfaz no sustituye a la API ni a la evaluación. El Proyecto 1 te resultará más llevadero.</li>
 </ul>
-<p><strong>Convalidar un bloque común:</strong> si ya dominas un curso, puedes saltarte su estudio, pero no su entrega. Presentas la evidencia de la entrega E correspondiente, el mentor la revisa y queda registrado qué se convalida. No se convalida B09 por conocer otra nube ni B05 por haber usado un panel de logs. El calendario solo se acorta después de esa revisión.</p>
 </section>
-<section class="sec"><h2 id="ruta-completa-de-un-vistazo">Ruta completa de un vistazo</h2>
-<p>Los IDs <strong>C</strong> son cursos; <strong>E</strong>, entregas propias; <strong>B</strong>, bloques. Dentro de cada bloque se sigue el orden mostrado. «Curso completo» = todos los capítulos y ejercicios de la ficha, no solo los vídeos.</p>
+<section class="sec"><h2 id="refuerzos-opcionales">Refuerzos opcionales</h2>
+<p>Si te falta base en algo, estos cursos de DataCamp pueden ayudarte. Son opcionales: elige solo lo que necesites. <strong>Para Python mandan los cursos recomendados que se comparten en el chat del programa.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
-<th>Bloque</th>
-<th>Cursos en orden</th>
-<th>Entrega</th>
-<th>Dedicación base</th>
+<th>Curso</th>
+<th>Para qué sirve</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="bloques.html#b01-ingenieria-python-y-api">B01 · Ingeniería Python y API</a></td>
-<td>C01 → C02</td>
-<td>E01</td>
-<td>8 h cursos + 6 h práctica + 1 h revisión = <strong>15 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Introduction to Python</a></td>
+<td>Primeros pasos con Python: variables, listas y funciones.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b02-aws-identidad-y-coste">B02 · AWS, identidad y coste</a></td>
-<td>C03 → C04 → C05</td>
-<td>E02</td>
-<td>8 h cursos + 4 h práctica + 1 h revisión = <strong>13 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/intermediate-python">Intermediate Python</a></td>
+<td>Más Python para manejar datos y estructurar la lógica.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b03-llm-y-contexto">B03 · LLM y contexto</a></td>
-<td>C06 → C07 → C08 → C09 → C10 → C11</td>
-<td>E03</td>
-<td>15 h cursos + 6 h práctica + 1 h revisión = <strong>22 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-functions-in-python">Introduction to Functions in Python</a></td>
+<td>Definir y reutilizar funciones.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b04-embeddings-y-rag">B04 · Embeddings y RAG</a></td>
-<td>C12 → C13 → C14</td>
-<td>E04</td>
-<td>9 h cursos + 10 h práctica + 1 h revisión = <strong>20 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/python-toolbox">Python Toolbox</a></td>
+<td>Iteradores, comprensiones y generadores.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b05-evaluacion-antes-de-agentes">B05 · Evaluación antes de agentes</a></td>
-<td>C15 → C16</td>
-<td>E05</td>
-<td>5 h cursos + 8 h práctica + 1 h revisión = <strong>14 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/writing-functions-in-python">Writing Functions in Python</a></td>
+<td>Funciones más robustas y mantenibles.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b06-tools-y-langgraph">B06 · Tools y LangGraph</a></td>
-<td>C17 → C18</td>
-<td>E06</td>
-<td>6 h cursos + 8 h práctica + 1 h revisión = <strong>15 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-python-for-developers">Introduction to Python for Developers</a></td>
+<td>Python para quien ya programa en otro lenguaje.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b07-mcp-y-conectores">B07 · MCP y conectores</a></td>
-<td>C19</td>
-<td>E07</td>
-<td>3 h cursos + 6 h práctica + 1 h revisión = <strong>10 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/intermediate-python-for-developers">Intermediate Python for Developers</a></td>
+<td>Más herramientas de Python para el desarrollo de software.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b08-api-segura-y-docker">B08 · API segura y Docker</a></td>
-<td>C20 → C21</td>
-<td>E08</td>
-<td>8 h cursos + 6 h práctica + 1 h revisión = <strong>15 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-apis-in-python">Introduction to APIs in Python</a></td>
+<td>Consumir APIs con peticiones HTTP y datos JSON.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b09-entrega-en-aws">B09 · Entrega en AWS</a></td>
-<td>C22 → C23 → C24</td>
-<td>E09</td>
-<td>10 h cursos + 8 h práctica + 1 h revisión + 1 h lectura AWS = <strong>20 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-git">Introduction to Git</a></td>
+<td>Control de versiones con Git.</td>
 </tr>
 <tr>
-<td><a href="bloques.html#b10-operacion-y-defensa-final">B10 · Operación y defensa final</a></td>
-<td>C25</td>
-<td>E10</td>
-<td>3 h cursos + 6 h práctica + 1 h revisión = <strong>10 h</strong></td>
+<td><a href="https://www.datacamp.com/courses/introduction-to-shell">Introduction to Shell</a></td>
+<td>Trabajar desde la terminal.</td>
+</tr>
+<tr>
+<td><a href="https://www.datacamp.com/courses/introduction-to-object-oriented-programming-in-python">Introduction to Object-Oriented Programming in Python</a></td>
+<td>Clases y objetos en Python.</td>
+</tr>
+<tr>
+<td><a href="https://www.datacamp.com/courses/introduction-to-sql">Introduction to SQL</a></td>
+<td>Consultas básicas a una base de datos.</td>
+</tr>
+<tr>
+<td><a href="https://www.datacamp.com/courses/intermediate-sql">Intermediate SQL</a></td>
+<td>Consultas más avanzadas: filtrar, agrupar y agregar.</td>
+</tr>
+<tr>
+<td><a href="https://www.datacamp.com/courses/understanding-data-engineering">Understanding Data Engineering</a></td>
+<td>Conceptos de ingeniería de datos y de pipelines.</td>
+</tr>
+<tr>
+<td><a href="https://www.datacamp.com/courses/containerization-and-virtualization-concepts">Containerization and Virtualization Concepts</a></td>
+<td>Qué es un contenedor y en qué se diferencia de una máquina virtual.</td>
+</tr>
+<tr>
+<td><a href="https://www.datacamp.com/courses/understanding-machine-learning">Understanding Machine Learning</a></td>
+<td>Fundamentos de ML, sin código.</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>Regla de secuencia:</strong> no empieces una práctica que dependa de una entrega no aceptada (sí puedes adelantar lectura independiente). B05 (evaluación) precede a B06 (agentes) porque los cursos de tools/LangGraph la exigen y hay que medir el cambio que introduce el agente.</p>
 </section>
 <nav class="pager" aria-label="Navegación entre páginas"><a class="prev" rel="prev" href="index.html"><small>Anterior</small><strong>← Inicio</strong></a><a class="next" rel="next" href="conceptos.html"><small>Siguiente</small><strong>Conceptos →</strong></a></nav>
 </main>

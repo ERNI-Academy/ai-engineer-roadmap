@@ -8,8 +8,8 @@ const vm = require("node:vm");
 const { test } = require("node:test");
 
 const script = fs.readFileSync(path.join(__dirname, "../assets/site.js"), "utf8");
-const key = "erni.ai-engineer-roadmap.v0.3.checklist";
-const ids = ["accesos", "diagnostico", "nivelacion", "b01", "b02", "b03", "b04", "b05", "b06", "b07", "b08", "b09", "b10", "handoff", "resultado"];
+const key = "erni.ai-engineer-roadmap.v0.4.checklist";
+const ids = ["roadmap", "datacamp", "proyecto1", "proyecto2", "cloudquest", "certificacion"];
 
 function element(id) {
   return {
@@ -18,12 +18,10 @@ function element(id) {
   };
 }
 
-function page({ saved = new Map(), blocked = "", confirm = true, clipboardFails = false, checklist = true } = {}) {
+function page({ saved = new Map(), blocked = "", confirm = true, checklist = true } = {}) {
   const boxes = checklist ? ids.map((id) => element(`check-${id}`)) : [];
-  const elements = Object.fromEntries(["checklist-status", "reset-progress", "copy-template", "weekly-template", "copy-status"].map((id) => [id, element(id)]));
-  elements["weekly-template"].textContent = "Semana:\nEvidencia entregada:\n";
+  const elements = Object.fromEntries(["checklist-status", "reset-progress"].map((id) => [id, element(id)]));
   const events = {};
-  const clipboard = [];
   const tabs = {
     scrollLeft: 0, width: 288,
     getBoundingClientRect() { return { left: 0, right: this.width }; },
@@ -56,12 +54,8 @@ function page({ saved = new Map(), blocked = "", confirm = true, clipboardFails 
       querySelectorAll: () => boxes,
       getElementById: (id) => checklist ? elements[id] : null,
     },
-    navigator: { clipboard: { async writeText(text) {
-      if (clipboardFails) throw new Error("Clipboard denied");
-      clipboard.push(text);
-    } } },
   });
-  return { boxes, elements, saved, tabs, window, events, clipboard };
+  return { boxes, elements, saved, tabs, window, events };
 }
 
 test("checkbox changes survive reload and store only known booleans", () => {
@@ -70,7 +64,7 @@ test("checkbox changes survive reload and store only known booleans", () => {
   first.boxes[4].events.change();
   const restored = page({ saved: first.saved });
   assert.equal(restored.boxes[4].checked, true);
-  assert.match(restored.elements["checklist-status"].textContent, /1 de 15/);
+  assert.match(restored.elements["checklist-status"].textContent, /1 de 6/);
   const data = JSON.parse(first.saved.get(key));
   assert.deepEqual(Object.keys(data), ids.map((id) => `check-${id}`));
   assert.equal(Object.values(data).every((value) => typeof value === "boolean"), true);
@@ -82,13 +76,13 @@ for (const blocked of ["getter", "read", "write"]) {
     const current = page({ blocked });
     current.boxes[0].checked = true;
     current.boxes[0].events.change();
-    assert.match(current.elements["checklist-status"].textContent, /1 de 15/);
+    assert.match(current.elements["checklist-status"].textContent, /1 de 6/);
     assert.match(current.elements["checklist-status"].textContent, /solo en esta visita/);
     assert.equal(current.saved.size, 0);
   });
 }
 
-for (const invalid of ["not json", "null", "[]", '{"check-accesos":"true"}', JSON.stringify(Object.fromEntries(ids.map((id) => [`unexpected-${id}`, false])))]) {
+for (const invalid of ["not json", "null", "[]", '{"check-roadmap":"true"}', JSON.stringify(Object.fromEntries(ids.map((id) => [`unexpected-${id}`, false])))]) {
   test(`invalid local payload falls back without reflecting or restoring it: ${invalid.slice(0, 22)}`, () => {
     const current = page({ saved: new Map([[key, invalid]]) });
     assert.equal(current.boxes.some((box) => box.checked), false);
@@ -125,12 +119,13 @@ test("active tab is visible on entry and resize without changing vertical positi
   assert.equal(current.saved.size, 0);
 });
 
-test("copy preserves line breaks and communicates clipboard denial", async () => {
+test("status text is a personal reminder and the reset needs no mentor wording", () => {
   const current = page();
-  await current.elements["copy-template"].events.click();
-  assert.deepEqual(current.clipboard, ["Semana:\nEvidencia entregada:\n"]);
-  assert.match(current.elements["copy-status"].textContent, /Plantilla copiada/);
-  const denied = page({ clipboardFails: true });
-  await denied.elements["copy-template"].events.click();
-  assert.match(denied.elements["copy-status"].textContent, /Descargar plantilla/);
+  assert.match(current.elements["checklist-status"].textContent, /recordatorio personal/);
+  assert.doesNotMatch(current.elements["checklist-status"].textContent, /mentor/i);
+  assert.equal(current.elements["reset-progress"].hidden, false);
+});
+
+test("pages without a checklist do not touch storage", () => {
+  assert.equal(page({ checklist: false }).saved.size, 0);
 });

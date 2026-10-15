@@ -1,345 +1,253 @@
 <div class="layout">
 <aside class="side">
 <nav class="toc toc-wide" aria-label="En esta página"><p class="toc-title">En esta página</p><ul>
-<li><a href="#b01-ingenieria-python-y-api">B01 · Ingeniería Python y API</a></li>
-<li><a href="#b02-aws-identidad-y-coste">B02 · AWS, identidad y coste</a></li>
-<li><a href="#b03-llm-y-contexto">B03 · LLM y contexto</a></li>
-<li><a href="#b04-embeddings-y-rag">B04 · Embeddings y RAG</a></li>
-<li><a href="#b05-evaluacion-antes-de-agentes">B05 · Evaluación antes de agentes</a></li>
-<li><a href="#b06-tools-y-langgraph">B06 · Tools y LangGraph</a></li>
-<li><a href="#b07-mcp-y-conectores">B07 · MCP y conectores</a></li>
-<li><a href="#b08-api-segura-y-docker">B08 · API segura y Docker</a></li>
-<li><a href="#b09-entrega-en-aws">B09 · Entrega en AWS</a></li>
-<li><a href="#b10-operacion-y-defensa-final">B10 · Operación y defensa final</a></li>
+<li><a href="#python-y-apis">Python y APIs</a></li>
+<li><a href="#aws-identidad-y-coste">AWS, identidad y coste</a></li>
+<li><a href="#llm-y-contexto">LLM y contexto</a></li>
+<li><a href="#embeddings-y-rag">Embeddings y RAG</a></li>
+<li><a href="#evaluacion">Evaluación</a></li>
+<li><a href="#herramientas-y-langgraph">Herramientas y LangGraph</a></li>
+<li><a href="#mcp-y-conectores">MCP y conectores</a></li>
+<li><a href="#api-segura-y-docker">API segura y Docker</a></li>
+<li><a href="#despliegue-en-aws">Despliegue en AWS</a></li>
+<li><a href="#operacion">Operación</a></li>
+<li><a href="#consejos-para-tus-proyectos">Consejos para tus proyectos</a></li>
 </ul></nav>
 <details class="toc toc-narrow"><summary>En esta página</summary><nav aria-label="En esta página (móvil)"><ul>
-<li><a href="#b01-ingenieria-python-y-api">B01 · Ingeniería Python y API</a></li>
-<li><a href="#b02-aws-identidad-y-coste">B02 · AWS, identidad y coste</a></li>
-<li><a href="#b03-llm-y-contexto">B03 · LLM y contexto</a></li>
-<li><a href="#b04-embeddings-y-rag">B04 · Embeddings y RAG</a></li>
-<li><a href="#b05-evaluacion-antes-de-agentes">B05 · Evaluación antes de agentes</a></li>
-<li><a href="#b06-tools-y-langgraph">B06 · Tools y LangGraph</a></li>
-<li><a href="#b07-mcp-y-conectores">B07 · MCP y conectores</a></li>
-<li><a href="#b08-api-segura-y-docker">B08 · API segura y Docker</a></li>
-<li><a href="#b09-entrega-en-aws">B09 · Entrega en AWS</a></li>
-<li><a href="#b10-operacion-y-defensa-final">B10 · Operación y defensa final</a></li>
+<li><a href="#python-y-apis">Python y APIs</a></li>
+<li><a href="#aws-identidad-y-coste">AWS, identidad y coste</a></li>
+<li><a href="#llm-y-contexto">LLM y contexto</a></li>
+<li><a href="#embeddings-y-rag">Embeddings y RAG</a></li>
+<li><a href="#evaluacion">Evaluación</a></li>
+<li><a href="#herramientas-y-langgraph">Herramientas y LangGraph</a></li>
+<li><a href="#mcp-y-conectores">MCP y conectores</a></li>
+<li><a href="#api-segura-y-docker">API segura y Docker</a></li>
+<li><a href="#despliegue-en-aws">Despliegue en AWS</a></li>
+<li><a href="#operacion">Operación</a></li>
+<li><a href="#consejos-para-tus-proyectos">Consejos para tus proyectos</a></li>
 </ul></nav></details>
 </aside>
 <main id="contenido" tabindex="-1">
-<header class="page-head"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1>Bloques B01–B10</h1><p class="lead">Los diez bloques: qué aprendes, cursos y entrega de cada uno.</p></header><section class="sec block"><h2 id="b01-ingenieria-python-y-api"><span class="badge">B01</span> <span>Ingeniería Python y API</span></h2>
+<header class="page-head"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1>Temas técnicos</h1><p class="lead">Diez temas: por qué importan, qué conviene dominar y dónde profundizar.</p></header>
+<div class="callout info"><p class="callout-title">Los cursos de profundización son opcionales</p><p>El track de DataCamp del plan oficial ya cubre lo esencial. Usa los cursos de cada tema solo si quieres profundizar o reforzar algo concreto.</p></div>
+<section class="sec block"><h2 id="python-y-apis"><span>Python y APIs</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>Antes de añadir IA necesitas un servicio Python limpio, con contrato claro y pruebas: muchos fallos son de ingeniería corriente, no del modelo. Aquí montas esa base con respuestas simuladas.</p>
+<p class="lede-label">Por qué importa</p>
+<p>Antes de añadir IA necesitas un servicio Python limpio, con un contrato claro y pruebas: muchos fallos son de ingeniería corriente, no del modelo.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
-<li>Organizar un proyecto Python en módulos con pruebas ejecutables desde un entorno limpio.</li>
-<li>Exponer una API FastAPI (<code>/healthz</code>, <code>/readyz</code>, <code>/v1/consultas</code>) validando la entrada.</li>
+<li>Organizar un proyecto Python en módulos, con pruebas que se ejecuten desde un entorno limpio.</li>
+<li>Exponer una API con FastAPI validando la entrada.</li>
 <li>Separar la capa HTTP de la lógica de negocio.</li>
-<li>Cargar datos de forma idempotente: dos cargas no duplican expedientes.</li>
+<li>Cargar datos de forma idempotente: dos cargas no duplican registros.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">15 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C01–C02</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E01</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C01. <a href="https://www.datacamp.com/courses/software-engineering-principles-in-python">Software Engineering Principles in Python</a> — 4 h.</strong> Capítulos 1–4 completos: Módulos, clases, documentación y pruebas. Antes: N03.</li>
-<li><strong>C02. <a href="https://www.datacamp.com/courses/introduction-to-fastapi">Introduction to FastAPI</a> — 4 h.</strong> Capítulos 1–3 completos: HTTP, validación, ejecución asíncrona y pruebas de una API JSON. Antes: N08 y N11.</li>
+<p><strong>En el plan oficial:</strong> DataCamp y los dos proyectos (LangChain y FastAPI).</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/software-engineering-principles-in-python">Software Engineering Principles in Python</a></li>
+<li><a href="https://www.datacamp.com/courses/introduction-to-fastapi">Introduction to FastAPI</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E01</summary><ul>
-<li><strong>Antes:</strong> D0 y nivelación pendiente de Python, APIs, Git y SQL. <strong>Resultado:</strong> servicio mantenible y corpus preparado.</li>
-<li><strong>E01 · 6 h de práctica.</strong> Crea el repositorio y los datos especificados en el caso. Implementa la API con respuestas simuladas, validación de entradas y separación de transporte/lógica. Documenta configuración y dependencias. No conectes todavía modelos ni AWS.</li>
-<li><strong>Entregar:</strong> README ejecutable, scripts/fixtures, API, pruebas y <code>docs/entregas/E01.md</code>. Incluye al menos: salud, preparación, entrada válida, mensaje vacío, tipo incorrecto y carga repetida de datos.</li>
-<li><strong>Avance:</strong> desde un entorno limpio otra persona puede arrancar el servicio y ejecutar los tests; el contrato coincide con la especificación; dos cargas no duplican expedientes; no hay secretos. Mentor AI/software revisa la entrega en 1 h.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b02-aws-identidad-y-coste"><span class="badge">B02</span> <span>AWS, identidad y coste</span></h2>
+<section class="sec block"><h2 id="aws-identidad-y-coste"><span>AWS, identidad y coste</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>El asistente acabará en AWS y consumiendo APIs de pago. Decidir servicios, permisos y límites de gasto desde el principio evita las sorpresas habituales del final.</p>
+<p class="lede-label">Por qué importa</p>
+<p>Un asistente acaba en la nube y consumiendo APIs de pago. Entender servicios, permisos y límites de gasto desde el principio evita las sorpresas habituales.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
 <li>Distinguir el rol de ejecución de una tarea de los permisos de la aplicación.</li>
-<li>Dibujar la arquitectura del laboratorio: región, servicios, datos y proveedor de modelos.</li>
+<li>Saber qué servicios, región y datos intervienen en una arquitectura sencilla.</li>
 <li>Explicar por qué una alarma de presupuesto avisa pero no corta el gasto.</li>
 <li>Describir cómo detener tareas y retirar recursos al terminar.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">13 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C03–C05</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E02</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C03. <a href="https://www.datacamp.com/courses/aws-concepts">AWS Concepts</a> — 2 h.</strong> Capítulos 1–3 completos: Servicios, infraestructura global y economía cloud. Antes: Sin prerrequisito de curso.</li>
-<li><strong>C04. <a href="https://www.datacamp.com/courses/aws-cloud-technology-and-services">AWS Cloud Technology and Services Concepts</a> — 3 h.</strong> Capítulos 1–3 completos: Cómputo, red, almacenamiento y servicios de datos e IA. Antes: C03.</li>
-<li><strong>C05. <a href="https://www.datacamp.com/courses/aws-security-and-cost-management">AWS Security and Cost Management Concepts</a> — 3 h.</strong> Capítulos 1–3 completos: Identidad, red, responsabilidad compartida y control de gasto. Antes: C03; cursar después de C04.</li>
+<p><strong>En el plan oficial:</strong> AWS Cloud Quest.</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/aws-concepts">AWS Concepts</a></li>
+<li><a href="https://www.datacamp.com/courses/aws-cloud-technology-and-services">AWS Cloud Technology and Services Concepts</a></li>
+<li><a href="https://www.datacamp.com/courses/aws-security-and-cost-management">AWS Security and Cost Management Concepts</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E02</summary><ul>
-<li><strong>Antes:</strong> E01 aceptada. <strong>Resultado:</strong> saber qué se desplegará y bajo qué límites.</li>
-<li><strong>E02 · 4 h de práctica.</strong> Dibuja el laboratorio del caso y fija sandbox, región, repositorio, servicios, permisos, datos, proveedor de modelos y plan de retirada. Distingue rol de ejecución de tarea y permisos de la aplicación. Prepara una estimación de coste y registra la cifra máxima autorizada por coordinación, no una cantidad inventada por el alumno.</li>
-<li><strong>Entregar:</strong> <code>docs/architecture.md</code>, <code>docs/laboratorio.md</code> y E02 con comprobación de identidad/ámbito, acceso a recursos permitidos, responsable del gasto y verificación de avisos.</li>
-<li><strong>Avance:</strong> referente AWS confirma cuenta/red/roles y control de coste. Una alarma de presupuesto <strong>no corta el gasto</strong>: documentar cómo detener las tareas y retirar recursos. Sin autorización no se consumen APIs ni cloud; puede continuar el trabajo local con proveedor simulado. E02 no se considera completamente aceptada hasta comprobar los accesos.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b03-llm-y-contexto"><span class="badge">B03</span> <span>LLM y contexto</span></h2>
+<section class="sec block"><h2 id="llm-y-contexto"><span>LLM y contexto</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>Tu primer contacto real con un modelo. El trabajo consiste en controlar qué entra (instrucciones y contexto) y qué sale (una respuesta validada), porque el modelo puede sonar convincente y estar equivocado.</p>
+<p class="lede-label">Por qué importa</p>
+<p>Es el primer contacto real con un modelo. El trabajo consiste en controlar qué entra (instrucciones y contexto) y qué sale (una respuesta validada), porque el modelo puede sonar convincente y estar equivocado.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
-<li>Llamar a un modelo con la Responses API pasándole un fragmento documental explícito.</li>
-<li>Comparar dos versiones de un prompt sobre diez ejemplos de desarrollo.</li>
-<li>Exigir salida con esquema válido y controlar timeouts y fallos del proveedor.</li>
+<li>Llamar a un modelo pasándole un fragmento de contexto explícito.</li>
+<li>Comparar dos versiones de un prompt sobre unas pocas preguntas fijas.</li>
+<li>Exigir una salida con esquema válido y controlar timeouts y fallos del proveedor.</li>
 <li>Explicar por qué un buen tono no demuestra que la respuesta sea verdadera.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">22 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C06–C11</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E03</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C06. <a href="https://www.datacamp.com/courses/large-language-models-llms-concepts">Large Language Models (LLMs) Concepts</a> — 2 h.</strong> Capítulos 1–4 completos: Fundamentos, entrenamiento a nivel conceptual, límites y riesgos. Antes: N16.</li>
-<li><strong>C07. <a href="https://www.datacamp.com/courses/llmops-concepts">LLMOps Concepts</a> — 1 h.</strong> Capítulos 1–3 completos: Ciclo completo: ideación, desarrollo, evaluación y operación. Antes: C06.</li>
-<li><strong>C08. <a href="https://www.datacamp.com/courses/working-with-the-openai-api">Working with the OpenAI API</a> — 3 h.</strong> Capítulos 1–3 completos: Integración de modelos, instrucciones y conversaciones. Antes: N02.</li>
-<li><strong>C09. <a href="https://www.datacamp.com/courses/prompt-engineering-with-the-openai-api">Prompt Engineering with the OpenAI API</a> — 4 h.</strong> Capítulos 1–4 completos: Diseño de instrucciones, ejemplos y pruebas de prompts. Antes: C08.</li>
-<li><strong>C10. <a href="https://www.datacamp.com/courses/working-with-the-openai-responses-api">Working with the OpenAI Responses API</a> — 3 h.</strong> Capítulos 1–3 completos: Responses API, herramientas, salidas estructuradas y streaming. Antes: C08; seguir C09 en esta ruta.</li>
-<li><strong>C11. <a href="https://www.datacamp.com/courses/working-with-hugging-face">Working with Hugging Face</a> — 2 h.</strong> Capítulos 1–2 completos: Modelos y datasets del Hub; uso de pipelines. Antes: N03.</li>
+<p><strong>En el plan oficial:</strong> DataCamp y Proyecto 1.</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/large-language-models-llms-concepts">Large Language Models (LLMs) Concepts</a></li>
+<li><a href="https://www.datacamp.com/courses/llmops-concepts">LLMOps Concepts</a></li>
+<li><a href="https://www.datacamp.com/courses/working-with-the-openai-api">Working with the OpenAI API</a></li>
+<li><a href="https://www.datacamp.com/courses/prompt-engineering-with-the-openai-api">Prompt Engineering with the OpenAI API</a></li>
+<li><a href="https://www.datacamp.com/courses/working-with-the-openai-responses-api">Working with the OpenAI Responses API</a></li>
+<li><a href="https://www.datacamp.com/courses/working-with-hugging-face">Working with Hugging Face</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E03</summary><ul>
-<li><strong>Antes:</strong> E01; N16 acreditado. E02 habilita las llamadas reales; sin ella, trabajar con simuladores.</li>
-<li><strong>E03 · 6 h de práctica.</strong> Integra Responses API con un fragmento documental explícito, sin búsqueda automática. Conserva dos versiones de prompt y compáralas sobre <strong>diez ejemplos de desarrollo</strong>: seis respondibles, dos sin evidencia, uno con contexto contradictorio y uno con fallo de proveedor. Añade pruebas de salida inválida y timeout mediante simulador.</li>
-<li><strong>Entregar:</strong> integración, configuración externa de proveedor/modelo, prompts, ejemplos, resultados comparativos y E03. Registrar tokens/coste cuando el proveedor los reporte; si falta un dato, marcarlo como no disponible.</li>
-<li><strong>Avance:</strong> esquema válido, ausencia de contexto tratada sin invención, timeout controlado y ninguna clave en trazas. Realizar una comprobación real mínima con datos sintéticos y configuración efectiva registrada. Justifica qué cambió entre prompts y por qué el tono convincente no demuestra verdad. Revisión AI/software de 1 h.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b04-embeddings-y-rag"><span class="badge">B04</span> <span>Embeddings y RAG</span></h2>
+<section class="sec block"><h2 id="embeddings-y-rag"><span>Embeddings y RAG</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>El modelo no conoce los procedimientos de tu organización. En vez de reentrenarlo, en cada pregunta se le entrega la parte relevante de tus documentos (RAG), base de casi cualquier asistente de conocimiento interno.</p>
+<p class="lede-label">Por qué importa</p>
+<p>El modelo no conoce los procedimientos de tu organización. En vez de reentrenarlo, en cada pregunta se le da la parte relevante de tus documentos (RAG): es la base de casi cualquier asistente de conocimiento interno.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
-<li>Indexar documentos por secciones con embeddings en Chroma, de forma repetible.</li>
-<li>Recuperar fragmentos (top-k) y citar <code>documentId</code>, <code>version</code> y <code>sectionId</code>.</li>
+<li>Indexar documentos por secciones con embeddings, de forma repetible.</li>
+<li>Recuperar fragmentos (top-k) y citar de dónde sale cada afirmación.</li>
 <li>Excluir de las búsquedas activas las versiones obsoletas.</li>
-<li>Distinguir si un fallo viene del buscador o de la generación, y abstenerse sin evidencia.</li>
+<li>Distinguir si un fallo viene del buscador o de la generación, y abstenerse cuando no hay evidencia.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">20 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C12–C14</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E04</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C12. <a href="https://www.datacamp.com/courses/introduction-to-embeddings-with-the-openai-api">Introduction to Embeddings with the OpenAI API</a> — 3 h.</strong> Capítulos 1–3 completos: Embeddings, similitud, búsqueda y almacenamiento vectorial. Antes: C08 y N04.</li>
-<li><strong>C13. <a href="https://www.datacamp.com/courses/building-ai-applications-with-pinecone">Building AI Applications with Pinecone</a> — 3 h.</strong> Capítulos 1–3 completos: Índices, operaciones vectoriales y ajuste de recuperación. Antes: C12.</li>
-<li><strong>C14. <a href="https://www.datacamp.com/courses/developing-llm-applications-with-langchain">Developing LLM Applications with LangChain</a> — 3 h.</strong> Capítulos 1–3 completos: Cadenas, agentes básicos e integración de RAG. Antes: C09 y C12; seguir C13.</li>
+<p><strong>En el plan oficial:</strong> DataCamp y Proyecto 2.</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/introduction-to-embeddings-with-the-openai-api">Introduction to Embeddings with the OpenAI API</a></li>
+<li><a href="https://www.datacamp.com/courses/building-ai-applications-with-pinecone">Building AI Applications with Pinecone</a></li>
+<li><a href="https://www.datacamp.com/courses/developing-llm-applications-with-langchain">Developing LLM Applications with LangChain</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E04</summary><ul>
-<li><strong>Antes:</strong> E03 y N04 acreditados. <strong>Resultado:</strong> responder usando evidencia recuperada y versionada.</li>
-<li><strong>E04 · 10 h de práctica.</strong> Ingiere los ocho documentos, divide por secciones, genera embeddings y crea el índice Chroma. Registra tamaño de fragmento, solapamiento si lo usas, metadatos y top-k. La versión antigua de DOC-06 debe quedar fuera de las búsquedas activas. Practica Pinecone en el curso, pero no mantengas dos índices activos del capstone.</li>
-<li><strong>Entregar:</strong> pipeline idempotente, inventario de fragmentos, configuración, diez preguntas con secciones esperadas y E04. Incluye una pregunta por documento, una sobre el plazo actualizado y otra que requiera combinar documentos. Añade un caso ajeno al corpus como prueba de abstención.</li>
-<li><strong>Avance:</strong> al menos <strong>8 de las 10 preguntas</strong> recuperan la sección esperada entre los primeros cinco resultados; todas las citas emitidas existen y están vigentes; el caso ajeno produce <code>not_found</code>; reingestar no duplica contenido. Explica por separado fallos del buscador y de la respuesta. Son umbrales del ejercicio, no garantías de servicio.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b05-evaluacion-antes-de-agentes"><span class="badge">B05</span> <span>Evaluación antes de agentes</span></h2>
+<section class="sec block"><h2 id="evaluacion"><span>Evaluación</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>Sin medir no sabes si un cambio mejora o empeora el sistema. Con un punto de partida medible antes de dar autonomía, sabrás después qué aporta el agente y cuánto cuesta.</p>
+<p class="lede-label">Por qué importa</p>
+<p>Sin medir no sabes si un cambio mejora o empeora el sistema. Con un punto de partida medible antes de dar autonomía, sabrás después qué aporta un agente y cuánto cuesta.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
-<li>Construir un conjunto de desarrollo y otro de test reservado, con manifiesto versionado.</li>
-<li>Reproducir la comparación entre dos configuraciones de retrieval o prompt.</li>
+<li>Preparar un conjunto de preguntas de desarrollo y otro reservado para test.</li>
+<li>Reproducir la comparación entre dos configuraciones de recuperación o de prompt.</li>
 <li>Explicar por qué el test no se usa para elegir la mejor configuración.</li>
 <li>Instrumentar cada etapa con identificador de petición, duración, error y consumo.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">14 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C15–C16</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E05</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C15. <a href="https://www.datacamp.com/courses/llm-application-fundamentals-with-langchain">LLM Application Fundamentals with LangChain</a> — 3 h (ficha: 2–4 h).</strong> Capítulos 1–2 completos: Salida estructurada, memoria conversacional y streaming. Antes: N06 y N07; seguir C14.</li>
-<li><strong>C16. <a href="https://www.datacamp.com/courses/llm-application-evaluation-with-langsmith">LLM Application Evaluation with LangSmith</a> — 2 h (ficha: 1–3 h).</strong> Módulo 1 completo: Evaluación sistemática y diagnóstico de aplicaciones. Antes: C15.</li>
+<p><strong>En el plan oficial:</strong> Proyecto 2.</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/llm-application-fundamentals-with-langchain">LLM Application Fundamentals with LangChain</a></li>
+<li><a href="https://www.datacamp.com/courses/llm-application-evaluation-with-langsmith">LLM Application Evaluation with LangSmith</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E05</summary><ul>
-<li><strong>Antes:</strong> E04. <strong>Resultado:</strong> un baseline medible antes de introducir más autonomía.</li>
-<li><strong>E05 · 8 h de práctica.</strong> Prepara el dataset y manifiesto de <a href="caso-final.html#dataset-y-evaluacion-final">Dataset y evaluación final</a>. Instrumenta etapas con un identificador de petición, duración, error y consumo disponible. Usa LangSmith con datos sintéticos; conserva también resultados exportables para que la evidencia no dependa de una captura de pantalla.</li>
-<li><strong>Entregar:</strong> <code>evals/dev.jsonl</code>, <code>evals/test.jsonl</code>, manifiesto, evaluador, resultados del baseline y E05. Compara dos configuraciones de retrieval/prompt <strong>solo sobre desarrollo</strong>, usando los mismos casos y registrando costes.</li>
-<li><strong>Avance:</strong> se puede reproducir la comparación; se identifican recuperación, modelo y herramienta —si existe—; se conoce qué casos siguen sin implementar. SQL/mixtos permanecen pendientes hasta E06, no se cuentan como éxitos. Test queda congelado y no se usa para elegir la mejor configuración. Revisión de 1 h.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b06-tools-y-langgraph"><span class="badge">B06</span> <span>Tools y LangGraph</span></h2>
+<section class="sec block"><h2 id="herramientas-y-langgraph"><span>Herramientas y LangGraph</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
+<p class="lede-label">Por qué importa</p>
 <p>Las herramientas dejan que el asistente consulte sistemas reales, no solo documentos. Cada grado de autonomía añade coste y riesgo: añade solo el que puedas justificar frente a un flujo determinista más simple.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
 <li>Definir una herramienta de solo lectura con contrato estricto de entrada y salida.</li>
-<li>Construir un grafo LangGraph con estado para consultas documentales, SQL o mixtas.</li>
+<li>Construir un grafo de LangGraph con estado para consultas documentales, de datos o mixtas.</li>
 <li>Garantizar que el ámbito autorizado lo fija la aplicación, no el modelo.</li>
-<li>Poner límites (máximo tres invocaciones, timeouts) y comprobar qué pasa al agotarlos.</li>
+<li>Poner límites (número de invocaciones, timeouts) y comprobar qué pasa al agotarlos.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">15 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C17–C18</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E06</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C17. <a href="https://www.datacamp.com/courses/llm-tool-use-with-langchain">LLM Tool Use with LangChain</a> — 3 h (ficha: 2–4 h).</strong> Módulo 1 completo: Contratos de herramientas e integración con datos externos. Antes: C15 y C16.</li>
-<li><strong>C18. <a href="https://www.datacamp.com/courses/agentic-systems-with-langgraph">Agentic Systems with LangGraph</a> — 3 h (ficha: 2–4 h).</strong> Módulo 1 completo: Estado, control y ejecución de sistemas agénticos. Antes: C15, C16 y C17.</li>
+<p><strong>En el plan oficial:</strong> Proyecto 2.</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/llm-tool-use-with-langchain">LLM Tool Use with LangChain</a></li>
+<li><a href="https://www.datacamp.com/courses/agentic-systems-with-langgraph">Agentic Systems with LangGraph</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E06</summary><ul>
-<li><strong>Antes:</strong> E05 y, dentro de este bloque, C17 antes de C18. <strong>Resultado:</strong> añadir solo la autonomía que se pueda justificar.</li>
-<li><strong>E06 · 8 h de práctica.</strong> Implementa una herramienta <code>get_case_status</code> que consulta por ID y ámbito autenticado, sin SQL libre ni escrituras. Integra un grafo capaz de resolver consulta documental, consulta SQL o una combinación. Compara el resultado con un flujo determinista simple; explica qué aporta el agente y qué coste añade.</li>
-<li><strong>Entregar:</strong> contrato de herramienta, grafo, pruebas y E06 con comparación sobre desarrollo.</li>
-<li><strong>Avance:</strong> los valores SQL coinciden exactamente; no se consulta otra área; el contexto autorizado no procede del modelo; el estado de una petición no pasa a otra. Límite académico: <strong>máximo tres invocaciones de herramienta por petición</strong>, timeout por dependencia y salida controlada al agotar el límite. Probar ID inexistente, área ajena, repetición de llamada y caída de herramienta. No se pide un sistema multiagente complejo.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b07-mcp-y-conectores"><span class="badge">B07</span> <span>MCP y conectores</span></h2>
+<section class="sec block"><h2 id="mcp-y-conectores"><span>MCP y conectores</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>MCP es un protocolo común para que un asistente use herramientas ajenas a su código. Sacar la consulta a un conector la hace reutilizable, pero hay que demostrar que no se pierden los controles de permisos.</p>
+<p class="lede-label">Por qué importa</p>
+<p>MCP es un protocolo común para que un asistente use herramientas ajenas a su código. Sacar una consulta a un conector la hace reutilizable, pero hay que comprobar que no se pierden los controles de permisos.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
-<li>Exponer la misma consulta como servidor MCP local con transporte stdio.</li>
+<li>Exponer una consulta como servidor MCP local.</li>
 <li>Consumirla desde el asistente con la misma respuesta y los mismos permisos.</li>
-<li>Rechazar argumentos inválidos y devolver error controlado si el servidor no está disponible.</li>
+<li>Rechazar argumentos inválidos y devolver un error controlado si el servidor no está disponible.</li>
 <li>Explicar dónde se conserva el contexto de autorización y cómo se aísla entre identidades.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">10 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C19</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E07</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C19. <a href="https://www.datacamp.com/courses/introduction-to-model-context-protocol-mcp">Introduction to Model Context Protocol (MCP)</a> — 3 h.</strong> Capítulos 1–3 completos: Cliente/servidor MCP, herramientas, recursos y preparación operativa. Antes: N05 y N08; seguir B06.</li>
+<p><strong>En el plan oficial:</strong> Ampliación opcional del Proyecto 2.</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/introduction-to-model-context-protocol-mcp">Introduction to Model Context Protocol (MCP)</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E07</summary><ul>
-<li><strong>Antes:</strong> E06; N05 y N08 acreditados. <strong>Resultado:</strong> desacoplar un conector sin perder control.</li>
-<li><strong>E07 · 6 h de práctica.</strong> Expón la misma consulta de negocio por un servidor MCP local y consúmela desde el asistente. Usa stdio para acotar el laboratorio; no abras un servidor público. La identidad/ámbito sigue viniendo del contexto de ejecución validado, no de un argumento que redacte el LLM.</li>
-<li><strong>Entregar:</strong> contrato y esquema de herramienta, arranque cliente/servidor, pruebas de paridad con E06 y E07. Documentar dónde se conserva el contexto de autorización y cómo se aísla entre las dos identidades de prueba.</li>
-<li><strong>Avance:</strong> misma respuesta y permisos antes/después de MCP; argumentos inválidos se rechazan; servidor no disponible produce un error controlado; una sola ruta activa de consulta, sin duplicar reglas SQL. Registrar compatibilidad/versiones efectivas. Revisión AI/software de 1 h.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b08-api-segura-y-docker"><span class="badge">B08</span> <span>API segura y Docker</span></h2>
+<section class="sec block"><h2 id="api-segura-y-docker"><span>API segura y Docker</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>Hasta ahora todo funciona en tu máquina. Antes de llevarlo a la nube hay que protegerlo (quién pregunta y qué puede ver) y empaquetarlo para que se ejecute igual en cualquier sitio.</p>
+<p class="lede-label">Por qué importa</p>
+<p>Hasta ahora todo funciona en tu máquina. Antes de llevarlo a la nube conviene protegerlo (quién pregunta y qué puede ver) y empaquetarlo para que se ejecute igual en cualquier sitio.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
 <li>Autenticar y autorizar peticiones, y acotar el tamaño de entradas y respuestas.</li>
 <li>Evitar que los errores filtren detalles internos.</li>
 <li>Construir una imagen Docker reproducible que no se ejecute como administrador.</li>
-<li>Probar casos negativos: credencial inválida, expediente de otra área e instrucciones ocultas en un documento.</li>
+<li>Probar casos negativos: credencial inválida, datos de otra área e instrucciones ocultas en un documento.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">15 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C20–C21</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E08</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C20. <a href="https://www.datacamp.com/courses/deploying-ai-into-production-with-fastapi">Deploying AI into Production with FastAPI</a> — 4 h.</strong> Capítulos 1–4 completos: Integración de modelos, seguridad, versionado y observabilidad de API. Antes: C02 y C06.</li>
-<li><strong>C21. <a href="https://www.datacamp.com/courses/introduction-to-docker">Introduction to Docker</a> — 4 h.</strong> Capítulos 1–3 completos: Contenedores, imágenes propias y endurecimiento básico. Antes: N10 y N15.</li>
+<p><strong>En el plan oficial:</strong> Los dos proyectos (la API) y AWS Cloud Quest (los contenedores).</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/deploying-ai-into-production-with-fastapi">Deploying AI into Production with FastAPI</a></li>
+<li><a href="https://www.datacamp.com/courses/introduction-to-docker">Introduction to Docker</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E08</summary><ul>
-<li><strong>Antes:</strong> E07 y nivelación de terminal/contenedores. <strong>Resultado:</strong> empaquetar el asistente manteniendo sus controles.</li>
-<li><strong>E08 · 6 h de práctica.</strong> Completa autenticación/autorización en la API, acota tamaño de entrada y respuestas, evita filtrar detalles internos y empaqueta el servicio y su conector MCP. La identidad de prueba se obtiene de credenciales externas al repositorio; no es un campo libre del mensaje.</li>
-<li><strong>Entregar:</strong> Dockerfile, instrucciones de ejecución, configuración de ejemplo sin valores secretos, pruebas negativas y E08.</li>
-<li><strong>Avance:</strong> imagen reproducible, ejecución sin usuario administrador del contenedor, salud/preparación correctas y tests previos en verde. Comprobar credencial inválida, expediente de otra área, instrucción irrelevante dentro de un documento, timeout y ausencia de evidencia. Revisión de repositorio, imagen y logs sin exposición de secretos. Un fallo de aislamiento o una credencial expuesta <strong>bloquea B09</strong>, aunque el resto funcione.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b09-entrega-en-aws"><span class="badge">B09</span> <span>Entrega en AWS</span></h2>
+<section class="sec block"><h2 id="despliegue-en-aws"><span>Despliegue en AWS</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>Un asistente solo es útil si otros pueden usarlo. Ejecutas en AWS el mismo artefacto que probaste, con un pipeline que bloquea la entrega si fallan las pruebas y una forma clara de volver atrás.</p>
+<p class="lede-label">Por qué importa</p>
+<p>Un asistente solo es útil si otros pueden usarlo. Conviene ejecutar en AWS el mismo artefacto que probaste, con un pipeline que bloquee la publicación si fallan las pruebas y una forma clara de volver atrás.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
-<li>Publicar una imagen en ECR y ejecutarla en Fargate con logs y secretos por referencia.</li>
+<li>Publicar una imagen en ECR y ejecutarla en Fargate, con logs y secretos por referencia.</li>
 <li>Reproducir la infraestructura con CloudFormation, no a mano.</li>
-<li>Montar un pipeline que prueba, construye y exige aprobación para entregar.</li>
+<li>Montar un pipeline que pruebe, construya y exija aprobación para publicar.</li>
 <li>Hacer rollback a un artefacto anterior y retirar los recursos propios.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">20 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C22–C24</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E09</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C22. <a href="https://www.datacamp.com/courses/introduction-to-aws-boto-in-python">Introduction to AWS Boto in Python</a> — 4 h.</strong> Capítulos 1–4 completos: Uso programático de AWS, S3 y tratamiento seguro de archivos. Antes: N04 y C03.</li>
-<li><strong>C23. <a href="https://www.datacamp.com/courses/deploying-applications-on-aws">Deploying Applications on AWS</a> — 3 h.</strong> Capítulos 1–3 completos: Desplegar, proteger y observar aplicaciones AWS. Antes: N01, N02 y C22.</li>
-<li><strong>C24. <a href="https://www.datacamp.com/courses/automating-deployments-on-aws">Automating Deployments on AWS</a> — 3 h.</strong> Capítulos 1–3 completos: Pipelines CI/CD, estrategias de entrega y CloudFormation. Antes: C03 y C04; seguir C23.</li>
+<p><strong>En el plan oficial:</strong> AWS Cloud Quest.</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/introduction-to-aws-boto-in-python">Introduction to AWS Boto in Python</a></li>
+<li><a href="https://www.datacamp.com/courses/deploying-applications-on-aws">Deploying Applications on AWS</a></li>
+<li><a href="https://www.datacamp.com/courses/automating-deployments-on-aws">Automating Deployments on AWS</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E09</summary><ul>
-<li><strong>Antes:</strong> E08 aceptada y sandbox de E02 operativo. <strong>Resultado:</strong> ejecutar en AWS el mismo artefacto que se probó.</li>
-<li><strong>Lecturas L-AWS · 1 h estimada propia, no duración de un curso.</strong> Leer, en este orden:<ol>
-<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html">Preparación de Amazon ECS</a>: cuenta, red, permisos y herramientas. No crear otra cuenta; usar el sandbox asignado.</li>
-<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html">Imagen Docker y Amazon ECR</a>: requisitos, crear imagen, publicarla en ECR y retirada.</li>
-<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-fargate.html">Primer servicio Linux en Fargate</a>: prerrequisitos y pasos 1–5.</li>
-<li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-with-cloudformation.html">ECS con CloudFormation</a>: plantilla, stack y revisión de cambios.</li>
-</ol>
-</li>
-<li><strong>Adaptación obligatoria del tutorial:</strong> usar la imagen de E08 y su puerto, no el ejemplo de Apache; digest/versiones fijas, no <code>latest</code>; roles acotados y red aprobada del sandbox. El ejemplo público incluye acceso amplio y HTTP: <strong>no copiar esas aperturas</strong>. El acceso al laboratorio debe usar el ingreso HTTPS o túnel seguro previsto por plataforma y quedar restringido. No te otorgues permisos administrativos para hacer funcionar el tutorial.</li>
-<li><strong>E09 · 8 h de práctica.</strong> Publica la imagen en ECR, crea una definición de tarea/servicio Fargate de una réplica, configura logs y secretos por referencia y reproduce la infraestructura con CloudFormation. El índice y SQL son snapshots ficticios de lectura; no se requiere persistencia de escrituras. Construye un pipeline que ejecute tests/evaluaciones de desarrollo, construya la imagen y requiera aprobación para entregar al sandbox.</li>
-<li><strong>Entregar:</strong> <code>infra/</code>, configuración del pipeline, commit/digest/configuración desplegados, evidencias de salud y consulta completa, rollback y E09.</li>
-<li><strong>Avance:</strong> pruebas fallidas bloquean la entrega; una consulta real completa funciona en el entorno; se puede volver a un artefacto anterior; existen pasos de retirada exactos sobre recursos propios. C23 enseña también Lambda/API Gateway, pero <strong>no exige desplegar una segunda copia del capstone en Lambda</strong>. Revisión conjunta AI/plataforma de 1 h.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<section class="sec block"><h2 id="b10-operacion-y-defensa-final"><span class="badge">B10</span> <span>Operación y defensa final</span></h2>
+<section class="sec block"><h2 id="operacion"><span>Operación</span></h2>
 <div class="lede">
-<p class="lede-label">Por qué este bloque</p>
-<p>Un sistema no está terminado hasta que puede operarse, diagnosticarse y entregarse a otra persona. Cierras el caso demostrando qué mide, cómo falla y cómo se recupera.</p>
+<p class="lede-label">Por qué importa</p>
+<p>Un sistema no está terminado hasta que puede operarse y diagnosticarse. Conviene saber qué mide, cómo falla y cómo se recupera.</p>
 </div>
 <div class="learn">
-<p class="learn-label">Al terminar sabrás</p>
+<p class="learn-label">Qué conviene dominar</p>
 <ul>
-<li>Configurar métricas, logs y una alarma útil en CloudWatch y enlazar el <code>requestId</code> con la traza.</li>
-<li>Ejecutar el test reservado sobre un candidato fijado y recuperar el servicio con el runbook.</li>
+<li>Configurar métricas, logs y una alarma útil en CloudWatch, y enlazar el identificador de petición con la traza.</li>
+<li>Ejecutar el test reservado sobre una versión fijada y recuperar el servicio siguiendo un runbook.</li>
 <li>Identificar dónde se consumen el tiempo y el coste.</li>
-<li>Defender tus decisiones y dejar documentación con la que otra persona reproduce y verifica el sistema.</li>
+<li>Dejar documentación con la que otra persona reproduce y verifica el sistema.</li>
 </ul>
 </div>
-<ul class="chips"><li><span class="chip-label">Dedicación</span><span class="chip-value">10 h</span></li><li><span class="chip-label">Cursos</span><span class="chip-value">C25</span></li><li><span class="chip-label">Entrega</span><span class="chip-value">E10</span></li></ul>
-
-<details class="callout abstract"><summary>Cursos del bloque</summary><ul>
-<li><strong>C25. <a href="https://www.datacamp.com/courses/monitoring-and-troubleshooting-aws">Monitoring and Troubleshooting AWS</a> — 3 h.</strong> Capítulos 1–3 completos: Métricas, logs, alarmas y trazas distribuidas. Antes: C03; seguir B09.</li>
+<p><strong>En el plan oficial:</strong> AWS Cloud Quest y, para las trazas, Langfuse (opcional) en el Proyecto 2.</p>
+<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<li><a href="https://www.datacamp.com/courses/monitoring-and-troubleshooting-aws">Monitoring and Troubleshooting AWS</a></li>
 </ul></details>
-
-<details class="callout example"><summary>Práctica y entrega E10</summary><ul>
-<li><strong>Antes:</strong> E09. <strong>Resultado:</strong> demostrar límites, diagnóstico y recuperación, y permitir el relevo.</li>
-<li><strong>E10 · 6 h de práctica.</strong> Configura métricas, logs y una alarma útil en CloudWatch; relaciona el requestId con la traza de aplicación. Ejecuta el test reservado sobre el candidato fijado y una incidencia controlada de dependencia indisponible. Recupera el servicio siguiendo el runbook.</li>
-<li><strong>Entregar:</strong> informe final, manifiesto evaluado, diagrama del estado real, dashboard/alarma comprobados, runbook, demostración y E10. Separar resultados locales y del sandbox; marcar toda prueba que no se haya ejecutado.</li>
-<li><strong>Avance:</strong> superar <a href="caso-final.html#dataset-y-evaluacion-final">la aceptación final</a>, identificar dónde se consume el tiempo y el coste, demostrar rollback/recuperación y retirada de los recursos del ejercicio. Otra persona debe poder arrancar/verificar usando solo la documentación. Una solución que funciona solo en la máquina del autor no cierra el caso.</li>
-<li><strong>Sesión final de 1 h incluida en la ruta:</strong> 15 min de demostración; 15 min de decisiones/alternativas; 15 min de diagnóstico de un fallo controlado; 15 min de revisión de evidencias y próximos pasos.</li>
-</ul></details>
-
-<p><a href="ruta.html#ruta-completa-de-un-vistazo">Volver al recorrido</a></p>
 </section>
-<nav class="pager" aria-label="Navegación entre páginas"><a class="prev" rel="prev" href="conceptos.html"><small>Anterior</small><strong>← Conceptos</strong></a><a class="next" rel="next" href="caso-final.html"><small>Siguiente</small><strong>Caso final →</strong></a></nav>
+<section class="sec"><h2 id="consejos-para-tus-proyectos">Consejos para tus proyectos</h2>
+<p>Son ideas basadas en buenas prácticas técnicas, <strong>no requisitos</strong>. Úsalas si te ayudan.</p>
+<ul>
+<li>Cita las fuentes: cada afirmación de la respuesta debería poder rastrearse a un fragmento concreto.</li>
+<li>Abstente cuando no haya evidencia: es mejor «no lo sé» que una respuesta verosímil inventada.</li>
+<li>Evalúa por separado la recuperación y la respuesta, con un puñado de preguntas fijas. Así sabes si el fallo está en la búsqueda o en el modelo.</li>
+<li>Pon las reglas de seguridad en el código y no solo en el prompt: el modelo puede ser engañado, tu código no debería.</li>
+<li>Mantén las claves fuera del código (variables de entorno o gestor de secretos) y fuera de los logs y del repositorio.</li>
+<li>Añade trazas por petición, con un identificador que aparezca en la respuesta y en los logs.</li>
+<li>Empieza con un flujo fijo antes de pasar a un agente: es más barato, más rápido y más fácil de probar.</li>
+<li>Pon límites de llamadas y timeouts a modelos y herramientas, para evitar bucles y gastos inesperados.</li>
+</ul>
+</section>
+<nav class="pager" aria-label="Navegación entre páginas"><a class="prev" rel="prev" href="conceptos.html"><small>Anterior</small><strong>← Conceptos</strong></a></nav>
 </main>
 </div>

@@ -10,23 +10,26 @@ import sys
 from pathlib import Path
 
 
-PAGE_SLUGS = ("index", "ruta", "conceptos", "bloques", "caso-final", "evaluacion")
+PAGE_SLUGS = ("index", "ruta", "conceptos", "bloques")
+# Páginas retiradas: se publican solo como redirección para no romper enlaces antiguos.
+REDIRECTS = {"caso-final": "index.html", "evaluacion": "index.html"}
 PAGE_FIELDS = frozenset(("slug", "title", "description", "body_class", "nav_label"))
 TEMPLATE_FIELDS = frozenset(("title", "description", "body_class", "navigation", "content"))
+REDIRECT_FIELDS = frozenset(("target",))
 TOKEN = re.compile(r"\{\{([a-z_]+)\}\}")
 
 
 def read_pages(source: Path) -> list[dict[str, str]]:
     pages = json.loads((source / "pages.json").read_text(encoding="utf-8"))
     if not isinstance(pages, list) or len(pages) != len(PAGE_SLUGS):
-        raise ValueError("source/pages.json debe definir las seis páginas públicas.")
+        raise ValueError("source/pages.json debe definir las cuatro páginas públicas.")
     for page in pages:
         if not isinstance(page, dict) or page.keys() != PAGE_FIELDS:
             raise ValueError("Metadatos de página incompletos o desconocidos.")
         if not all(isinstance(value, str) and value.strip() for value in page.values()):
             raise ValueError("Los metadatos deben ser textos no vacíos.")
     if tuple(page["slug"] for page in pages) != PAGE_SLUGS:
-        raise ValueError("Las URLs y el orden de las seis páginas deben conservarse.")
+        raise ValueError("Las URLs y el orden de las cuatro páginas deben conservarse.")
     return pages
 
 
@@ -37,8 +40,10 @@ def render_site(project_root: Path) -> dict[str, bytes]:
     template = (source / "template.html").read_text(encoding="utf-8")
     if set(TOKEN.findall(template)) != TEMPLATE_FIELDS:
         raise ValueError("source/template.html contiene marcadores incompatibles.")
-    weekly_template = (source / "seguimiento-semanal.md").read_text(encoding="utf-8")
-    outputs = {"downloads/seguimiento-semanal.md": weekly_template.encode("utf-8")}
+    redirect = (source / "redirect.html").read_text(encoding="utf-8")
+    if set(TOKEN.findall(redirect)) != REDIRECT_FIELDS:
+        raise ValueError("source/redirect.html contiene marcadores incompatibles.")
+    outputs: dict[str, bytes] = {}
 
     for page in pages:
         navigation = []
@@ -49,16 +54,16 @@ def render_site(project_root: Path) -> dict[str, bytes]:
                 f'{html.escape(entry["nav_label"])}</a>'
             )
         content = (source / "pages" / f'{page["slug"]}.html').read_text(encoding="utf-8")
-        if page["slug"] == "evaluacion":
-            if content.count("{{weekly_template}}") != 1:
-                raise ValueError("Evaluación debe incluir una única plantilla semanal.")
-            content = content.replace("{{weekly_template}}", html.escape(weekly_template))
         if TOKEN.search(content):
             raise ValueError(f'{page["slug"]}: marcador de contenido sin resolver.')
         fields = {key: html.escape(page[key], quote=True) for key in ("title", "description", "body_class")}
         fields.update(navigation="\n".join(navigation), content=content.rstrip())
         rendered = TOKEN.sub(lambda match: fields[match.group(1)], template)
         outputs[f'{page["slug"]}.html'] = rendered.encode("utf-8")
+    for slug, target in REDIRECTS.items():
+        if Path(target).stem not in PAGE_SLUGS:
+            raise ValueError(f"La redirección {slug} apunta a un destino inexistente.")
+        outputs[f"{slug}.html"] = TOKEN.sub(lambda _: html.escape(target, quote=True), redirect).encode("utf-8")
     return outputs
 
 
@@ -86,10 +91,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"No se pudo generar la web: {exc}", file=sys.stderr)
         return 1
     if args.check and changed:
-        print("HTML o descarga desactualizados: " + ", ".join(changed), file=sys.stderr)
+        print("HTML desactualizado: " + ", ".join(changed), file=sys.stderr)
         print("Ejecuta python3 scripts/build.py y revisa el diff.", file=sys.stderr)
         return 1
-    print(f"Generación comprobada: {len(PAGE_SLUGS)} páginas y plantilla semanal; "
+    print(f"Generación comprobada: {len(PAGE_SLUGS)} páginas y {len(REDIRECTS)} redirecciones; "
           f"{len(changed)} archivos actualizados." if not args.check else "Sin deriva: web y fuentes coinciden.")
     return 0
 

@@ -1,19 +1,32 @@
 # Roadmap AI Engineer · ERNI
 
-Guía del alumno del programa AI Engineer de ERNI: diagnóstico de entrada, rutas por perfil, cursos enlazados, entregas y calendario. **Versión 0.3 · 8 de octubre de 2026 · Propuesta para revisión de ERNI.**
+Material de apoyo técnico del programa AI Engineer de ERNI: el plan oficial en un vistazo, orientación por perfil, glosario de conceptos y temas técnicos con cursos opcionales. **v0.4 · 15 de octubre de 2026.**
 
 **Web:** https://erni-academy.github.io/ai-engineer-roadmap/
 
+La web **no define el plan**: el plan, los plazos y lo que hay que hacer están en las slides del kick-off. Si algo de la web no cuadra con ellas, mandan las slides. Por eso no contiene tareas evaluables, calendario propio, condiciones de avance ni cifras de coste.
+
+## Estructura
+
+| Página | Contenido |
+|---|---|
+| `index.html` · Inicio | El plan oficial en seis pasos, qué es un AI Engineer, stack típico, accesos, checklist personal de seis casillas y requisitos técnicos |
+| `ruta.html` · Tu perfil | Qué te costará más o menos según tu perfil, rutas por perfil y refuerzos opcionales |
+| `conceptos.html` · Conceptos | 22 conceptos con ejemplo, error típico y dónde te los encontrarás en el plan |
+| `bloques.html` · Temas técnicos | Diez temas (por qué importan, qué conviene dominar, cursos opcionales) y consejos para los proyectos. Conserva el nombre de archivo para no romper enlaces |
+
+`caso-final.html` y `evaluacion.html` ya no tienen contenido: se publican solo como **redirección** a `index.html` (`meta refresh` inmediato, enlace visible y `noindex`), fuera de la navegación, para no romper enlaces antiguos.
+
 ## Fuentes y generación
 
-Este repositorio contiene todas las fuentes necesarias para reproducir las seis páginas. `source/pages/*.html` son los fragmentos de contenido extraídos de la web pública anterior; no requieren documentación interna. Se conserva el orden de los 25 cursos, los diez bloques, las URLs y las anclas existentes.
+Las páginas HTML de la raíz se generan: se edita `source/`, nunca los HTML a mano.
 
 - `source/template.html`: cabecera, navegación y pie comunes.
-- `source/pages.json`: títulos, descripciones y orden de navegación.
-- `source/pages/*.html`: contenido por página. Editar aquí, no los HTML de la raíz.
-- `source/seguimiento-semanal.md`: plantilla única para la vista legible y la descarga.
+- `source/pages.json`: títulos, descripciones y orden de navegación de las cuatro páginas.
+- `source/pages/*.html`: contenido de cada página.
+- `source/redirect.html`: plantilla de las redirecciones. Las páginas redirigidas se declaran en `REDIRECTS` de `scripts/build.py`.
 - `assets/site.css` y `assets/site.js`: estilos e interacciones compartidos.
-- `diagrams/`: diagramas públicos existentes; el generador no los transforma.
+- `diagrams/`: diagramas públicos; el generador no los transforma.
 
 Requiere **Python 3.10 o posterior**, solo biblioteca estándar. Desde la raíz:
 
@@ -23,7 +36,7 @@ python3 scripts/build.py --check
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Abre `http://127.0.0.1:8000/`. La generación valida todas las fuentes antes de escribir; no depende de red, reloj ni rutas externas. Repetirla no cambia los archivos. `--check` devuelve código 1 si falta una salida o hay deriva y no escribe nada. Incluye en la publicación los seis HTML, `assets/`, `downloads/` y `diagrams/`. Se retira el antiguo paso `apply_branding.py`: el logo ya forma parte de la plantilla común.
+Abre `http://127.0.0.1:8000/`. La generación valida todas las fuentes antes de escribir y repetirla no cambia los archivos. `--check` devuelve código 1 si falta una salida o hay deriva y no escribe nada. Se publican los seis HTML, `assets/` y `diagrams/`.
 
 ## Comprobaciones
 
@@ -33,16 +46,14 @@ python3 -B -m unittest discover -s tests -p 'test_*.py'
 node --test tests/test_interactions.cjs
 ```
 
-La última comprobación necesita Node.js 18 o posterior y no instala paquetes. Comprueba persistencia/reinicio de casillas, errores de almacenamiento, datos locales inválidos, copia y desplazamiento de navegación mediante dobles sintéticos. Las comprobaciones Python cubren generación determinista, ausencia de escrituras de `--check`, errores de fuentes, enlaces/anclas locales, logo, cursos, bloques y regresiones de contenido. El filtro acotado de referencias privadas no acredita por sí solo ausencia de información sensible.
+- `check_site.py`: enlaces y anclas locales, redirecciones, logo, diez temas, checklist de seis casillas y ausencia de deriva. Falla si el **texto visible** publicado (incluidos `alt`, `title` y `aria-label`) reintroduce contenido del plan propio retirado (códigos, evaluación, nombres internos) o cifras de coste.
+- `tests/test_build.py`: generación determinista, `--check` sin escrituras, redirecciones y filtro de texto visible.
+- `tests/test_interactions.cjs` (Node.js 18 o posterior, sin paquetes): persistencia y reinicio de las casillas, errores de almacenamiento, datos locales inválidos y desplazamiento de la navegación, con dobles sintéticos.
 
-Antes de publicar, revisar también en navegador a 1440, 390 y 320 px, modo claro/oscuro, teclado y sin JavaScript: sección activa visible, ausencia de desbordamiento de página, recarga de casillas, copia/descarga y legibilidad. Las pruebas con dobles no sustituyen esa comprobación; los enlaces externos y la experiencia dentro de cursos no se validan automáticamente.
+Antes de publicar, revisar también en navegador a 1440, 390 y 320 px, en modo claro y oscuro, con teclado y sin JavaScript. Los enlaces externos no se validan automáticamente.
 
-## Seguimiento y límites
+## Progreso personal
 
-Las 15 casillas guardan únicamente booleanos en `localStorage`, bajo `erni.ai-engineer-roadmap.v0.3.checklist`. No hay backend, envío, analítica ni sincronización entre dispositivos. Los datos incompatibles o un almacenamiento bloqueado dejan la checklist operativa durante la visita con un aviso. Reiniciar requiere confirmación local; no cambia la evaluación del mentor. Borrar datos del navegador elimina el seguimiento y cambiar de versión de clave empieza un registro nuevo.
+Las seis casillas de Inicio (una por paso del plan oficial) guardan solo booleanos en `localStorage`, bajo `erni.ai-engineer-roadmap.v0.4.checklist`. No hay backend, envío, analítica ni sincronización entre dispositivos. Con datos incompatibles o almacenamiento bloqueado, la checklist sigue funcionando durante la visita con un aviso. Borrar los datos del navegador elimina el progreso; cambiar la versión de la clave empieza un registro nuevo.
 
-Sin JavaScript se mantienen navegación, contenido, casillas temporales y descarga de la plantilla Markdown. El botón de copia necesita permiso de portapapeles; si falla, la plantilla se puede seleccionar o descargar. No se recogen nombres ni texto libre.
-
-La referencia del programa es **20 semanas a 8 h: 160 h, con 156 h de base y 4 h de margen**. La nivelación y la certificación opcional son aparte. Los costes públicos incluyen fecha y fuente; las licencias corporativas, los meses autorizados y el consumo siguen pendientes, por lo que no se publica un total cerrado. Esta web es una propuesta didáctica, no una aprobación corporativa.
-
-`assets/erni-logo.png` conserva los bytes del [logo oficial de ERNI](https://www.betterask.erni/wp-content/uploads/2023/09/ERNI_logo_color-768x199.png) (768 × 199 píxeles). La cabecera mantiene sus colores y proporción sobre fondo blanco, también en modo oscuro.
+`assets/erni-logo.png` conserva los bytes del [logo oficial de ERNI](https://www.betterask.erni/wp-content/uploads/2023/09/ERNI_logo_color-768x199.png) (768 × 199 píxeles), sobre fondo blanco también en modo oscuro.

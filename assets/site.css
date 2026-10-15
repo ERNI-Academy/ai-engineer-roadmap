@@ -51,7 +51,7 @@ nav.tabs a:hover { background: rgba(255, 255, 255, .1); color: #fff; }
 nav.tabs a[aria-current="page"] { background: #fff; color: #0f2a47; }
 header.site :focus-visible { outline-color: #fff; }
 .nav-hint { display: none; }
-.proposal-status { max-width: 1280px; margin: 0 auto; padding: 12px 16px 0; color: var(--muted); font-size: 13px; }
+.version-note { max-width: 1280px; margin: 0 auto; padding: 12px 16px 0; color: var(--muted); font-size: 13px; }
 
 /* Maquetación */
 .layout { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 40px; padding: 28px 16px 64px; }
@@ -142,16 +142,10 @@ details.callout > :last-child { margin-bottom: 16px; }
 @media (prefers-reduced-motion: reduce) { details.callout > summary::after { transition: none; } }
 .callout ul, .callout ol { padding-left: 1.3em; }
 
-/* Bloques B01–B10 */
+/* Temas técnicos */
 section.block { background: var(--surface); border: 1px solid var(--border); border-top: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); padding: clamp(20px, 3.5vw, 36px); margin-top: 32px; }
 section.block:first-of-type { margin-top: 8px; }
 .block > h2 { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
-.badge { flex: none; display: inline-grid; place-items: center; min-width: 56px; height: 56px; padding: 0 8px; border-radius: 16px; background: var(--accent); color: #fff; font-size: 19px; font-weight: 800; letter-spacing: .02em; }
-@media (prefers-color-scheme: dark) { .badge { color: #06202f; } }
-.chips { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.chips li { max-width: none; margin: 0; display: inline-flex; flex-direction: column; padding: 7px 14px; border-radius: 10px; background: var(--accent-soft); border: 1px solid var(--border); line-height: 1.25; }
-.chip-label { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-.chip-value { font-weight: 700; color: var(--heading); }
 .lede { border-left: 5px solid var(--accent); background: var(--surface-2); border-radius: 0 12px 12px 0; padding: 16px 22px; margin: 0 0 22px; font-size: 17.5px; line-height: 1.6; }
 .lede p:last-child { margin-bottom: 0; }
 .lede-label, .learn-label { margin: 0 0 6px; font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; color: var(--accent); }
@@ -187,12 +181,11 @@ button, .button { display: inline-flex; align-items: center; justify-content: ce
 button:hover, .button:hover { background: var(--accent-soft); }
 .button.primary { background: var(--accent); color: var(--surface); }
 .hero-actions { margin-top: 20px; }
-.template-actions, .checklist-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+.checklist-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
 .progress-checklist { list-style: none; padding: 0 !important; }
 .progress-checklist label { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; min-height: 44px; cursor: pointer; }
 .progress-checklist input { flex: 0 0 auto; width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--accent); }
-#checklist-status, #copy-status { font-size: 14px; }
-#weekly-template { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; max-width: calc(100% - 40px); }
+#checklist-status { font-size: 14px; }
 
 /* Móvil */
 @media (max-width: 860px) {
@@ -209,8 +202,10 @@ button:hover, .button:hover { background: var(--accent-soft); }
   html { scroll-padding-top: 146px; }
   section.sec { margin-top: 48px; padding-top: 32px; }
   .block > h2 { gap: 12px; }
-  .badge { min-width: 48px; height: 48px; font-size: 17px; }
   .pager { flex-direction: column; }
   .pager a { max-width: none; }
   .pager .next { margin-left: 0; text-align: left; }
 }
+
+/* Páginas retiradas (solo redirección) */
+.redirect-box { max-width: 640px; margin: 15vh auto; padding: 0 16px; }
