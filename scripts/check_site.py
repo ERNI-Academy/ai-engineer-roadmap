@@ -140,7 +140,7 @@ def check_site(project_root: Path) -> list[str]:
         errors.append("Los bytes del logo oficial han cambiado.")
     if len(re.findall(r'<section class="sec block">', content["bloques.html"])) != 10:
         errors.append("Deben conservarse los diez temas técnicos.")
-    for required in ("mandan las slides", "v0.4 · 15 de octubre de 2026 · Material de apoyo del programa AI Engineer"):
+    for required in ("mandan las slides", "v0.4.1 · 15 de octubre de 2026 · Material de apoyo del programa AI Engineer"):
         if required not in content["index.html"]:
             errors.append(f"Inicio: falta «{required}».")
     for path in (project_root / "source").rglob("*"):

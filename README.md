@@ -1,19 +1,19 @@
 # Roadmap AI Engineer · ERNI
 
-Material de apoyo técnico del programa AI Engineer de ERNI: el plan oficial en un vistazo, orientación por perfil, glosario de conceptos y temas técnicos con cursos opcionales. **v0.4 · 15 de octubre de 2026.**
+Material de apoyo técnico del programa AI Engineer de ERNI: el plan oficial en un vistazo, orientación por perfil, glosario de conceptos y temas técnicos con sus cursos. **v0.4.1 · 15 de octubre de 2026.**
 
 **Web:** https://erni-academy.github.io/ai-engineer-roadmap/
 
-La web **no define el plan**: el plan, los plazos y lo que hay que hacer están en las slides del kick-off. Si algo de la web no cuadra con ellas, mandan las slides. Por eso no contiene tareas evaluables, calendario propio, condiciones de avance ni cifras de coste.
+La web **no define el plan**: el plan, los plazos y lo que hay que hacer están en las slides del kick-off. Si algo de la web no cuadra con ellas, mandan las slides. Por eso no contiene tareas evaluables ni cifras de coste; del calendario y la regla de avance solo resume lo que se dijo en el kick-off.
 
 ## Estructura
 
 | Página | Contenido |
 |---|---|
-| `index.html` · Inicio | El plan oficial en seis pasos, qué es un AI Engineer, stack típico, accesos, checklist personal de seis casillas y requisitos técnicos |
+| `index.html` · Inicio | El plan oficial en seis pasos, qué es un AI Engineer, stack típico, accesos, checklist personal de seis casillas y qué conviene tener preparado |
 | `ruta.html` · Tu perfil | Qué te costará más o menos según tu perfil, rutas por perfil y refuerzos opcionales |
 | `conceptos.html` · Conceptos | 22 conceptos con ejemplo, error típico y dónde te los encontrarás en el plan |
-| `bloques.html` · Temas técnicos | Diez temas (por qué importan, qué conviene dominar, cursos opcionales) y consejos para los proyectos. Conserva el nombre de archivo para no romper enlaces |
+| `bloques.html` · Temas técnicos | Diez temas de apoyo, que no son pasos ni requisitos (por qué importan, qué conviene dominar, cursos del track de DataCamp y opcionales), y consejos para los proyectos. Conserva el nombre de archivo para no romper enlaces |
 
 `caso-final.html` y `evaluacion.html` ya no tienen contenido: se publican solo como **redirección** a `index.html` (`meta refresh` inmediato, enlace visible y `noindex`), fuera de la navegación, para no romper enlaces antiguos.
 

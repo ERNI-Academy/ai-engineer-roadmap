@@ -23,20 +23,20 @@
 <header class="hero"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1 id="ai-engineer-guia-de-apoyo">AI Engineer · guía de apoyo</h1><p class="lead">Conceptos, consejos y recursos técnicos para sacar más partido al plan oficial del programa.</p><p class="hero-actions"><a class="button primary" href="ruta.html">Elige tu perfil →</a></p></header>
 <div class="callout important"><p class="callout-title">Esta web es material de apoyo</p><p>El plan, los plazos y lo que hay que hacer están en las slides del kick-off. <strong>Si algo de esta web no cuadra con las slides, mandan las slides.</strong></p></div>
 <section class="sec"><h2 id="el-plan-oficial-en-un-vistazo">El plan oficial en un vistazo</h2>
-<p>Seis pasos, en este orden. Termina un paso antes de empezar el siguiente.</p>
+<p>Seis pasos, en este orden. Termina cada paso antes de empezar el siguiente; la única excepción es roadmap.sh, que es de consulta y puedes compaginar con DataCamp.</p>
 <ol>
-<li><strong><a href="https://roadmap.sh/ai-engineer">roadmap.sh, rol AI Engineer</a>.</strong> Glosario y checklist personal de conceptos. Es una primera lectura: no hace falta estudiarlo todo.</li>
-<li><strong><a href="https://www.datacamp.com/tracks/associate-ai-engineer-for-developers">DataCamp, track «Associate AI Engineer for Developers»</a>.</strong> Obligatorio para todos, con cuenta personal.</li>
+<li><strong><a href="https://roadmap.sh/ai-engineer">roadmap.sh, rol AI Engineer</a>.</strong> Glosario del rol, junto con la página <a href="conceptos.html">Conceptos</a> de esta guía. Es una primera lectura (orientativo: una semana): no hace falta estudiarlo todo y, si se te hace bola, empieza DataCamp y vuelve a él cuando lo necesites.</li>
+<li><strong><a href="https://www.datacamp.com/tracks/associate-ai-engineer-for-developers">DataCamp, track «Associate AI Engineer for Developers»</a>.</strong> El track que hacemos todos, con tu cuenta personal.</li>
 <li><strong>Proyecto 1.</strong> Chatbot básico (texto, imágenes e historial de conversación) con LangChain y FastAPI.</li>
-<li><strong>Proyecto 2.</strong> Agente con RAG, con LangChain y FastAPI. Langfuse es opcional para las trazas.</li>
+<li><strong>Proyecto 2.</strong> Chatbot más avanzado con RAG (responde a partir de tus documentos), con LangChain y FastAPI.</li>
 <li><strong>AWS Cloud Quest.</strong> Empieza por la isla de fundamentos si no conoces AWS; después, las de IA.</li>
-<li><strong>Certificación (opcional).</strong> AWS (AI Practitioner o Generative AI Developer) o LangChain. ERNI paga el examen.</li>
+<li><strong>Certificación (opcional).</strong> AWS (AI Practitioner o Generative AI Developer) o LangChain. Al terminar, si quieres certificarte, pídelo antes de reservar: ERNI paga el examen.</li>
 </ol>
-<p>Los dos proyectos se hacen <strong>a mano al menos una vez</strong>, sin pedírselo entero a un asistente de código, y se presentan en una sesión de seguimiento. Como referencia, usa la documentación de <a href="https://docs.langchain.com/">LangChain y LangGraph</a> y la de <a href="https://fastapi.tiangolo.com/">FastAPI</a>.</p>
+<p>Los proyectos se escriben <strong>a mano, línea a línea</strong>, sin pedírselos enteros a un asistente de código: la idea es hacerlo así al menos una vez para ver los detalles. Después los presentas en la sesión de seguimiento que toque. Si ya dominas estos temas, puedes añadir Langfuse a tus proyectos para ver las trazas (opcional). Como referencia, usa la documentación de <a href="https://docs.langchain.com/">LangChain y LangGraph</a> y la de <a href="https://fastapi.tiangolo.com/">FastAPI</a>.</p>
 <h3 id="seguimiento-y-calendario-orientativo">Seguimiento y calendario orientativo</h3>
 <ul>
 <li><strong>Seguimiento:</strong> online, cada dos semanas. Cuentas qué has hecho, planteas dudas y bloqueos.</li>
-<li><strong>Programa opcional:</strong> es compatible con tu trabajo. Si lo dejas, avisa.</li>
+<li><strong>Programa opcional y extra:</strong> ERNI paga los recursos (plataformas, acceso a modelos y el examen de certificación) y tú pones la dedicación. Si un día no puedes ir a la sesión o vas más lento, no pasa nada; si lo dejas del todo, avisa.</li>
 </ul>
 <div class="table-wrap"><table>
 <thead>
@@ -52,7 +52,7 @@
 </tr>
 <tr>
 <td>Noviembre</td>
-<td>Terminar DataCamp y hacer el Proyecto 1</td>
+<td>Terminar DataCamp y empezar el Proyecto 1</td>
 </tr>
 <tr>
 <td>Diciembre</td>
@@ -68,15 +68,15 @@
 </section>
 <section class="sec"><h2 id="que-es-un-ai-engineer">Qué es un AI Engineer</h2>
 <p>No entrenas modelos: construyes productos con modelos que ya existen. Alrededor del modelo diseñas lo que falta: buscar en documentos, consultar sistemas con permisos, validar la salida, medir la calidad y desplegar.</p>
-<details class="callout info"><summary>Definición oficial y ejemplo</summary><p>La definición oficial del programa dice: <em>«An AI Engineer builds products on top of Generative AI Foundation Models, rather than training models from scratch. Starts with the user need, selects an API or open model, then designs the application around it.»</em></p>
-<p>Ejemplo: los operadores de soporte pierden tiempo buscando el procedimiento correcto. Un AI Engineer parte de esa necesidad, elige un modelo (por API o abierto) y construye alrededor lo que falta.</p></details>
+<details class="callout info"><summary>Definición y ejemplo</summary><p>Una definición que resume bien el rol: <em>«An AI Engineer builds products on top of Generative AI Foundation Models, rather than training models from scratch. Starts with the user need, selects an API or open model, then designs the application around it.»</em></p>
+<p>Ejemplo: el clásico chatbot. Un equipo pierde tiempo buscando información en sus documentos; un AI Engineer parte de esa necesidad, elige un modelo (por API o abierto) y construye alrededor lo que falta.</p></details>
 </section>
 <section class="sec"><h2 id="stack-tipico-del-rol">Stack típico del rol</h2>
 <p>No tienes que dominarlo todo; sirve para ubicarte.</p>
 <ul>
 <li>Lenguajes: Python (también JS/TS y Java).</li>
 <li>Orquestación de LLM: LangChain, LangGraph, Strands (y alternativas como PydanticAI, CrewAI o Mastra).</li>
-<li>Observabilidad y pasarela de modelos: LangFuse y LiteLLM (también MLflow y LangSmith).</li>
+<li>Observabilidad y pasarela de modelos: Langfuse y LiteLLM (también MLflow y LangSmith).</li>
 <li>Nube: AWS y Bedrock (o Azure y AI Foundry).</li>
 <li>Backend y despliegue: FastAPI; Docker en ECS, Fargate, Azure Container Apps o AgentCore; algo de frontend con React o Streamlit.</li>
 <li>Modelos abiertos y locales: Ollama, vLLM, llama.cpp y Hugging Face.</li>
@@ -100,18 +100,18 @@
 </tr>
 <tr>
 <td><a href="https://www.datacamp.com/tracks/associate-ai-engineer-for-developers">DataCamp</a></td>
-<td>Cursos guiados con ejercicios (track obligatorio)</td>
-<td>Cuenta personal. Empieza con la prueba gratuita y, antes de que te toque pagar, avisa: ERNI cubre la suscripción</td>
+<td>Cursos guiados con ejercicios (el track del plan)</td>
+<td>Cuenta personal. Empieza con el plan gratuito y, antes de que te toque pagar, avisa por el chat del programa: ERNI paga la suscripción como una solicitud de formación</td>
 </tr>
 <tr>
 <td>AWS Cloud Quest</td>
 <td>Práctica de nube en formato de juego</td>
-<td>A través de <a href="https://aws.amazon.com/training/digital/">AWS Skill Builder</a>. Si tienes dudas sobre el acceso, pregunta antes de contratar nada</td>
+<td>Cuenta personal en <a href="https://aws.amazon.com/training/digital/aws-cloud-quest/">AWS Skill Builder</a>. La isla de fundamentos es gratuita (empieza por ella si no conoces AWS); si alguna isla te pide pagar, avisa antes y ERNI la paga</td>
 </tr>
 <tr>
 <td>Pasarela LiteLLM de ERNI</td>
 <td>Acceso a modelos para tus proyectos</td>
-<td>Clave individual, que viene con un ejemplo de código, y presupuesto mensual limitado</td>
+<td>Te la da la coordinación del programa: clave individual, un ejemplo de código y un presupuesto mensual limitado</td>
 </tr>
 <tr>
 <td>Documentación de <a href="https://docs.langchain.com/">LangChain y LangGraph</a> y de <a href="https://fastapi.tiangolo.com/">FastAPI</a></td>
@@ -120,29 +120,28 @@
 </tr>
 </tbody>
 </table></div>
-<div class="callout info"><p class="callout-title">Norma de acceso a modelos</p><p>Los modelos se consumen siempre por la pasarela LiteLLM de ERNI, con tu clave individual. No uses otros servicios ni claves personales.</p></div>
-<p>Para Python, los cursos recomendados se comparten en el chat del programa.</p>
+<p>Si no conoces Python, empieza por uno de los cursos que se comparten en el chat del programa: con hacer uno o dos completos es suficiente.</p>
 </section>
 <section class="sec"><h2 id="mi-progreso">Mi progreso</h2>
 <p id="checklist-note">Una casilla por paso del plan oficial. Es un recordatorio personal: se guarda solo en este navegador y no se envía ni se sincroniza con ningún servidor. No se guardan nombres ni texto libre.</p>
 <p id="checklist-status" role="status" aria-live="polite">El guardado local requiere JavaScript. Sin él puedes marcar casillas durante esta visita; no se garantiza su conservación al recargar.</p>
 <ul class="progress-checklist" id="progress-checklist" aria-describedby="checklist-note">
-<li><label for="check-roadmap"><input type="checkbox" id="check-roadmap" data-progress> <span>roadmap.sh: primera lectura del rol AI Engineer, sin estudiarlo todo.</span></label></li>
+<li><label for="check-roadmap"><input type="checkbox" id="check-roadmap" data-progress> <span>roadmap.sh: primera lectura del rol AI Engineer, a modo de glosario.</span></label></li>
 <li><label for="check-datacamp"><input type="checkbox" id="check-datacamp" data-progress> <span>DataCamp: track «Associate AI Engineer for Developers» terminado.</span></label></li>
-<li><label for="check-proyecto1"><input type="checkbox" id="check-proyecto1" data-progress> <span>Proyecto 1: chatbot básico con LangChain y FastAPI, hecho a mano al menos una vez.</span></label></li>
-<li><label for="check-proyecto2"><input type="checkbox" id="check-proyecto2" data-progress> <span>Proyecto 2: agente con RAG con LangChain y FastAPI, hecho a mano al menos una vez.</span></label></li>
+<li><label for="check-proyecto1"><input type="checkbox" id="check-proyecto1" data-progress> <span>Proyecto 1: chatbot básico con LangChain y FastAPI, escrito a mano y presentado.</span></label></li>
+<li><label for="check-proyecto2"><input type="checkbox" id="check-proyecto2" data-progress> <span>Proyecto 2: chatbot con RAG con LangChain y FastAPI, escrito a mano y presentado.</span></label></li>
 <li><label for="check-cloudquest"><input type="checkbox" id="check-cloudquest" data-progress> <span>AWS Cloud Quest: isla de fundamentos (si no conoces AWS) y después las de IA.</span></label></li>
-<li><label for="check-certificacion"><input type="checkbox" id="check-certificacion" data-progress> <span>Certificación (opcional): AWS o LangChain.</span></label></li>
+<li><label for="check-certificacion"><input type="checkbox" id="check-certificacion" data-progress> <span>Certificación (opcional): AWS o LangChain, pedida antes de reservar el examen.</span></label></li>
 </ul>
 <div class="checklist-actions"><button type="button" id="reset-progress" hidden>Reiniciar casillas</button></div>
 </section>
-<section class="start" aria-labelledby="las-partes-de-la-guia"><h2 id="las-partes-de-la-guia">Las partes de la guía</h2><ul class="start-grid"><li><a class="start-card" href="ruta.html"><strong>Tu perfil</strong><span>El plan es el mismo para todos; según tu perfil, unas partes te costarán más que otras.</span><em>Abrir →</em></a></li><li><a class="start-card" href="conceptos.html"><strong>Conceptos</strong><span>Glosario con ejemplos para entender cada término del programa.</span><em>Abrir →</em></a></li><li><a class="start-card" href="bloques.html"><strong>Temas técnicos</strong><span>Diez temas: por qué importan, qué conviene dominar y cursos opcionales para profundizar.</span><em>Abrir →</em></a></li></ul></section>
+<section class="start" aria-labelledby="las-partes-de-la-guia"><h2 id="las-partes-de-la-guia">Las partes de la guía</h2><ul class="start-grid"><li><a class="start-card" href="ruta.html"><strong>Tu perfil</strong><span>El plan es el mismo para todos; según tu perfil, unas partes te costarán más que otras.</span><em>Abrir →</em></a></li><li><a class="start-card" href="conceptos.html"><strong>Conceptos</strong><span>Glosario con ejemplos para entender cada término del programa.</span><em>Abrir →</em></a></li><li><a class="start-card" href="bloques.html"><strong>Temas técnicos</strong><span>Diez temas de apoyo: por qué importan, qué conviene dominar y qué cursos los cubren.</span><em>Abrir →</em></a></li></ul></section>
 <section class="sec"><h2 id="antes-de-empezar">Antes de empezar</h2>
-<p>Requisitos técnicos para trabajar con comodidad:</p>
+<p>Qué conviene tener preparado (si te falta algo, no pasa nada: se aprende por el camino):</p>
 <ul>
-<li>Python y un entorno de desarrollo (IDE) en tu ordenador.</li>
+<li>Python y un entorno de desarrollo (IDE) en tu ordenador. Si no conoces Python, hay cursos en el chat del programa.</li>
 <li>Git.</li>
-<li>Docker, más adelante, cuando llegues a los contenedores.</li>
+<li>Docker, opcional, si quieres empaquetar tus proyectos.</li>
 <li>Leer inglés técnico: la documentación y casi todos los cursos están en inglés.</li>
 </ul>
 </section>

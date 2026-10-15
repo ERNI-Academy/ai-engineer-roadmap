@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Temas técnicos · ERNI · Roadmap AI Engineer</title>
-<meta name="description" content="Diez temas técnicos: por qué importan, qué conviene dominar y cursos opcionales para profundizar.">
+<meta name="description" content="Diez temas técnicos de apoyo: por qué importan, qué conviene dominar y qué cursos los cubren.">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js" defer></script>
 </head>
@@ -23,39 +23,39 @@
 <p class="nav-hint" id="nav-hint">Desliza la barra para ver las cuatro secciones ↔</p>
 </div>
 </header>
-<p class="version-note">v0.4 · 15 de octubre de 2026 · Material de apoyo del programa AI Engineer</p>
+<p class="version-note">v0.4.1 · 15 de octubre de 2026 · Material de apoyo del programa AI Engineer</p>
 <div class="layout">
 <aside class="side">
 <nav class="toc toc-wide" aria-label="En esta página"><p class="toc-title">En esta página</p><ul>
 <li><a href="#python-y-apis">Python y APIs</a></li>
-<li><a href="#aws-identidad-y-coste">AWS, identidad y coste</a></li>
 <li><a href="#llm-y-contexto">LLM y contexto</a></li>
 <li><a href="#embeddings-y-rag">Embeddings y RAG</a></li>
 <li><a href="#evaluacion">Evaluación</a></li>
 <li><a href="#herramientas-y-langgraph">Herramientas y LangGraph</a></li>
 <li><a href="#mcp-y-conectores">MCP y conectores</a></li>
 <li><a href="#api-segura-y-docker">API segura y Docker</a></li>
+<li><a href="#aws-identidad-y-coste">AWS, identidad y coste</a></li>
 <li><a href="#despliegue-en-aws">Despliegue en AWS</a></li>
 <li><a href="#operacion">Operación</a></li>
 <li><a href="#consejos-para-tus-proyectos">Consejos para tus proyectos</a></li>
 </ul></nav>
 <details class="toc toc-narrow"><summary>En esta página</summary><nav aria-label="En esta página (móvil)"><ul>
 <li><a href="#python-y-apis">Python y APIs</a></li>
-<li><a href="#aws-identidad-y-coste">AWS, identidad y coste</a></li>
 <li><a href="#llm-y-contexto">LLM y contexto</a></li>
 <li><a href="#embeddings-y-rag">Embeddings y RAG</a></li>
 <li><a href="#evaluacion">Evaluación</a></li>
 <li><a href="#herramientas-y-langgraph">Herramientas y LangGraph</a></li>
 <li><a href="#mcp-y-conectores">MCP y conectores</a></li>
 <li><a href="#api-segura-y-docker">API segura y Docker</a></li>
+<li><a href="#aws-identidad-y-coste">AWS, identidad y coste</a></li>
 <li><a href="#despliegue-en-aws">Despliegue en AWS</a></li>
 <li><a href="#operacion">Operación</a></li>
 <li><a href="#consejos-para-tus-proyectos">Consejos para tus proyectos</a></li>
 </ul></nav></details>
 </aside>
 <main id="contenido" tabindex="-1">
-<header class="page-head"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1>Temas técnicos</h1><p class="lead">Diez temas: por qué importan, qué conviene dominar y dónde profundizar.</p></header>
-<div class="callout info"><p class="callout-title">Los cursos de profundización son opcionales</p><p>El track de DataCamp del plan oficial ya cubre lo esencial. Usa los cursos de cada tema solo si quieres profundizar o reforzar algo concreto.</p></div>
+<header class="page-head"><p class="eyebrow">ERNI · Roadmap AI Engineer</p><h1>Temas técnicos</h1><p class="lead">Diez temas de apoyo: por qué importan, qué conviene dominar y qué cursos los cubren.</p></header>
+<div class="callout info"><p class="callout-title">Estos temas no son pasos ni requisitos</p><p>Lo que hay que hacer y en qué orden lo marca el <a href="index.html#el-plan-oficial-en-un-vistazo">plan oficial</a>. «Qué conviene dominar» son ideas para orientarte, no una lista que tengas que cumplir. En cada tema, los cursos <strong>del track de DataCamp</strong> los harás en el paso 2 del plan; los de <strong>para profundizar</strong> son opcionales.</p></div>
 <section class="sec block"><h2 id="python-y-apis"><span>Python y APIs</span></h2>
 <div class="lede">
 <p class="lede-label">Por qué importa</p>
@@ -67,40 +67,19 @@
 <li>Organizar un proyecto Python en módulos, con pruebas que se ejecuten desde un entorno limpio.</li>
 <li>Exponer una API con FastAPI validando la entrada.</li>
 <li>Separar la capa HTTP de la lógica de negocio.</li>
-<li>Cargar datos de forma idempotente: dos cargas no duplican registros.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> DataCamp y los dos proyectos (LangChain y FastAPI).</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<p><strong>Relación con el plan:</strong> DataCamp y los dos proyectos, que usan LangChain y FastAPI.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Del track de DataCamp:</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/software-engineering-principles-in-python">Software Engineering Principles in Python</a></li>
+</ul><p><strong>Para profundizar (opcional):</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/introduction-to-fastapi">Introduction to FastAPI</a></li>
-</ul></details>
-</section>
-<section class="sec block"><h2 id="aws-identidad-y-coste"><span>AWS, identidad y coste</span></h2>
-<div class="lede">
-<p class="lede-label">Por qué importa</p>
-<p>Un asistente acaba en la nube y consumiendo APIs de pago. Entender servicios, permisos y límites de gasto desde el principio evita las sorpresas habituales.</p>
-</div>
-<div class="learn">
-<p class="learn-label">Qué conviene dominar</p>
-<ul>
-<li>Distinguir el rol de ejecución de una tarea de los permisos de la aplicación.</li>
-<li>Saber qué servicios, región y datos intervienen en una arquitectura sencilla.</li>
-<li>Explicar por qué una alarma de presupuesto avisa pero no corta el gasto.</li>
-<li>Describir cómo detener tareas y retirar recursos al terminar.</li>
-</ul>
-</div>
-<p><strong>En el plan oficial:</strong> AWS Cloud Quest.</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
-<li><a href="https://www.datacamp.com/courses/aws-concepts">AWS Concepts</a></li>
-<li><a href="https://www.datacamp.com/courses/aws-cloud-technology-and-services">AWS Cloud Technology and Services Concepts</a></li>
-<li><a href="https://www.datacamp.com/courses/aws-security-and-cost-management">AWS Security and Cost Management Concepts</a></li>
 </ul></details>
 </section>
 <section class="sec block"><h2 id="llm-y-contexto"><span>LLM y contexto</span></h2>
 <div class="lede">
 <p class="lede-label">Por qué importa</p>
-<p>Es el primer contacto real con un modelo. El trabajo consiste en controlar qué entra (instrucciones y contexto) y qué sale (una respuesta validada), porque el modelo puede sonar convincente y estar equivocado.</p>
+<p>Es la base de cualquier aplicación con un modelo. El trabajo consiste en controlar qué entra (instrucciones y contexto) y qué sale (una respuesta validada), porque el modelo puede sonar convincente y estar equivocado.</p>
 </div>
 <div class="learn">
 <p class="learn-label">Qué conviene dominar</p>
@@ -111,20 +90,22 @@
 <li>Explicar por qué un buen tono no demuestra que la respuesta sea verdadera.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> DataCamp y Proyecto 1.</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
-<li><a href="https://www.datacamp.com/courses/large-language-models-llms-concepts">Large Language Models (LLMs) Concepts</a></li>
-<li><a href="https://www.datacamp.com/courses/llmops-concepts">LLMOps Concepts</a></li>
+<p><strong>Relación con el plan:</strong> DataCamp y Proyecto 1.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Del track de DataCamp:</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/working-with-the-openai-api">Working with the OpenAI API</a></li>
 <li><a href="https://www.datacamp.com/courses/prompt-engineering-with-the-openai-api">Prompt Engineering with the OpenAI API</a></li>
-<li><a href="https://www.datacamp.com/courses/working-with-the-openai-responses-api">Working with the OpenAI Responses API</a></li>
 <li><a href="https://www.datacamp.com/courses/working-with-hugging-face">Working with Hugging Face</a></li>
+<li><a href="https://www.datacamp.com/courses/llmops-concepts">LLMOps Concepts</a></li>
+<li><a href="https://www.datacamp.com/courses/working-with-the-openai-responses-api">Working with the OpenAI Responses API</a></li>
+</ul><p><strong>Para profundizar (opcional):</strong></p><ul>
+<li><a href="https://www.datacamp.com/courses/large-language-models-llms-concepts">Large Language Models (LLMs) Concepts</a></li>
+<li><a href="https://www.datacamp.com/courses/llm-application-fundamentals-with-langchain">LLM Application Fundamentals with LangChain</a></li>
 </ul></details>
 </section>
 <section class="sec block"><h2 id="embeddings-y-rag"><span>Embeddings y RAG</span></h2>
 <div class="lede">
 <p class="lede-label">Por qué importa</p>
-<p>El modelo no conoce los procedimientos de tu organización. En vez de reentrenarlo, en cada pregunta se le da la parte relevante de tus documentos (RAG): es la base de casi cualquier asistente de conocimiento interno.</p>
+<p>El modelo no conoce los documentos de tu organización. En vez de reentrenarlo, en cada pregunta se le da la parte relevante de tus documentos (RAG): es la base de casi cualquier asistente de conocimiento interno.</p>
 </div>
 <div class="learn">
 <p class="learn-label">Qué conviene dominar</p>
@@ -135,8 +116,8 @@
 <li>Distinguir si un fallo viene del buscador o de la generación, y abstenerse cuando no hay evidencia.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> DataCamp y Proyecto 2.</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<p><strong>Relación con el plan:</strong> DataCamp y Proyecto 2, el chatbot con RAG.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Del track de DataCamp:</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/introduction-to-embeddings-with-the-openai-api">Introduction to Embeddings with the OpenAI API</a></li>
 <li><a href="https://www.datacamp.com/courses/building-ai-applications-with-pinecone">Building AI Applications with Pinecone</a></li>
 <li><a href="https://www.datacamp.com/courses/developing-llm-applications-with-langchain">Developing LLM Applications with LangChain</a></li>
@@ -145,27 +126,26 @@
 <section class="sec block"><h2 id="evaluacion"><span>Evaluación</span></h2>
 <div class="lede">
 <p class="lede-label">Por qué importa</p>
-<p>Sin medir no sabes si un cambio mejora o empeora el sistema. Con un punto de partida medible antes de dar autonomía, sabrás después qué aporta un agente y cuánto cuesta.</p>
+<p>Sin medir no sabes si un cambio mejora o empeora el sistema. Con unas pocas preguntas fijas puedes comparar dos versiones de tu proyecto y saber qué aporta cada cambio.</p>
 </div>
 <div class="learn">
 <p class="learn-label">Qué conviene dominar</p>
 <ul>
-<li>Preparar un conjunto de preguntas de desarrollo y otro reservado para test.</li>
+<li>Preparar unas preguntas para ajustar el sistema y otras guardadas aparte para la comprobación final.</li>
 <li>Reproducir la comparación entre dos configuraciones de recuperación o de prompt.</li>
-<li>Explicar por qué el test no se usa para elegir la mejor configuración.</li>
-<li>Instrumentar cada etapa con identificador de petición, duración, error y consumo.</li>
+<li>Explicar por qué las preguntas guardadas aparte no se usan para elegir la mejor configuración.</li>
+<li>Registrar en cada etapa un identificador de petición, la duración, los errores y el consumo.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> Proyecto 2.</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
-<li><a href="https://www.datacamp.com/courses/llm-application-fundamentals-with-langchain">LLM Application Fundamentals with LangChain</a></li>
+<p><strong>Relación con el plan:</strong> no es requisito. Es útil para comprobar si tus proyectos responden bien.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Para profundizar (opcional):</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/llm-application-evaluation-with-langsmith">LLM Application Evaluation with LangSmith</a></li>
 </ul></details>
 </section>
 <section class="sec block"><h2 id="herramientas-y-langgraph"><span>Herramientas y LangGraph</span></h2>
 <div class="lede">
 <p class="lede-label">Por qué importa</p>
-<p>Las herramientas dejan que el asistente consulte sistemas reales, no solo documentos. Cada grado de autonomía añade coste y riesgo: añade solo el que puedas justificar frente a un flujo determinista más simple.</p>
+<p>Las herramientas dejan que el asistente consulte sistemas reales, no solo documentos. Cada grado de autonomía añade coste y riesgo: añade solo el que puedas justificar frente a un flujo fijo más simple.</p>
 </div>
 <div class="learn">
 <p class="learn-label">Qué conviene dominar</p>
@@ -176,8 +156,8 @@
 <li>Poner límites (número de invocaciones, timeouts) y comprobar qué pasa al agotarlos.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> Proyecto 2.</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<p><strong>Relación con el plan:</strong> DataCamp toca las herramientas y los agentes. Usarlos en tus proyectos es opcional, no es requisito.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Para profundizar (opcional):</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/llm-tool-use-with-langchain">LLM Tool Use with LangChain</a></li>
 <li><a href="https://www.datacamp.com/courses/agentic-systems-with-langgraph">Agentic Systems with LangGraph</a></li>
 </ul></details>
@@ -196,15 +176,15 @@
 <li>Explicar dónde se conserva el contexto de autorización y cómo se aísla entre identidades.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> Ampliación opcional del Proyecto 2.</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<p><strong>Relación con el plan:</strong> DataCamp tiene un curso de MCP. Usarlo en tus proyectos es opcional.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Del track de DataCamp:</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/introduction-to-model-context-protocol-mcp">Introduction to Model Context Protocol (MCP)</a></li>
 </ul></details>
 </section>
 <section class="sec block"><h2 id="api-segura-y-docker"><span>API segura y Docker</span></h2>
 <div class="lede">
 <p class="lede-label">Por qué importa</p>
-<p>Hasta ahora todo funciona en tu máquina. Antes de llevarlo a la nube conviene protegerlo (quién pregunta y qué puede ver) y empaquetarlo para que se ejecute igual en cualquier sitio.</p>
+<p>Un servicio que van a usar otras personas conviene protegerlo (quién pregunta y qué puede ver) y empaquetarlo para que se ejecute igual en cualquier sitio.</p>
 </div>
 <div class="learn">
 <p class="learn-label">Qué conviene dominar</p>
@@ -215,16 +195,38 @@
 <li>Probar casos negativos: credencial inválida, datos de otra área e instrucciones ocultas en un documento.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> Los dos proyectos (la API) y AWS Cloud Quest (los contenedores).</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<p><strong>Relación con el plan:</strong> los dos proyectos exponen una API con FastAPI. Protegerla a fondo y empaquetarla con Docker es opcional.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Para profundizar (opcional):</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/deploying-ai-into-production-with-fastapi">Deploying AI into Production with FastAPI</a></li>
 <li><a href="https://www.datacamp.com/courses/introduction-to-docker">Introduction to Docker</a></li>
+</ul></details>
+</section>
+<div class="callout info"><p class="callout-title">AWS en el programa</p><p>La nube se practica en AWS Cloud Quest, un laboratorio en el que despliegas recursos reales sin coste para ti. El plan no pide una cuenta propia de AWS ni desplegar tus proyectos en ella. Los tres temas siguientes sirven para entender lo que verás allí y para ir más allá si quieres.</p></div>
+<section class="sec block"><h2 id="aws-identidad-y-coste"><span>AWS, identidad y coste</span></h2>
+<div class="lede">
+<p class="lede-label">Por qué importa</p>
+<p>Un asistente acaba en la nube y consumiendo APIs de pago. Entender servicios, permisos y límites de gasto evita las sorpresas habituales.</p>
+</div>
+<div class="learn">
+<p class="learn-label">Qué conviene dominar</p>
+<ul>
+<li>Distinguir el rol de ejecución de una tarea de los permisos de la aplicación.</li>
+<li>Saber qué servicios, región y datos intervienen en una arquitectura sencilla.</li>
+<li>Explicar por qué una alarma de presupuesto avisa pero no corta el gasto.</li>
+<li>Describir cómo detener tareas y retirar recursos al terminar.</li>
+</ul>
+</div>
+<p><strong>Relación con el plan:</strong> AWS Cloud Quest.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Para profundizar (opcional):</strong></p><ul>
+<li><a href="https://www.datacamp.com/courses/aws-concepts">AWS Concepts</a></li>
+<li><a href="https://www.datacamp.com/courses/aws-cloud-technology-and-services">AWS Cloud Technology and Services Concepts</a></li>
+<li><a href="https://www.datacamp.com/courses/aws-security-and-cost-management">AWS Security and Cost Management Concepts</a></li>
 </ul></details>
 </section>
 <section class="sec block"><h2 id="despliegue-en-aws"><span>Despliegue en AWS</span></h2>
 <div class="lede">
 <p class="lede-label">Por qué importa</p>
-<p>Un asistente solo es útil si otros pueden usarlo. Conviene ejecutar en AWS el mismo artefacto que probaste, con un pipeline que bloquee la publicación si fallan las pruebas y una forma clara de volver atrás.</p>
+<p>Un asistente solo es útil si otros pueden usarlo. Conviene ejecutar en la nube el mismo artefacto que probaste, con un pipeline que bloquee la publicación si fallan las pruebas y una forma clara de volver atrás.</p>
 </div>
 <div class="learn">
 <p class="learn-label">Qué conviene dominar</p>
@@ -235,8 +237,8 @@
 <li>Hacer rollback a un artefacto anterior y retirar los recursos propios.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> AWS Cloud Quest.</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<p><strong>Relación con el plan:</strong> en AWS Cloud Quest desplegarás recursos en un laboratorio. Lo demás es opcional.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Para profundizar (opcional):</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/introduction-to-aws-boto-in-python">Introduction to AWS Boto in Python</a></li>
 <li><a href="https://www.datacamp.com/courses/deploying-applications-on-aws">Deploying Applications on AWS</a></li>
 <li><a href="https://www.datacamp.com/courses/automating-deployments-on-aws">Automating Deployments on AWS</a></li>
@@ -251,13 +253,13 @@
 <p class="learn-label">Qué conviene dominar</p>
 <ul>
 <li>Configurar métricas, logs y una alarma útil en CloudWatch, y enlazar el identificador de petición con la traza.</li>
-<li>Ejecutar el test reservado sobre una versión fijada y recuperar el servicio siguiendo un runbook.</li>
+<li>Volver a pasar tus preguntas de prueba después de cada cambio y saber cómo recuperar el servicio si falla.</li>
 <li>Identificar dónde se consumen el tiempo y el coste.</li>
 <li>Dejar documentación con la que otra persona reproduce y verifica el sistema.</li>
 </ul>
 </div>
-<p><strong>En el plan oficial:</strong> AWS Cloud Quest y, para las trazas, Langfuse (opcional) en el Proyecto 2.</p>
-<details class="callout abstract"><summary>Para profundizar (opcional)</summary><ul>
+<p><strong>Relación con el plan:</strong> no es requisito. Si ya dominas estos temas, puedes añadir Langfuse a tus proyectos para ver las trazas.</p>
+<details class="callout abstract"><summary>Cursos de este tema</summary><p><strong>Para profundizar (opcional):</strong></p><ul>
 <li><a href="https://www.datacamp.com/courses/monitoring-and-troubleshooting-aws">Monitoring and Troubleshooting AWS</a></li>
 </ul></details>
 </section>
@@ -277,6 +279,6 @@
 <nav class="pager" aria-label="Navegación entre páginas"><a class="prev" rel="prev" href="conceptos.html"><small>Anterior</small><strong>← Conceptos</strong></a></nav>
 </main>
 </div>
-<footer class="foot">v0.4 · 15 de octubre de 2026 · Material de apoyo del programa AI Engineer</footer>
+<footer class="foot">v0.4.1 · 15 de octubre de 2026 · Material de apoyo del programa AI Engineer</footer>
 </body>
 </html>
